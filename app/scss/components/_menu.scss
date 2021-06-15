@@ -1,0 +1,116 @@
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__inner {
+        max-width: 1120px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 35px;   
+    }
+
+    &__link {
+        font-size: 15px;
+        line-height: 1.2;
+        @extend %Rubik-500;
+        color: $blue-300;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom-color 0.5s;
+
+        &:hover {
+            border-bottom-color: $blue-300;
+        }
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+        height: 50px;
+
+        .user__search {
+            margin-right: 20px;
+            border: 1px solid transparent;
+            background-color: $blue-100;
+            padding: 17px 18px 13px 18px;
+            border-radius: 50%;
+        }
+
+        .user__item {
+            margin-right: 20px;
+            border: 1px solid transparent;
+            background-color: $yellow-500;
+            padding: 20px 40px 10px;
+            border-radius: 30px;
+            display: flex;
+        }
+
+        .user__link {
+            background-repeat: no-repeat;
+            width: 21px;
+            height: 17px;
+            position: relative;
+            
+        
+            span {
+                position: absolute;
+                right: -2px;
+                top: -5px;
+                border: 1px solid transparent;
+                background-color: $white-100;
+                border-radius: 50px;
+                @extend %DMSans-400;
+                font-size: 10px;
+                line-height: 1.1;
+            }
+
+            &--heart {
+                background-image: url(../../images/heart.svg);
+                margin-right: 55px;
+
+                &::after {
+                    content: "";
+                    width: 1px;
+                    position: absolute;
+                    height: 30px;
+                    background-color: $yellow-300;
+                    left: 50px;
+                    top: -10px;
+                }
+            }
+
+            &--basket {
+                background-image: url(../../images/basket.svg);
+            }
+        }
+        
+        .user__more {
+            border: 1px solid transparent;
+            background-color: $blue-300;
+            padding: 25px;
+            border-radius: 50%;
+            position: relative;
+            
+            &::before {
+                content: "";
+                position: absolute;
+                background-image: url(../../images/user__more.svg);
+                background-repeat: no-repeat;
+                height: 20px;
+                width: 20px;              
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}

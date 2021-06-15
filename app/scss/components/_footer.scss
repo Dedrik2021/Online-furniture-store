@@ -1,0 +1,114 @@
+.footer {
+    padding: 100px 0 30px;
+    @extend %Rubik-400;
+    color: $gray-100;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 55px;
+    }
+
+    &__content {
+        max-width: 275px;
+        width: 100%; 
+    }
+
+    &__logo {
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    
+    &__subtitle {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 1.2;
+        color: $blue-700;
+        @extend %DMSans-700;
+        text-transform: uppercase;
+        height: 35px;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__contacts {
+        max-width: 220px;
+        font-style: normal;
+    }
+    
+
+    &__link {
+        display: inline-block;
+        line-height: 1.7;
+        margin-bottom: 10px;
+    }
+
+    &__form {
+        position: relative;
+        @extend %DMSans-400;
+    }
+
+    &__text {
+        margin-bottom: 35px;
+        line-height: 1.7;
+        @extend %Rubik-400;
+    }
+
+    &__email {
+        background-color: $yellow-100;
+        border: none;
+        height: 40px;
+        max-width: 170px;
+        padding: 0 15px;
+
+        &::placeholder {
+            color: $blue-400;
+            font-size: 12px;
+            line-height: auto;
+        }
+    }
+
+    &__btn {
+        background-color: $blue-200;
+        padding: 10px 20px ;
+        position: absolute;
+        right: 0;
+        color: $white-100;
+        line-height: 1.4;
+    }
+
+    &__bottom {
+        padding-top: 30px;
+        border-top: 1px solid $blue-100;
+        display: flex;
+        justify-content: space-between;
+        line-height: 2.3;
+    }
+
+    .menu {
+        display: flex;
+
+        &__item {
+            position: relative;
+            &:not(:last-child) {          
+                margin-right: 30px;
+    
+                &::after {
+                    position: absolute;
+                    content: "";
+                    background-color: $gray-100;
+                    height: 20px;
+                    width: 2px;
+                    right: -15px;
+                    top: 5px;
+                }
+            }
+        }
+
+        &__link {
+            @extend %Rubik-400;
+            color: $gray-100;
+        }
+    }
+}
