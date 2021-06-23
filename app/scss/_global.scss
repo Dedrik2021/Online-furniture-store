@@ -20,9 +20,9 @@ body {
 }
 
 .sr-only {
-    border: 0; 
-    clip: rect(0 0 0 0); 
-    height: 1px;  
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
     margin: -1px;
     overflow: hidden;
     padding: 0;
@@ -30,3 +30,23 @@ body {
     width: 1px;
 }
 
+.link {
+    padding: 22px 100px 22px 30px;
+    @extend %Rubik-500;
+    font-size: 15px;
+    line-height: 1.1;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        background-image: url(../images/arrow.svg);
+        background-repeat: no-repeat;
+        content: "";
+        right: 20px;
+        height: 10px;
+        width: 22px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+}

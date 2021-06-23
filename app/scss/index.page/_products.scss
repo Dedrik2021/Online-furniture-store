@@ -1,0 +1,117 @@
+.products {
+    padding-top: 65px;
+
+    &__title {
+        @extend %DMSans-700;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 25px;
+        color: $black-100;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto 80px;
+        max-width: 380px;
+    }
+
+    &__btn {
+        color: $gray-300;
+        font-size: 16px;
+        transition: font-weight 0.3s, color 0.3s;
+    }
+
+    .mixitup-control-active {
+        color: $black-200;
+        @extend %DMSans-700;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 30px;
+        row-gap: 40px;
+
+        &__item {
+            max-width: 270px;
+            box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+            height: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding-bottom: 40px;
+            position: relative;
+
+            &:hover .user {
+                opacity: 1;
+                visibility: visible;
+                top: 50%;
+            }
+        }
+
+        &__link {
+            margin-bottom: 65px;
+        }
+
+        &__title {
+            @extend %DMSans-500;
+            font-size: 16px;
+            color: $blue-500;
+            line-height: 2.3;
+        }
+
+        &__price {
+            @extend %DMSans-700;
+            color: $blue-200;
+            font-size: 16px;
+            line-height: 1.2;
+        }
+    }
+
+    .user {
+        width: 160px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        top: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: visibility 0.5s, opacity 0.5s, top 0.5s;
+        top: 60%;
+        transform: translateY(-50%);
+
+
+        &__link {
+            background-color: $white-100;
+            border-radius: 50px;
+            transition: background-color 0.4s;
+
+            &--search {
+                padding: 15px 14px 10px 15px;
+            }
+
+            &--basket {
+                padding: 15px 13px 10px 14px;
+            }
+
+            &--heart {
+                padding: 16px 13px 9px;
+            }
+
+            path {
+                transition: fill 0.4s;
+            }
+
+            &:hover {
+                background-color: $blue-200;
+
+                path {
+                    fill: $white-100;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+.advantages {
+
+    &__inner {
+        display: flex;
+        justify-content: space-around;
+        padding: 50px 0 60px;
+        background-color: $yellow-100;
+    }
+
+    &__body {
+        padding-left: 70px;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;   
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 55px;
+            width: 55px;
+            background-repeat: no-repeat;
+            left: -10px;
+            top: 0;
+        }
+
+        &--support::before {
+            background-image: url(../../images/advantages/hours.png);
+        }
+
+        &--delivery::before {
+            background-image: url(../../images/advantages/car.png);
+
+        }
+
+        &--payment::before {
+            background-image: url(../../images/advantages/card.png);
+        }
+    }
+
+    &__title {
+        @extend %DMSans-700;
+        font-size: 18px;
+        line-height: 1.8; 
+        color: $gray-600;
+        
+        &--delivery {
+
+            &::after,
+            &::before {
+                position: absolute;
+                content: "";
+                height: 170px;
+                width: 1px;
+                background-color: $gray-100;
+                top: -50px;
+            }
+            
+            &::after {
+                right: -140px;          
+            }
+    
+            &::before {
+                left: -180px;               
+            }
+        }
+    }
+
+    &__text {
+        max-width: 215px;
+        font-size: 16px;
+        line-height: 1.8;
+        color: $gray-500;
+    }
+}
