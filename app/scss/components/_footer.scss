@@ -1,7 +1,6 @@
 .footer {
     
     padding: 100px 0 30px;
-    @extend %Rubik-400;
     color: $gray-400;
 
     &__top {
@@ -21,7 +20,7 @@
     }
 
     
-    &__subtitle {
+    &__title {
         margin-bottom: 20px;
         font-size: 16px;
         line-height: 1.2;
@@ -39,21 +38,27 @@
     }
     
     &__link {
+        @extend %Rubik-400;
         display: inline-block;
         line-height: 1.7;
         margin-bottom: 10px;
         position: relative;
         border-radius: 50%;
-        transition: background-color 0.3s, color 0.3s;
+        transition: background-color 0.4s, color 0.4s, font-weight 0.1s;
 
         &:hover {
             background-color: $yellow-500;
             color: $blue-700;
+            font-weight: 500;
         }
 
         &--address,
         &--phone,
         &--email {
+
+            &:hover {
+                font-weight: 400;
+            }
 
             span {
                 text-transform: uppercase;
@@ -91,6 +96,11 @@
             right: 0;
             color: $white-100;
             line-height: 1.4;
+            transition: background-color 0.4s;
+
+            &:hover {
+                background-color: $blue-500;
+            }
         }
     }
 

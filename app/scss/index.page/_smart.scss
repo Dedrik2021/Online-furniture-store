@@ -1,7 +1,8 @@
 .smart {
+    padding-top: 150px;
 
     &__list {
-        padding: 100px 0 130px;
+        padding: 100px 0 85px;
         background-color: $yellow-500;
         position: relative;
 
@@ -21,12 +22,12 @@
         display: flex;
         justify-content: space-between; 
         align-items: center;      
-        height: 590px;
+        height: 635px;
     }
 
     &__content {
         max-width: 420px;
-        height: 360px;
+        height: 410px;
     }
 
     &__span {
@@ -34,7 +35,7 @@
         line-height: 1;
         @extend %Rubik-500;
         text-transform: uppercase;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         color: $blue-500;
         display: block;
     }
@@ -44,7 +45,7 @@
         color: $blue-300;
         font-size: 18px;
         line-height: 1.7;
-        margin-bottom: 40px;
+        margin-bottom: 35px;
         max-width: 385px;
     }
 
@@ -62,10 +63,8 @@
 
     &__img {
         background-repeat: no-repeat;
-        margin-top: 25px;
         width: 645px;
-        height: 270px;
-    
+        height: 285px;
     }
 
     .slick-list {

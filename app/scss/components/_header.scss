@@ -1,3 +1,16 @@
 .header {
     padding: 55px 0 45px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    background-color: $white-100;
+    transition: background-color 0.3s, padding 1s;
+
+    &.sticky {
+        padding: 15px 0;
+        background-color: $yellow-100;
+        max-width: 1920px;
+    }
 }
