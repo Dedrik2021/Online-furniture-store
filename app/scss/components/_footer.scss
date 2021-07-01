@@ -110,7 +110,7 @@
         line-height: 2.3;
 
         .footer__copy-span {
-            max-width: 50%;
+            max-width: 500px;
             @include line-clamp-1;
         }
 
