@@ -21,35 +21,35 @@ $yellow-200: #fde3cc;
 $yellow-300: #fde7d3;
 $yellow-500: #fcd7b6;
 
-%DMSans-400 {
-    font-family: 'DMSans', sans-serif;
-    font-weight: 400;
-}
-
-%DMSans-500 {
-    font-family: 'DMSans', sans-serif;
-    font-weight: 500;
-}
-
-%DMSans-700 {
-    font-family: 'DMSans', sans-serif;
-    font-weight: 700;
-}
-
-%Rubik-400 {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 400;
-}
-
-%Rubik-500 {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 500;
-}
+$dmsans: 'DMSans', sans-serif;
+$rubik: 'Rubik', sans-serif;
 
 
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});
 }
+
 @function min($numbers...) {
     @return m#{i}n(#{$numbers});
+}
+
+@mixin line-clamp-1 {
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@mixin line-clamp-2 {
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@mixin line-clamp-3 {
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }

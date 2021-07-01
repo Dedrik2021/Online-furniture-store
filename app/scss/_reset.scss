@@ -1,22 +1,22 @@
-html{
-  box-sizing: border-box;
+html {
+    box-sizing: border-box;
 }
 
 *,
 *::after,
-*::before{
-  box-sizing: inherit;
+*::before {
+    box-sizing: inherit;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
-  outline-color: $blue-300;
+    text-decoration: none;
+    color: inherit;
+    outline-color: $blue-300;
 }
 
 ul,
 ol {
-  padding: 0;
+    padding: 0;
 }
 
 body,
@@ -35,29 +35,33 @@ figcaption,
 blockquote,
 dl,
 dd {
-  margin: 0;
+    margin: 0;
 }
 
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 input,
 button,
 textarea,
 select {
-  font: inherit;
-  outline-color: $blue-300;
+    font: inherit;
+    outline-color: $blue-300;
 }
 
 button {
-  cursor: pointer;
-  outline-color: $blue-300;
-  border: none;
-  background-color: transparent;
-  padding: 0;
+    cursor: pointer;
+    outline-color: $blue-300;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+address {
+    font-style: normal;
 }

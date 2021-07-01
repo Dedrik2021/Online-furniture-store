@@ -1,5 +1,4 @@
 .footer {
-    
     padding: 100px 0 30px;
     color: $gray-400;
 
@@ -9,7 +8,7 @@
         margin-bottom: 55px;
     }
 
-    &__content {
+    &__box {
         max-width: 275px;
         width: 100%; 
     }
@@ -18,61 +17,64 @@
         margin-bottom: 20px;
         display: block;
     }
-
     
     &__title {
+        padding-top: 15px;
         margin-bottom: 20px;
         font-size: 16px;
         line-height: 1.2;
         color: $blue-700;
-        @extend %DMSans-700;
+        font-family: $dmsans;
+        font-weight: 700;
         text-transform: uppercase;
-        height: 35px;
         display: flex;
         align-items: flex-end;
+        @include line-clamp-1;
     }
 
     &__contacts {
         max-width: 195px;
-        font-style: normal;
     }
-    
+
+    &__item {
+        max-width: 235px;
+    }
+
     &__link {
-        @extend %Rubik-400;
+        font-family: $rubik;
+        font-weight: 400;
         display: inline-block;
         line-height: 1.7;
         margin-bottom: 10px;
         position: relative;
-        border-radius: 50%;
-        transition: background-color 0.4s, color 0.4s, font-weight 0.1s;
+        border-bottom: 1px solid transparent;
+        transition: background-color 0.4s, color 0.4s, border-bottom-color 0.4s;
+        transition: color 0.4s, border-bottom-color 0.4s;
+        @include line-clamp-2;
 
-        &:hover {
-            background-color: $yellow-500;
-            color: $blue-700;
-            font-weight: 500;
+        &:focus {
+            outline-color: $gray-300;
         }
 
-        &--address,
-        &--phone,
-        &--email {
-
-            &:hover {
-                font-weight: 400;
-            }
-
-            span {
-                text-transform: uppercase;
-            }
+        &:hover {
+            border-bottom-color: $blue-200;
+            color: $blue-200;
         }
     }
 
-    .subscribe {
+    &__link-span {
+        text-transform: uppercase;
+    }
+
+    .subscribe-form {
         position: relative;
 
         &__text {
             margin-bottom: 35px;
             line-height: 1.7;
-            @extend %Rubik-400;
+            font-family: $rubik;
+            font-weight: 400;
+            @include line-clamp-2;
         }
 
         &__email {
@@ -81,35 +83,36 @@
             height: 40px;
             max-width: 170px;
             padding: 0 15px;
+
+            &:focus {
+                outline-color: $yellow-200;
+            }
     
             &::placeholder {
                 color: $blue-400;
                 font-size: 12px;
-                line-height: auto;
+                line-height: 1.2;
             }
         }
 
         &__btn {
-            background-color: $blue-200;
             padding: 10px 20px;
             position: absolute;
-            right: 0;
-            color: $white-100;
-            line-height: 1.4;
-            transition: background-color 0.4s;
-
-            &:hover {
-                background-color: $blue-500;
-            }
+            right: -1px;
         }
     }
 
     &__bottom {
-        padding-top: 30px;
+        padding-top: 25px;
         border-top: 1px solid $blue-100;
         display: flex;
         justify-content: space-between;
         line-height: 2.3;
+
+        .footer__copy-span {
+            max-width: 50%;
+            @include line-clamp-1;
+        }
 
         .menu {
             display: flex;
@@ -133,9 +136,14 @@
             }
     
             &__link {
-                @extend %Rubik-400;
+                font-family: $rubik;
+                font-weight: 400;
                 color: $gray-400;
                 transition: border-bottom-color 0.4s, color 0.4s;
+
+                &:focus {
+                    outline-color: $gray-300;
+                }
     
                 &:hover {
                     border-bottom-color: $blue-200;

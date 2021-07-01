@@ -1,27 +1,34 @@
 $(function() {
 
-    $('.search__btn').on('click', function() {
-        $('.search__input, .search__btn').toggleClass('active');
+    $('.user-nav__btn').on('click', function() {
+        $('.user-nav__input, .user-nav__btn, .user-nav__search').toggleClass('active');
     })
 
-    $('.user__link--heart').on('click', function() {
-        $('.user__link--heart').toggleClass('active');
+    $('.user-nav__link--heart').on('click', function() {
+        $('.user-nav__link--heart').toggleClass('active');
     })
 
-    $('.user__link--basket').on('click', function() {
-        $('.user__link--basket').toggleClass('active');
+    $('.user-nav__link--basket').on('click', function() {
+        $('.user-nav__link--basket').toggleClass('active');
     })
 
-    $('.user__more').on('click', function() {
-        $('.user__more').toggleClass('active');
+    $('.user-nav__more').on('click', function() {
+        $('.user-nav__more, .menu-throwing').toggleClass('active');
     })
 
-    // $(document).mouseup(function (e) {
-    //     var container = $('.search__btn.active, .search__input.active');
-    //     if (container.has(e.target).length === 0){
-    //         container.hide();
-    //     }
-    // });
+    $(document).mouseup(function (e) {
+        var container = $('.user-nav');
+        if (container.has(e.target).length === 0 && $('.user-nav__input, .user-nav__btn, .user-nav__link--heart, .user-nav__link--basket').hasClass('active')) {
+            $('.user-nav__input, .user-nav__btn, .user-nav__search, .user-nav__link--basket, .user-nav__link--heart').removeClass('active');
+        }
+    });
+
+    $(document).mouseup(function (e) {
+        var container = $('.user-nav__inner');
+        if (container.has(e.target).length === 0 && $('.user-nav__more, .menu-throwing').hasClass('active')) {
+            $('.user-nav__more, .menu-throwing').removeClass('active');
+        }
+    });
 
     $(window).scroll(function() {
         if ($(this).scrollTop() > 1){
@@ -31,7 +38,7 @@ $(function() {
         }
     });
 
-    $('.smart__list').slick({
+    $('.baner__list').slick({
         fade: true,
         arrows: false,
         autoplay: true,
@@ -39,4 +46,4 @@ $(function() {
     });
 });
 
-const mixer = mixitup('.gallery');
+const mixer = mixitup('.products-things');

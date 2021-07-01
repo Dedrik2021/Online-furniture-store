@@ -1,18 +1,14 @@
 .advantages {
 
-    &__inner {
+    &__list {
         display: flex;
         justify-content: space-around;
-        padding: 50px 0 60px;
+        padding: 40px 0;
         background-color: $yellow-100;
     }
 
-    &__body {
-        padding-left: 70px;
-        height: 60px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;   
+    &__item {
+        padding-left: 65px;
         position: relative;
 
         &::before {
@@ -22,28 +18,31 @@
             width: 55px;
             background-repeat: no-repeat;
             left: -10px;
-            top: -5px;
+            top: 10px;
         }
 
         &--support::before {
-            background-image: url(../../images/advantages/hours.png);
+            background-image: url(../images/advantages/hours.png);
         }
 
         &--delivery::before {
-            background-image: url(../../images/advantages/car.png);
+            background-image: url(../images/advantages/car.png);
 
         }
 
         &--payment::before {
-            background-image: url(../../images/advantages/card.png);
+            background-image: url(../images/advantages/card.png);
         }
     }
 
-    &__title {
-        @extend %DMSans-700;
+    &__span {
+        font-family: $dmsans;
+        font-weight: 700;
         font-size: 18px;
         line-height: 1.8; 
-        color: $gray-600;
+        color: $gray-600; 
+        max-width: 215px;
+        @include line-clamp-1;
         
         &--delivery {
 
@@ -51,14 +50,14 @@
             &::before {
                 position: absolute;
                 content: "";
-                height: 170px;
+                height: 168px;
                 width: 1px;
                 background-color: $gray-100;
-                top: -50px;
+                top: -40px;
             }
             
             &::after {
-                right: -140px;          
+                right: -145px;          
             }
     
             &::before {
@@ -72,5 +71,6 @@
         font-size: 16px;
         line-height: 1.8;
         color: $gray-500;
+        @include line-clamp-2;
     }
 }

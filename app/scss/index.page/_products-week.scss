@@ -1,106 +1,124 @@
-.products {
-    padding-top: 60px;
+.products-week {
+    padding-top: 65px;
 
     &__title {
-        @extend %DMSans-700;
+        font-family: $dmsans;
+        font-weight: 700;
         font-size: 36px;
         text-align: center;
         margin-bottom: 25px;
         color: $black-100;
     }
 
-    &__list {
+    .products-filters {
         display: flex;
         justify-content: space-between;
         margin: 0 auto 80px;
         max-width: 380px;
-    }
+        font-family: $dmsans;
+        font-weight: 700;
 
-    &__btn {
-        color: $gray-300;
-        font-size: 16px;
-        transition: font-weight 0.3s, color 0.3s;
+        &__btn {
+            color: $gray-300;
+            font-size: 16px;
+            transition: color 0.3s;
+
+            &:hover {
+                color: $black-200;
+            }
+        }
     }
 
     .mixitup-control-active {
         color: $black-200;
-        @extend %DMSans-700;
     }
 
-    .gallery {
+    .products-things {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         column-gap: 30px;
         row-gap: 40px;
 
         &__item {
+            padding: 25px 10px 40px;
             max-width: 270px;
             box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-            height: 380px;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             align-items: center;
-            padding-bottom: 40px;
             position: relative;
 
-            &:hover .user {
+            &:hover .user-items {
                 opacity: 1;
-                visibility: visible;
                 top: 50%;
             }
         }
+    }
 
-        &__link {
+    .product-card {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__img {
+            height: 195px;
             margin-bottom: 65px;
+            display: flex;
+            align-items: flex-end;
         }
 
-        &__title {
-            @extend %DMSans-500;
+        &__name {
+            max-width: 200px;
+            font-family: $dmsans;
+            font-weight: 500;
             font-size: 16px;
             color: $blue-500;
             line-height: 2.3;
+            @include line-clamp-1;
         }
 
         &__price {
-            @extend %DMSans-700;
+            max-width: 150px;
+            font-family: $dmsans;
+            font-weight: 700;
             color: $blue-200;
             font-size: 16px;
             line-height: 1.2;
+            @include line-clamp-1;
         }
     }
 
-    .user {
-        width: 160px;
+    .user-items {
         position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         top: 0;
         opacity: 0;
-        visibility: hidden;
         transition: visibility 0.5s, opacity 0.5s, top 0.5s;
         top: 60%;
         transform: translateY(-50%);
+        display: flex;
+
+        &:focus {
+            opacity: 1;
+            top: 50%;
+            outline-color: $gray-300;
+        }
 
 
-        &__link {
+        &__btn {
+            margin: 0 7px;
             background-color: $white-100;
-            border-radius: 50px;
+            border-radius: 50%;
             transition: background-color 0.4s;
-
-            &--search {
-                padding: 15px 14px 10px 15px;
-            }
-
-            &--basket {
-                padding: 15px 13px 10px 14px;
-            }
-
-            &--heart {
-                padding: 16px 13px 9px;
-            }
-
+            box-shadow: 1px 1px 25px 1px rgba(37, 37, 37, 0.4);
+            height: 46px;
+            width: 46px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
             path {
                 transition: fill 0.4s;
             }
