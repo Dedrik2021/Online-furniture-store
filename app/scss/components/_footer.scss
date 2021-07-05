@@ -1,5 +1,5 @@
 .footer {
-    padding: 100px 0 30px;
+    padding: 20px 0 30px;
     color: $gray-400;
 
     &__top {
@@ -15,16 +15,15 @@
 
     &__logo {
         margin-bottom: 20px;
-        display: block;
+        display: inline-block;
     }
     
-    &__title {
+    &__name {
         padding-top: 15px;
         margin-bottom: 20px;
         font-size: 16px;
         line-height: 1.2;
         color: $blue-700;
-        font-family: $dmsans;
         font-weight: 700;
         text-transform: uppercase;
         display: flex;
@@ -36,13 +35,8 @@
         max-width: 195px;
     }
 
-    &__item {
-        max-width: 235px;
-    }
-
     &__link {
         font-family: $rubik;
-        font-weight: 400;
         display: inline-block;
         line-height: 1.7;
         margin-bottom: 10px;
@@ -50,7 +44,6 @@
         border-bottom: 1px solid transparent;
         transition: background-color 0.4s, color 0.4s, border-bottom-color 0.4s;
         transition: color 0.4s, border-bottom-color 0.4s;
-        @include line-clamp-2;
 
         &:focus {
             outline-color: $gray-300;
@@ -73,7 +66,6 @@
             margin-bottom: 35px;
             line-height: 1.7;
             font-family: $rubik;
-            font-weight: 400;
             @include line-clamp-2;
         }
 
@@ -121,7 +113,7 @@
                 position: relative;
     
                 &:not(:last-child) {          
-                    margin-right: 30px;
+                    margin-right: 25px;
         
                     &::after {
                         position: absolute;
@@ -137,7 +129,6 @@
     
             &__link {
                 font-family: $rubik;
-                font-weight: 400;
                 color: $gray-400;
                 transition: border-bottom-color 0.4s, color 0.4s;
 

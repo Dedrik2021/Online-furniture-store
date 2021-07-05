@@ -1,0 +1,52 @@
+.partners {
+    padding: 265px 0 85px;
+    background-color: $yellow-100;
+    position: relative;
+    top: -60px;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    } 
+
+    &__link {
+        display: block;
+        background-repeat: no-repeat;
+        transition: transform 0.4s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &--peterson {
+            background-image: url(../images/partners/partners-1.png);
+            height: 85px;
+            width: 85px;
+        }
+
+        &--kmn {
+            background-image: url(../images/partners/partners-2.png);
+            width: 150px;
+            height: 50px;
+        }
+
+        &--chainforce {
+            background-image: url(../images/partners/partners-3.png);
+            width: 150px;
+            height: 80px;
+        }
+
+        &--next {
+            background-image: url(../images/partners/partners-4.png);
+            height: 55px;
+            width: 170px;
+        }
+
+        &--vintage {
+            background-image: url(../images/partners/partners-5.png);
+            height: 65px;
+            width: 120px;
+        }
+    }
+}

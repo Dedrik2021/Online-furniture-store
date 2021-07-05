@@ -1,6 +1,8 @@
 $white-100: #fff;
+$white-400: #e6e6e6;
 
 $gray-100: #e8e4df;
+$gray-200: #b3b7b5;
 $gray-300: #8b8b8b;
 $gray-400: #7b7b7b;
 $gray-500: #585858;
@@ -8,12 +10,14 @@ $gray-600: #414141;
 
 $black-100: #191919;
 $black-200: #1a1a1a;
+$black-300: #262626;
 
 $blue-100: #edf1f4;
 $blue-200: #a3bbc8;
 $blue-300: #436372;
 $blue-400: #234969;
 $blue-500: #243f4d;
+$blue-600: #222933;
 $blue-700: #1f2044;
 
 $yellow-100: #fef7f0;
@@ -21,9 +25,11 @@ $yellow-200: #fde3cc;
 $yellow-300: #fde7d3;
 $yellow-500: #fcd7b6;
 
+$pink-300: #feefe2;
+
 $dmsans: 'DMSans', sans-serif;
 $rubik: 'Rubik', sans-serif;
-
+$poppins: 'Poppins', sans-serif;
 
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});
@@ -52,4 +58,25 @@ $rubik: 'Rubik', sans-serif;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+@mixin gradient {
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        background-color: $gray-600;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+
+    &:hover::after {
+        opacity: 0.1;
+        background-blend-mode: darken;
+        background-color: $blue-500;
+    }
 }

@@ -23,11 +23,23 @@ main {
     padding: 0 15px;
     margin: 0 auto;
 
+    &--lg {
+        max-width: 1920px;
+    }
+
     &--sm {
         max-width: 1200px;
     }
 }
 
+.title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 25px;
+    color: $black-100;
+}
 
 .sr-only {
     border: 0;
@@ -50,7 +62,7 @@ main {
         background-color: $blue-500;
     }
 
-    &--arrow {
+    &--blue {
         padding: 22px 100px 22px 30px;
         font-family: $rubik;
         font-weight: 500;
@@ -60,7 +72,7 @@ main {
     
         &::after {
             position: absolute;
-            background-image: url(../images/components/arrow.svg);
+            background-image: url(../images/components/arrow-white.svg);
             background-repeat: no-repeat;
             content: "";
             right: 20px;
@@ -74,19 +86,50 @@ main {
 
     &--transparent {
         background-color: transparent;
-        transition: background-color 0.4s;
+        color: $blue-300;
+        font-family: $rubik;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 1.1;
+        border: 1px solid $gray-200;
+        border-radius: 5px;
+        padding: 20px 85px 20px 20px;
+        transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+
+        path {
+            transition: fill 0.4s;
+        }
 
         &:hover {
             background-color: $blue-200;
+            color: $white-100;
+            border-color: transparent;
+
+            path {
+                fill: $white-100;
+            }
+        }
+    }
+}
+
+.products-filters {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 80px;
+    max-width: 380px;
+    font-weight: 700;
+
+    &__btn {
+        color: $gray-300;
+        font-size: 16px;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $black-200;
         }
     }
 
-    &--blue {
-        background-color: $blue-200;
-        transition: background-color 0.4s;
-
-        &:hover {
-            background-color: $blue-500;
-        }
+    .mixitup-control-active {
+        color: $black-200;
     }
 }

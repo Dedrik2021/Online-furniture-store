@@ -1,0 +1,111 @@
+.products-new-design {
+    padding-top: 100px;
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+        row-gap: 30px;
+        margin-bottom: 120px;
+    }
+
+    .design-card {
+
+        &__link {
+            max-width: 370px;
+            height: 246px;
+            display: block;
+            position: relative;
+            @include gradient;
+        }
+
+        &__box {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            padding: 35px 140px 45px 35px;
+        }
+
+        &__name {
+            display: block;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 1.2;
+            color: $black-100;
+            margin-bottom: 15px;
+            @include line-clamp-2;
+        }
+
+        &__style {
+            display: block;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1.2;
+            color: $blue-200;
+            @include line-clamp-1;
+        }
+    }
+
+    &__video {
+        background-repeat: no-repeat;
+        background-color: $white-400;
+        background-size: cover;
+        display: block;
+        height: 54vh;
+        max-height: 500px;
+        position: relative;
+
+        &:hover path {
+            fill: $blue-400;
+        }
+
+        &::after,
+        &::before {
+            position: absolute;
+            background-color: $blue-200;
+            border-radius: 50%;
+            content: "";
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: background-color 0.4s, opacity 0.4s;
+        }
+
+        &::before {
+            height: 127px;
+            width: 127px;
+            background-color: rgba(163, 187, 200, 0.4);
+        }
+
+        &::after {
+            height: 98px;
+            width: 98px;
+        }
+
+        &:hover::before {
+            background-color: $blue-200;
+            opacity: 0.8;
+        }
+        
+        &:hover::after {
+            background-color: $blue-100;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        z-index: 5;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        path {
+            transition: fill 0.4s;
+        }
+    }
+}

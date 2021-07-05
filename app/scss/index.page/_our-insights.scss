@@ -1,0 +1,147 @@
+.our-insights {
+    position: relative;
+    bottom: -115px;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__link {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.2;
+        color: $black-300;
+        padding-right: 25px;
+        position: relative;
+        transition: color 0.4s;
+
+        &:hover {
+            color: $blue-200;
+
+            & path {
+                fill: $blue-200;
+            }
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        
+        path {
+            transition: fill 0.4s;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+    }
+
+    .post-card {
+
+        &__img {
+            background-repeat: no-repeat;
+            height: 250px;
+            width: 370px;
+            background-color: $white-400;
+        }
+
+        &__box {
+            padding: 35px 30px 25px 30px;
+            height: 175px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: $white-100;
+            z-index: 5;
+            @include gradient;
+        }
+
+        &__span {
+            position: absolute;
+            z-index: 1;
+            left: 25px;
+            top: -17px;
+            padding: 5px 35px;
+            color: $white-100;
+            font-family: $poppins;
+            font-weight: 700;
+            border-radius: 40px;
+            background-color: $blue-200;
+        }
+
+        &__text {
+            margin-bottom: 15px;
+            color: $black-300;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 1.2;
+            position: relative;
+            z-index: 5;
+            transition: color 0.4s, border-bottom-color 0.4s;
+            @include line-clamp-3;
+
+            &:hover {
+                color: $blue-200;
+                border-bottom-color: $blue-200;
+            }
+        }
+
+        &__bottom {
+            border-top: 1px solid $blue-200;
+            padding-top: 15px;
+            text-transform: uppercase;
+            margin-top: auto;
+            display: flex;
+        }
+
+        &__admin,
+        &__date {
+            font-family: $rubik;
+            position: relative;
+            z-index: 5;
+            font-size: 12px;
+            line-height: 2;
+            color: $blue-600;
+            padding-left: 15px;
+            @include line-clamp-1;
+
+            &::before {
+                background-repeat: no-repeat;
+                position: absolute;
+                content: "";
+                width: 13px;
+                height: 12px;
+                top: 4px;
+                left: 0;
+            }
+        }
+
+        &__date {
+            margin-right: 25px;
+
+            &::before {
+                background-image: url(../images/our-insights/post-date.svg);
+            }
+        }
+
+        &__admin {
+            transition: color 0.4s;
+
+            &::before {
+                background-image: url(../images/our-insights/post-user.svg);
+            }
+
+            &:hover {
+                color: $blue-200;
+            }
+        }
+    }
+}

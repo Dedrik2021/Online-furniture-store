@@ -46,4 +46,14 @@ $(function() {
     });
 });
 
-const mixer = mixitup('.products-things');
+var containerEl1 = document.querySelector('.products-week__content');
+var containerEl2 = document.querySelector('.products-new-design__content');
+
+var config = {
+    controls: {
+        scope: 'local'
+    }
+};
+
+var mixer1 = mixitup(containerEl1, config);
+var mixer2 = mixitup(containerEl2, config);

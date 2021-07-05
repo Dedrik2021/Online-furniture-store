@@ -60,7 +60,6 @@
         line-height: 1.2;
         font-family: $rubik;
         font-weight: 500;
-        color: $blue-300;
         border-bottom: 1px solid transparent;
         transition: border-bottom-color 0.4s, color 0.4s;
 
@@ -108,19 +107,16 @@
             font-size: 13px;
             line-height: 1.2;
             font-family: $rubik;
-            font-weight: 400;
             padding-left: 10px;
             border-bottom: 1px solid $blue-300;
-            color: $blue-300;
             background-color: $blue-200;
             border-radius: 20px;
-            transition: background-color 0.4s, color 0.4s, border-color 0.4s, font-weight 0.1s;
+            transition: background-color 0.4s, color 0.4s, border-color 0.4s;
     
             &:hover {
                 background-color: $blue-100;
                 color: $blue-200;
                 border-color: $white-100;
-                font-weight: 500;
             }
         }
     }
@@ -324,21 +320,18 @@
                 display: block;
                 font-size: 13px;
                 line-height: 1.2;
-                font-weight: 400;
                 font-family: $rubik;
                 padding-left: 10px;
                 border-bottom: 1px solid $blue-300;
-                color: $blue-300;
                 background-color: $blue-200;
                 border-radius: 20px;
-                transition: background-color 0.4s, color 0.4s, border-color 0.4s, font-weight 0.1s;
+                transition: background-color 0.4s, color 0.4s, border-color 0.4s;
                 @include line-clamp-1;
             
                 &:hover {
                     background-color: $blue-100;
                     color: $blue-200;
                     border-color: $white-100;
-                    font-weight: 500;
                 }
             }
 
