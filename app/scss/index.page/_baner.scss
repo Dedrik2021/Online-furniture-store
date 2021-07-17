@@ -4,7 +4,7 @@
     &__list {
         background-color: $yellow-500;
         position: relative;
-        padding: 215px 0 280px;
+        padding: 215px 0 275px;
 
         &::after {
             position: absolute;
@@ -22,11 +22,10 @@
     &__inner {
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
     }
 
     &__content {
-        max-width: 420px;
+        max-width: 440px;
     }
 
     &__span {
@@ -38,7 +37,7 @@
         margin-bottom: 25px;
         color: $blue-500;
         display: block;
-        @include line-clamp-3;
+        @include line-clamp (3);
     }
 
     &__text {
@@ -47,24 +46,24 @@
         line-height: 1.7;
         margin-bottom: 35px;
         max-width: 385px;
-        @include line-clamp-3;
+        @include line-clamp (5);
     }
 
     &__btn {
         display: inline-block;
-        align-items: start;
-        background-color: $blue-200;
-        color: $white-100;
-        transition: background-color 0.4s;
+        margin-bottom: 5px;
 
-        &:hover {
-            background-color: $blue-300;
+        &:focus {
+            box-shadow: 5px 5px 5px 2px rgba(37, 37, 37, 0.5);
+        }
+
+        &:active {
+            background-color: $blue-200;
         }
     }
 
     &__img {
-        display: flex;
-        align-items: flex-end;
+        padding-top: 60px;
         background-repeat: no-repeat;
         max-width: 645px;
         width: 100%;
@@ -72,7 +71,7 @@
     }
 
     .slick-list {
-        z-index: 1;
+        z-index: 5;
     }
 
     .slick-dots button {
@@ -89,6 +88,10 @@
         &:hover {
             background-color: $white-100;
         }
+
+        &:focus {
+            box-shadow: 0px 0px 5px 5px rgba(67, 99, 114, 0.5);
+        }
     }
 
     .slick-dots {
@@ -101,13 +104,10 @@
 
     .slick-dots li:not(:last-child) {
         margin-right: 10px;
+        visibility: visible;
     }
 
     .slick-active button {
         background-color: $white-100;
-
-        &:hover {
-            background-color: $white-100;
-        }
     }
 }

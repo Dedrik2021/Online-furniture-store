@@ -8,6 +8,7 @@
     }
 
     &__item {
+        max-width: 580px;
         padding-left: 65px;
         position: relative;
 
@@ -22,16 +23,15 @@
         }
 
         &--support::before {
-            background-image: url(../images/advantages/hours.png);
+            background-image: url(../images/content/hours.png);
         }
 
         &--delivery::before {
-            background-image: url(../images/advantages/car.png);
-
+            background-image: url(../images/content/car.png);
         }
 
         &--payment::before {
-            background-image: url(../images/advantages/card.png);
+            background-image: url(../images/content/card.png);
         }
     }
 
@@ -41,7 +41,7 @@
         line-height: 1.8; 
         color: $gray-600; 
         max-width: 215px;
-        @include line-clamp-1;
+        @include line-clamp (1);
         
         &--delivery {
 
@@ -70,6 +70,6 @@
         font-size: 16px;
         line-height: 1.8;
         color: $gray-500;
-        @include line-clamp-2;
+        @include line-clamp (3);
     }
 }

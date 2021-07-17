@@ -39,22 +39,8 @@ $poppins: 'Poppins', sans-serif;
     @return m#{i}n(#{$numbers});
 }
 
-@mixin line-clamp-1 {
-    -webkit-line-clamp: 1;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-@mixin line-clamp-2 {
-    -webkit-line-clamp: 2;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-@mixin line-clamp-3 {
-    -webkit-line-clamp: 3;
+@mixin line-clamp ($rows: 1) {
+    -webkit-line-clamp: $rows;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;

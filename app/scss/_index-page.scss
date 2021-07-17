@@ -1,6 +1,36 @@
 @import './index.page/baner';
 @import './index.page/advantages';
 @import './index.page/products-week';
-@import './index.page/products-new-design';
-@import './index.page/our-insights';
+@import './index.page/design';
+@import './index.page/insights';
 @import './index.page/partners';
+
+.products-filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+    font-weight: 700;
+
+    &__item {
+        margin: 0 15px;
+    }
+
+    &__btn {
+        color: $gray-300;
+        font-size: 16px;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $black-200;
+        }
+
+        &:focus {
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px 2px rgba(67, 99, 114, 0.5);
+        }
+    }
+
+    .mixitup-control-active {
+        color: $black-200;
+    }
+}

@@ -1,6 +1,6 @@
 html,
 body {
-    height: 100%; 
+    height: 100%;
 }
 
 body {
@@ -8,10 +8,35 @@ body {
     font-family: $dmsans;
     font-weight: 400;
     color: $blue-300;
+    line-height: 1.2;
     font-size: 14px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+a {
+
+    &:focus {
+        outline: none;
+        box-shadow: 5px 5px 5px 2px rgba(67, 99, 114, 0.5);
+    }
+
+    &:active:focus {
+        box-shadow: 0px 0px 0px 0px rgba(67, 99, 114, 0.5);
+    }
+}
+
+button {
+
+    &:focus {
+        outline: none;
+        box-shadow: 0px 0px 5px 5px rgba(37, 37, 37, 0.5);
+    }
+
+    &:active:focus {
+        box-shadow: 0px 0px 0px 0px rgba(37, 37, 37, 0.5);
+    }
 }
 
 main {
@@ -35,7 +60,6 @@ main {
 .title {
     font-weight: 700;
     font-size: 36px;
-    line-height: 1.2;
     text-align: center;
     margin-bottom: 25px;
     color: $black-100;
@@ -53,26 +77,32 @@ main {
 }
 
 .btn {
-    background-color: $blue-200;
-    color: $white-100;
-    line-height: 1.4;
-    transition: background-color 0.4s;
+    border: none;
+    background-color: transparent;
+    padding: 0;
 
-    &:hover {
-        background-color: $blue-500;
+    &--universal {
+        background-color: $blue-200;
+        color: $white-100;
+        line-height: 1.4;
+        transition: background-color 0.4s;
+
+        &:hover {
+            background-color: $blue-500;
+        }
     }
 
-    &--blue {
+    &--arrow {
         padding: 22px 100px 22px 30px;
         font-family: $rubik;
         font-weight: 500;
         font-size: 15px;
         line-height: 1.1;
         position: relative;
-    
+
         &::after {
             position: absolute;
-            background-image: url(../images/components/arrow-white.svg);
+            background-image: url(../images/content/arrow-white.svg);
             background-repeat: no-repeat;
             content: "";
             right: 20px;
@@ -84,8 +114,7 @@ main {
         }
     }
 
-    &--transparent {
-        background-color: transparent;
+    &--more {
         color: $blue-300;
         font-family: $rubik;
         font-weight: 500;
@@ -96,7 +125,12 @@ main {
         padding: 20px 85px 20px 20px;
         transition: background-color 0.4s, color 0.4s, border-color 0.4s;
 
-        path {
+        svg {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 20px;
+            fill: $blue-300;
             transition: fill 0.4s;
         }
 
@@ -105,31 +139,72 @@ main {
             color: $white-100;
             border-color: transparent;
 
-            path {
+            svg {
                 fill: $white-100;
             }
         }
     }
 }
 
-.products-filters {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto 80px;
-    max-width: 380px;
-    font-weight: 700;
+.menu__dropdown {
+    color: $white-100;
+    position: absolute;
+    top: 50px;
+    max-width: 230px;
+    border: 2px solid $blue-200;
+    border-top: none;
+    width: 100%;
+    padding: 15px 10px;
+    background-color: $blue-100;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    transition: opacity 0.4s, top 0.4s, visibility 0.4s;
 
-    &__btn {
-        color: $gray-300;
-        font-size: 16px;
-        transition: color 0.3s;
+    &--wide {
+        background-color: $blue-300;
+        max-width: 245px;
+        width: 100%;
+        top: 75px;
+        right: 0;
 
-        &:hover {
-            color: $black-200;
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            top: 50px;
         }
     }
 
-    .mixitup-control-active {
-        color: $black-200;
+    &__item {
+        border-radius: 20px;
+        transition: box-shadow 0.4s;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+            @include line-clamp (1);
+        }
+
+        &:hover {
+            box-shadow: 5px 5px 5px 2px rgba(67, 99, 114, 0.5);
+        }
+    }
+
+    &__link {
+        padding: 5px 0;
+        display: block;
+        font-size: 13px;
+        font-family: $rubik;
+        padding-left: 10px;
+        border-bottom: 1px solid $blue-300;
+        background-color: $blue-200;
+        border-radius: 20px;
+        transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+
+        &:hover {
+            color: $blue-300;
+            background-color: $blue-100;
+            border-color: $white-100;
+        }
     }
 }
