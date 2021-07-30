@@ -3,14 +3,46 @@
     &__list {
         display: flex;
         justify-content: space-around;
-        padding: 40px 0;
-        background-color: $yellow-100;
+
+        @include r($mobile-xl) {
+            display: flex;
+            flex-wrap: wrap;
+        }
     }
 
     &__item {
-        max-width: 580px;
-        padding-left: 65px;
+        max-width: 590px;
+        width: 100%;
+        padding: 40px 0px 45px 225px;
         position: relative;
+        background-color: $yellow-100;
+
+        @include r($mobile-xl) {
+            max-width: 480px;
+            padding: 40px 0px 45px 200px;
+        }
+
+        @include r($mobile-md) {
+            display: block;
+            max-width: 600px;
+        }
+
+        @include r($mobile) {
+            padding: 40px 20px 45px 100px;
+        }
+
+        &:not(:last-child) {
+            border-right: 1px solid $gray-100;
+
+            @include r($mobile-xl) {
+                border-right: none;
+                margin-bottom: 30px;
+            }
+
+            @include r($mobile) {
+                margin-bottom: 20px;
+            }
+        }
 
         &::before {
             position: absolute;
@@ -18,8 +50,12 @@
             height: 55px;
             width: 55px;
             background-repeat: no-repeat;
-            left: -10px;
-            top: 10px;
+            left: 135px;
+            top: 50px;
+
+            @include r($mobile) {
+                left: 35px;
+            }
         }
 
         &--support::before {
@@ -41,28 +77,7 @@
         line-height: 1.8; 
         color: $gray-600; 
         max-width: 215px;
-        @include line-clamp (1);
-        
-        &--delivery {
-
-            &::after,
-            &::before {
-                position: absolute;
-                content: "";
-                height: 168px;
-                width: 1px;
-                background-color: $gray-100;
-                top: -40px;
-            }
-            
-            &::after {
-                right: -145px;          
-            }
-    
-            &::before {
-                left: -180px;               
-            }
-        }
+        @include line-clamp(1);
     }
 
     &__text {
@@ -70,6 +85,10 @@
         font-size: 16px;
         line-height: 1.8;
         color: $gray-500;
-        @include line-clamp (3);
+        @include line-clamp(3);
+
+        @include r($mobile) {
+            max-width: 400px;
+        }
     }
 }

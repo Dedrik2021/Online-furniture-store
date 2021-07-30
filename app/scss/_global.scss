@@ -18,24 +18,43 @@ body {
 a {
 
     &:focus {
-        outline: none;
-        box-shadow: 5px 5px 5px 2px rgba(67, 99, 114, 0.5);
+        outline: transparent;
+        border-bottom: 1px solid $blue-300;
     }
 
     &:active:focus {
-        box-shadow: 0px 0px 0px 0px rgba(67, 99, 114, 0.5);
+        border-radius: 0;
+        border-bottom-color: $gray-400;
+        color: $gray-400;
+    }
+
+    @include r($mobile-xl) {
+        &:focus {
+            border-bottom: none;
+        }
+    
+        &:active:focus {
+            border-bottom-color: transparent;
+            color: transparent;
+        }
     }
 }
 
 button {
 
     &:focus {
-        outline: none;
+        outline: transparent;
         box-shadow: 0px 0px 5px 5px rgba(37, 37, 37, 0.5);
     }
 
     &:active:focus {
         box-shadow: 0px 0px 0px 0px rgba(37, 37, 37, 0.5);
+    }
+
+    @include r($mobile-sm) {
+        &:focus {
+            box-shadow: 0px 0px 0px 0px rgba(37, 37, 37, 0.5);
+        }
     }
 }
 
@@ -63,6 +82,10 @@ main {
     text-align: center;
     margin-bottom: 25px;
     color: $black-100;
+
+    @include r($mobile) {
+        font-size: 26px;
+    }
 }
 
 .sr-only {
@@ -100,6 +123,10 @@ main {
         line-height: 1.1;
         position: relative;
 
+        @include r($mobile) {
+            padding: 22px 70px 22px 20px;
+        }
+
         &::after {
             position: absolute;
             background-image: url(../images/content/arrow-white.svg);
@@ -125,6 +152,10 @@ main {
         padding: 20px 85px 20px 20px;
         transition: background-color 0.4s, color 0.4s, border-color 0.4s;
 
+        @include r($mobile-sm) {
+            padding: 15px 60px 15px 10px;
+        }
+
         svg {
             position: absolute;
             top: 50%;
@@ -143,68 +174,15 @@ main {
                 fill: $white-100;
             }
         }
-    }
-}
 
-.menu__dropdown {
-    color: $white-100;
-    position: absolute;
-    top: 50px;
-    max-width: 230px;
-    border: 2px solid $blue-200;
-    border-top: none;
-    width: 100%;
-    padding: 15px 10px;
-    background-color: $blue-100;
-    border-radius: 10px;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 10;
-    transition: opacity 0.4s, top 0.4s, visibility 0.4s;
-
-    &--wide {
-        background-color: $blue-300;
-        max-width: 245px;
-        width: 100%;
-        top: 75px;
-        right: 0;
-
-        &.active {
-            opacity: 1;
-            visibility: visible;
-            top: 50px;
-        }
-    }
-
-    &__item {
-        border-radius: 20px;
-        transition: box-shadow 0.4s;
-
-        &:not(:last-child) {
-            margin-bottom: 10px;
-            @include line-clamp (1);
+        &:active:focus {
+            background-color: $blue-300;
+            color: $white-100;
+            border-radius: 5px;
         }
 
-        &:hover {
-            box-shadow: 5px 5px 5px 2px rgba(67, 99, 114, 0.5);
-        }
-    }
-
-    &__link {
-        padding: 5px 0;
-        display: block;
-        font-size: 13px;
-        font-family: $rubik;
-        padding-left: 10px;
-        border-bottom: 1px solid $blue-300;
-        background-color: $blue-200;
-        border-radius: 20px;
-        transition: background-color 0.4s, color 0.4s, border-color 0.4s;
-
-        &:hover {
-            color: $blue-300;
-            background-color: $blue-100;
-            border-color: $white-100;
+        &:focus {
+            box-shadow: 5px 5px 5px 2px rgba(37, 37, 37, 0.5);
         }
     }
 }

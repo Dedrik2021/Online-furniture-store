@@ -1,10 +1,18 @@
-.baner {
+.board {
     padding-top: 150px;
+
+    @include r($mobile-xl) {
+        padding-top: 98px;
+    } 
 
     &__list {
         background-color: $yellow-500;
         position: relative;
         padding: 215px 0 275px;
+
+        @include r($mobile-sm) {
+            padding: 150px 0 130px;
+        }
 
         &::after {
             position: absolute;
@@ -12,23 +20,49 @@
             background-repeat: no-repeat;
             top: 100px;
             right: 185px;
-            width: 635px;
-            height: 635px;
+            min-width: 635px;
+            min-height: 635px;
             background-image: -webkit-linear-gradient( 180deg, rgb(255,255,255) 0%, rgba(255,255,255,0) 100%);  
-            border-radius: 50%;       
+            border-radius: 50%;   
+            
+            @include r($mobile-xl) {
+                right: 15px;
+            } 
+
+            @include r($mobile-md) {
+                left: 50%;
+                transform: translateX(-50%);
+                top: 80px;
+            } 
+
+            @include r($mobile-sm) {
+                min-width: 500px;
+                min-height: 500px;
+                top: 50px;
+            }
+
+            @include r($mobile) {
+                min-width: 300px;
+                min-height: 300px;
+            }
         }
     }
     
     &__inner {
         display: flex;
         justify-content: space-between;
+
+        @include r($mobile-md) {
+            justify-content: center;
+            text-align: center;
+        }
     }
 
     &__content {
         max-width: 440px;
     }
 
-    &__span {
+    &__title {
         font-size: 72px;
         line-height: 1;
         font-weight: 500;
@@ -37,7 +71,15 @@
         margin-bottom: 25px;
         color: $blue-500;
         display: block;
-        @include line-clamp (3);
+        @include line-clamp(3);
+
+        @include r($mobile-xl) {
+            font-size: 65px;
+        } 
+
+        @include r($mobile) {
+            font-size: 45px;
+        }
     }
 
     &__text {
@@ -46,7 +88,16 @@
         line-height: 1.7;
         margin-bottom: 35px;
         max-width: 385px;
-        @include line-clamp (5);
+        @include line-clamp(5);
+
+        @include r($mobile-md) {
+            text-align: left;
+        }
+
+        @include r($mobile) {
+            font-size: 16px;
+            text-align: center;
+        }
     }
 
     &__btn {
@@ -55,19 +106,25 @@
 
         &:focus {
             box-shadow: 5px 5px 5px 2px rgba(37, 37, 37, 0.5);
+            border-bottom: none;
         }
 
-        &:active {
-            background-color: $blue-200;
+        &:active:focus {
+            background-color: $gray-300;
+            color: $white-100;
         }
     }
 
-    &__img {
+    &__img-wrapper {
         padding-top: 60px;
         background-repeat: no-repeat;
         max-width: 645px;
         width: 100%;
         height: 28vh;
+
+        @include r($mobile-md) {
+            display: none;
+        }
     }
 
     .slick-list {
@@ -83,7 +140,12 @@
         font-family: $rubik;
         color: $blue-500;
         background-color: $yellow-200;
-        transition: background-color 0.4s;
+        transition: background-color 0.4s, color 0.4s;
+
+        @include r($mobile-sm) {
+            background-color: $blue-200;
+            color: $white-100;
+        }
 
         &:hover {
             background-color: $white-100;
@@ -100,6 +162,7 @@
         transform: translateX(-50%);
         position: absolute;
         bottom: 45px;
+        z-index: 1;
     }
 
     .slick-dots li:not(:last-child) {
@@ -109,5 +172,6 @@
 
     .slick-active button {
         background-color: $white-100;
+        color: $black-100;
     }
 }

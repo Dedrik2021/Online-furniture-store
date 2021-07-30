@@ -1,16 +1,35 @@
 .insights {
     padding-top: 110px;
 
+    @include r($mobile) {
+        padding-top: 50px;
+    }
+
     &__top {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
+        align-items: flex-end;
+        margin-bottom: 45px;
+
+        @include r($mobile) {
+            display: block;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 0;
+
+        @include r($mobile) {
+            margin-bottom: 30px;
+        }
     }
 
     &__link {
         font-weight: 700;
         font-size: 16px;
+        border-bottom: 1px solid transparent;
         color: $black-300;
         padding-right: 25px;
         position: relative;
@@ -31,56 +50,133 @@
             right: 0;
             transition: fill 0.4s;
         }
-
-        &:focus {
-            border-radius: 5px;
-        }
     }
 
     &__list {
         display: flex;
         justify-content: space-between;
+
+        @include r($mobile-lg) {
+            display: flex;
+            flex-wrap: wrap;
+        }
     }
 
     &__item {
         max-width: 370px;
+
+        @include r($mobile-lg) {
+            margin: 0 auto;
+            max-width: 450px;
+        }
+
+        @include r($mobile-md) {
+            max-width: 370px;
+        }
+
+        @include r($mobile-sm) {
+            max-width: 500px;
+        }
+
+        &:not(:last-child) {
+
+            @include r($mobile-lg) {
+                margin-bottom: 40px;
+            }
+            
+            @include r($mobile-sm) {
+                margin-bottom: 30px;
+            }
+
+            @include r($mobile) {
+                margin-bottom: 20px;
+            }
+        }
+
+        article {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     & + .partners {
-        margin-top: -180px;
+        margin-top: -170px;
         padding-top: 260px;
+
+        @include r($mobile-lg) {
+            padding-top: 220px;
+            margin-top: -165px;
+        }
+
+        @include r($mobile) {
+            padding-top: 190px;
+            margin-top: -165px;
+        }
     }
 }
 
 .post-card {
 
     &__link {
-        
+
         &--category {
             position: absolute;
             z-index: 1;
-            left: 25px;
-            top: -17px;
-            padding: 2px 30px;
+            left: 30px;
+            top: -20px;
+            padding: 8px 30px;
             color: $white-100;
             font-family: $poppins;
             font-weight: 700;
             max-width: 315px;
-            line-height: 2;
+            line-height: 1.2;
             border-radius: 40px;
             background-color: $blue-200;
             transition: background-color 0.4s;
-            @include line-clamp (1);
+            @include line-clamp(1);
 
             &:hover {
                 background-color: $blue-300;
             }
         }
 
+        &--admin {
+            border-bottom: 1px solid transparent;
+            transition: color 0.4s;
+    
+            &::before {
+                background-image: url(../images/content/post-user.svg);
+            }
+    
+            &:hover {
+                color: $blue-200;
+            }
+    
+            &:focus {
+                outline: transparent;
+                border-bottom: 1px solid $black-200;
+                box-shadow: none;
+            }
+        }
+
         &:focus {
-        
+            box-shadow: 5px 5px 5px 2px rgba(37, 37, 37, 0.5);
+            border-bottom: none;
+
             .post-card__img {
                 transform: scale(1.2);
+            }
+        }
+
+        &--title {
+
+            &:focus {
+                box-shadow: 3px 3px 5px 2px rgba(37, 37, 37, 0.5);
+            }
+
+            &:active:focus {
+                box-shadow: 0px 0px 5px 2px rgba(37, 37, 37, 0.5);
             }
         }
     }
@@ -92,11 +188,17 @@
         height: 250px;
         background-color: $white-400;
         overflow: hidden;
+        height: 100%;
     }
 
     &__img {
         object-fit: cover;
+        background-position: bottom;
         transition: transform 1s;
+
+        @include r($mobile-lg) {
+            width: 100%;
+        }
 
         &:hover {
             transform: scale(1.2);
@@ -104,25 +206,28 @@
     }
 
     &__box {
+        height: 100%;
         display: flex;
         flex-direction: column;
-        min-height: 180px;
-        justify-content: space-between;
-        padding: 35px 30px 25px 30px;
+        padding: 30px 30px 25px 30px;
         position: relative;
         background-color: $white-100;
+
+        @include r($mobile-lg) {
+            background-color: $blue-100;
+        }
     }
 
-    &__text {
+    &__title {
         margin-bottom: 15px;
         color: $black-300;
         font-weight: 500;
         font-size: 18px;
         transition: color 0.4s, border-bottom-color 0.4s;
-        @include line-clamp (5);
+        @include line-clamp(5);
 
         &:hover {
-            color: $blue-200;              
+            color: $blue-200;
         }
     }
 
@@ -132,6 +237,10 @@
         text-transform: uppercase;
         display: flex;
         margin-top: auto;
+
+        @include r($mobile-lg) {
+            justify-content: space-around;
+        }
     }
 
     &__link--admin,
@@ -141,10 +250,19 @@
         max-width: 150px;
         flex: none;
         font-size: 12px;
-        line-height: 2;
+        line-height: 1.2;
         color: $blue-600;
         padding-left: 15px;
-        @include line-clamp (1);
+        @include line-clamp(1);
+
+        @include r($mobile-md) {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        @include r($mobile) {
+            max-width: 120px;
+        }
 
         &::before {
             background-repeat: no-repeat;
@@ -152,8 +270,12 @@
             content: "";
             width: 13px;
             height: 12px;
-            top: 4px;
+            top: 0px;
             left: 0;
+
+            @include r($mobile-md) {
+                top: 4px;
+            }
         }
     }
 
@@ -162,22 +284,6 @@
 
         &::before {
             background-image: url(../images/content/post-date.svg);
-        }
-    }
-
-    &__link--admin {
-        transition: color 0.4s;
-
-        &::before {
-            background-image: url(../images/content/post-user.svg);
-        }
-
-        &:hover {
-            color: $blue-200;
-        }
-
-        &:focus {
-            border-radius: 5px;
         }
     }
 }

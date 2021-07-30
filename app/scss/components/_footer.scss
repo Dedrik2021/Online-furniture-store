@@ -1,28 +1,79 @@
 .footer {
-    padding: 80px 0 30px;
+    padding: 85px 0 30px;
     color: $gray-400;
+
+    @include r($mobile-sm) {
+        padding-bottom: 20px;
+    }
+
+    @include r($mobile) {
+        padding-top: 50px;
+    }
 
     &__top {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 55px;
+        margin-bottom: 60px;
+
+        @include r($mobile-md) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        @include r($mobile) {
+            margin-bottom: 40px;
+        }
     }
 
     &__box {
         max-width: 275px;
         width: 100%; 
+
+        @include r($mobile-md) {
+            max-width: 245px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+        }
+
+        @include r($mobile-sm) {
+
+            &:not(:last-child) {
+                margin-bottom: 0px;
+            }
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                margin-bottom: 30px;
+            }
+        }
+
+        @include r($mobile) {
+            max-width: 275px;
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                margin-bottom: 0px;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+        
     }
 
     &__logo {
         margin-bottom: 20px;
         display: inline-block;
-
-        &:focus {
-            border-radius: 5px;
-        }
+        border-bottom: 1px solid transparent;
     }
     
-    &__name {
+    &__title {
         padding-top: 15px;
         margin-bottom: 20px;
         font-size: 16px;
@@ -31,26 +82,28 @@
         text-transform: uppercase;
         display: flex;
         align-items: flex-end;
-        @include line-clamp (1);
+        @include line-clamp(1);
     }
 
     &__contacts {
         max-width: 195px;
     }
 
+    &__item {
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
     &__link {
+        border-bottom: 1px solid transparent;
         font-family: $rubik;
         display: inline-block;
         line-height: 1.7;
-        margin-bottom: 10px;
         position: relative;
         border-bottom: 1px solid transparent;
         transition: background-color 0.4s, color 0.4s, border-bottom-color 0.4s;
-        
-
-        &:focus {
-            border-radius: 5px;
-        }
 
         &:hover {
             border-bottom-color: $blue-200;
@@ -59,6 +112,10 @@
 
         span {
             text-transform: uppercase;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
         }
     }
 
@@ -69,9 +126,21 @@
         justify-content: space-between;
         line-height: 2.3;
 
+        @include r($mobile) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         .footer__copy {
+            margin-right: 30px;
             max-width: 70%;
-            @include line-clamp (3);
+            @include line-clamp(3);
+
+            @include r($mobile) {
+                margin-right: 0;
+                max-width: 500px;
+                margin-bottom: 10px;
+            }
         }
 
         .menu {
@@ -82,13 +151,18 @@
     
                 &:not(:last-child) {          
                     margin-right: 25px;
+
+                    @include r($mobile-xl) {
+                        margin-right: 25px;
+                        margin-bottom: 0px;
+                    }
         
                     &::after {
                         position: absolute;
                         content: "";
                         background-color: $gray-400;
                         height: 20px;
-                        width: 2px;
+                        width: 1px;
                         right: -15px;
                         top: 5px;
                     }
@@ -99,6 +173,10 @@
                 font-family: $rubik;
                 color: $gray-400;
                 transition: border-bottom-color 0.4s, color 0.4s;
+
+                @include r($mobile-xl) {
+                    font-size: 15px;
+                }
     
                 &:hover {
                     border-bottom-color: $blue-200;
@@ -112,11 +190,15 @@
 .subscribe-form {
     position: relative;
 
+    @include r($mobile-lg) {
+        display: block;
+    }
+
     &__text {
         margin-bottom: 35px;
         line-height: 1.7;
         font-family: $rubik;
-        @include line-clamp (3);
+        @include line-clamp(3);
     }
 
     &__email {
@@ -141,6 +223,18 @@
         padding: 10px 20px;
         position: absolute;
         right: -1px;
+
+        @include r($mobile-lg) {
+            padding: 10px 5px;
+        }
+
+        @include r($mobile-sm) {
+            right: -2px;
+        }
+
+        @include r($mobile) {
+            padding: 10px 20px;
+        }
 
         &:focus {
             box-shadow: 5px 5px 5px 2px rgba(37, 37, 37, 0.5);

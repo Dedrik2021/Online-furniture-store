@@ -1,4 +1,4 @@
-@import './index.page/baner';
+@import './index.page/board';
 @import './index.page/advantages';
 @import './index.page/products-week';
 @import './index.page/design';
@@ -11,13 +11,29 @@
     margin-bottom: 80px;
     font-weight: 700;
 
+    @include r($mobile-sm) {
+        margin-bottom: 50px;
+    }
+
+    @include r($mobile) {
+        text-align: center;
+        max-width: 270px;
+        margin: 0 auto 20px;
+    }
+
     &__item {
         margin: 0 15px;
+
+        @include r($mobile) {
+            margin: 0 0;
+        
+        }
     }
 
     &__btn {
         color: $gray-300;
         font-size: 16px;
+        border-bottom: 1px solid transparent;
         transition: color 0.3s;
 
         &:hover {
@@ -25,12 +41,35 @@
         }
 
         &:focus {
-            border-radius: 5px;
-            box-shadow: 5px 5px 5px 2px rgba(67, 99, 114, 0.5);
+            outline: transparent;
+            box-shadow: none;
+            border-bottom-color: $black-200;
+        }
+
+        &:active {
+            color: $blue-200;
+            border-bottom-color: $blue-200;
         }
     }
 
     .mixitup-control-active {
         color: $black-200;
+    }
+
+    .slick-btn {
+        position: absolute;
+        top: -4px;
+        background-color: $yellow-500;
+        border-radius: 10px;
+        z-index: 1;
+        font-size: 20px;
+    }
+    
+    .slick-prev {
+        left: -5%;
+    }
+    
+    .slick-next {
+        right:-5%;
     }
 }
