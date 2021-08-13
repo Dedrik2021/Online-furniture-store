@@ -5,6 +5,22 @@
 @import './index.page/insights';
 @import './index.page/partners';
 
+@import './index.page/product-list1';
+@import './index.page/product-list2';
+
+.footer,
+.insights,
+.products-week,
+.design {
+    @include r($mobile-xl) {
+        padding-top: 65px;
+    }
+    
+    @include r($mobile) {
+        padding-top: 40px;
+    }
+}
+
 .products-filters {
     display: flex;
     justify-content: center;
@@ -17,7 +33,7 @@
 
     @include r($mobile) {
         text-align: center;
-        max-width: 270px;
+        max-width: 230px;
         margin: 0 auto 20px;
     }
 
@@ -66,10 +82,103 @@
     }
     
     .slick-prev {
-        left: -5%;
+        left: -8%;
     }
     
     .slick-next {
-        right:-5%;
+        right: -8%;
     }
+}
+
+.page-nomination {
+    padding: 25px 0 30px;
+    text-align: center;
+    background-color: $blue-100;
+    margin: 150px 0 120px;
+
+    &__title {
+        font-family: $rubik;
+        font-weight: 300;
+        margin-bottom: 10px;
+        font-size: 36px;
+        color: $blue-600;
+    }
+}
+
+.breadcrumbs {
+    display: flex;
+    justify-content: center;
+
+    &__item {
+
+        &:not(:last-child) {
+            padding-right: 20px;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "/";
+                right: 7px;
+                top: 0;
+            }
+        }
+    }
+
+    &__link {
+        font-family: $rubik;
+        font-weight: 400;
+        color: $blue-600;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom-color 0.4s, color 0.4s;
+
+        &:hover {
+            border-bottom-color: $blue-200;
+            color: $blue-200;
+        }
+    }
+
+    &__page {
+        font-family: $rubik;
+        font-weight: 400;
+        color: $blue-600;
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+
+    &__prev {
+        margin-right: 15px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__prev,
+    &__next,
+    &__link {
+        background-color: transparent;
+        border: 1px solid $blue-200;
+        padding: 15px 20px;
+        font-family: $rubik;
+        font-weight: 400;
+        color: $blue-500;
+        font-size: 16px;
+        transition: background-color 0.4s, color 0.4s;
+
+        &:hover {
+            background-color: $blue-200;
+            color: $white-100;
+        }
+    }
+    
 }

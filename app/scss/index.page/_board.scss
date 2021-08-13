@@ -5,13 +5,21 @@
         padding-top: 98px;
     } 
 
+    @include r($mobile-sm) {
+        padding-top: 73px;
+    } 
+
     &__list {
         background-color: $yellow-500;
         position: relative;
         padding: 215px 0 275px;
 
         @include r($mobile-sm) {
-            padding: 150px 0 130px;
+            padding: 100px 0 130px;
+        }
+        
+        @include r($mobile) {
+            padding: 100px 0 100px;
         }
 
         &::after {
@@ -20,8 +28,8 @@
             background-repeat: no-repeat;
             top: 100px;
             right: 185px;
-            min-width: 635px;
-            min-height: 635px;
+            width: 635px;
+            height: 635px;
             background-image: -webkit-linear-gradient( 180deg, rgb(255,255,255) 0%, rgba(255,255,255,0) 100%);  
             border-radius: 50%;   
             
@@ -36,14 +44,14 @@
             } 
 
             @include r($mobile-sm) {
-                min-width: 500px;
-                min-height: 500px;
-                top: 50px;
+                width: 500px;
+                height: 500px;
+                top: 30px;
             }
 
             @include r($mobile) {
-                min-width: 300px;
-                min-height: 300px;
+                width: 300px;
+                height: 300px;
             }
         }
     }
@@ -60,6 +68,11 @@
 
     &__content {
         max-width: 440px;
+
+        @include r($mobile-md) {
+            position: relative;
+            z-index: 5;
+        }
     }
 
     &__title {
@@ -91,12 +104,14 @@
         @include line-clamp(5);
 
         @include r($mobile-md) {
-            text-align: left;
+            margin: 0 auto 50px;
+            background-color: $white-100;
+            border-radius: 10px;
         }
 
         @include r($mobile) {
             font-size: 16px;
-            text-align: center;
+            margin-bottom: 25px;
         }
     }
 
@@ -123,36 +138,9 @@
         height: 28vh;
 
         @include r($mobile-md) {
-            display: none;
-        }
-    }
-
-    .slick-list {
-        z-index: 5;
-    }
-
-    .slick-dots button {
-        height: 30px;
-        width: 30px;
-        border-radius: 50%;
-        font-size: 10px;
-        font-weight: 500;
-        font-family: $rubik;
-        color: $blue-500;
-        background-color: $yellow-200;
-        transition: background-color 0.4s, color 0.4s;
-
-        @include r($mobile-sm) {
-            background-color: $blue-200;
-            color: $white-100;
-        }
-
-        &:hover {
-            background-color: $white-100;
-        }
-
-        &:focus {
-            box-shadow: 0px 0px 5px 5px rgba(67, 99, 114, 0.5);
+            position: absolute;
+            z-index: 0;
+            padding: 0;
         }
     }
 
@@ -163,15 +151,49 @@
         position: absolute;
         bottom: 45px;
         z-index: 1;
-    }
 
-    .slick-dots li:not(:last-child) {
-        margin-right: 10px;
-        visibility: visible;
-    }
+        @include r($mobile) {
+            bottom: 35px;
+        }
 
-    .slick-active button {
-        background-color: $white-100;
-        color: $black-100;
+        li:not(:last-child) {
+            margin-right: 10px;
+            visibility: visible;
+        }
+
+        button {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            font-size: 10px;
+            font-weight: 500;
+            font-family: $rubik;
+            color: $blue-500;
+            background-color: $yellow-200;
+            transition: background-color 0.4s, color 0.4s;
+    
+            @include r($mobile-sm) {
+                background-color: $blue-200;
+                color: $white-100;
+            }
+    
+            &:hover {
+                background-color: $white-100;
+            }
+    
+            &:focus {
+                box-shadow: 0px 0px 5px 5px rgba(67, 99, 114, 0.5);
+            }
+        }
+
+        .slick-active button {
+            background-color: $white-100;
+            color: $black-100;
+        }
+    } 
+
+    .slick-list {
+        z-index: 5;
     }
+    
 }

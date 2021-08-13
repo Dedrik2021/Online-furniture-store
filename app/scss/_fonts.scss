@@ -28,6 +28,15 @@
 @font-face {
     font-family: 'Rubik';
     font-display: swap;
+    src: url('../fonts/Rubik-Medium.woff2') format('woff2'),
+         url('../fonts/Rubik-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;  
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-display: swap;
     src: url('../fonts/Rubik-Regular.woff2') format('woff2'),
          url('../fonts/Rubik-Regular.woff') format('woff');
     font-weight: 400;
@@ -37,11 +46,12 @@
 @font-face {
     font-family: 'Rubik';
     font-display: swap;
-    src: url('../fonts/Rubik-Medium.woff2') format('woff2'),
-         url('../fonts/Rubik-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;  
+    src: url('../fonts/Rubik-Light.woff2') format('woff2'),
+         url('../fonts/Rubik-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;    
 }
+
 
 @font-face {
     font-family: 'Poppins';

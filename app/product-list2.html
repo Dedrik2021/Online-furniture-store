@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online furniture store</title>
+    <link rel="icon" href="images/content/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="lock">
+    
+    @@include('./parts/_header.html')
+
+    <main class="main">
+
+        <div class="products-list2">
+            <div class="page-nomination">
+                <div class="container container--sm">
+                    <h1 class="page-nomination__title">
+                        Product list 2
+                    </h1>
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs__item breadcrumbs__item--left">
+                            <a class="breadcrumbs__link" href="http://localhost:3000/">
+                                Home
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <span class="breadcrumbs__page">
+                                Product list 2
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container container--sm">
+                <div class="products-list__content">
+                    <div class="products-list__aside">
+                        <div class="filters-box">
+                            <h2 class="filters-box__title title-products">
+                                Category
+                            </h2>
+                            <form class="filters-product">
+                                <label class="sr-only" for="filters-chair">
+                                    category chair
+                                </label>
+                                <select class="filters-product__select" id="filters-chair" name="[feedback]chair">
+                                    <option class="filters-product__option" value=".chair">
+                                        Chair
+                                    </option>
+                                    <option class="filters-product__option" value=".chair">
+                                        White chair
+                                    </option>
+                                    <option class="filters-product__option" value=".chair">
+                                        Wooden chair
+                                    </option>
+                                    <option class="filters-product__option" value=".chair">
+                                        white chair
+                                    </option>
+                                    <option class="filters-product__option" value=".chair">
+                                        Wooden chair
+                                    </option>
+                                </select>
+                                <label class="sr-only" for="filters-table">
+                                    category table
+                                </label>
+                                <select class="filters-product__select filters-product__select--table" id="filters-table" name="[feedback]table">
+                                    <option class="filters-product__option" value=".table">
+                                        Table
+                                    </option>
+                                    <option class="filters-product__option" value=".table">
+                                        Retro Table
+                                    </option>
+                                    <option class="filters-product__option" value=".table">
+                                        Table
+                                    </option>
+                                    <option class="filters-product__option" value=".table">
+                                        Retro Table
+                                    </option>
+                                    <option class="filters-product__option" value=".table">
+                                        Table
+                                    </option>
+                                </select>
+                                <label class="sr-only" for="filters-lamp">
+                                    category lamp
+                                </label>
+                                <select class="filters-product__select" id="filters-lamp" name="[feedback]lamp">
+                                    <option class="filters-product__option" value=".lamp">
+                                        Lamp
+                                    </option>
+                                    <option class="filters-product__option" value=".lamp">
+                                        Mirum Notare Tellus
+                                    </option>
+                                    <option class="filters-product__option" value=".lamp">
+                                        Malesuada Tempor 
+                                        Euismod
+                                    </option>
+                                    <option class="filters-product__option" value=".lamp">
+                                        Lamp
+                                    </option>
+                                    <option class="filters-product__option" value=".lamp">
+                                        Mirum Notare Tellus
+                                    </option>
+                                </select>
+                                <label class="sr-only" for="filters-watch">
+                                    category watch
+                                </label>
+                                <select class="filters-product__select" id="filters-watch" name="[feedback]watch">
+                                    <option class="filters-product__option" value=".watch">
+                                        Watch
+                                    </option>
+                                    <option class="filters-product__option" value=".watch">
+                                        Watch Clock
+                                    </option>
+                                    <option class="filters-product__option" value=".watch">
+                                        Watch
+                                    </option>
+                                    <option class="filters-product__option" value=".watch">
+                                        Watch Clock
+                                    </option>
+                                    <option class="filters-product__option" value=".watch">
+                                        Watch
+                                    </option>
+                                </select>
+                                <label class="sr-only" for="filters-clock">
+                                    category clock
+                                </label>
+                                <select class="filters-product__select" id="filters-clock" name="[feedback]clock">
+                                    <option class="filters-product__option" value=".clock">
+                                        Clock
+                                    </option>
+                                    <option class="filters-product__option" value=".clock">
+                                        Clock Watch
+                                    </option>
+                                    <option class="filters-product__option" value=".clock">
+                                        Clock
+                                    </option>
+                                    <option class="filters-product__option" value=".clock">
+                                        Clock Watch
+                                    </option>
+                                    <option class="filters-product__option" value=".clock">
+                                        Clock
+                                    </option>
+                                </select>
+                            </form>
+                            <h2 class="filters-box__title filters-box__title--price title-products">
+                                Price
+                            </h2>
+                            <form class="filters-price" tabindex="0">
+                                <label class="filters-price__label">
+                                    <span class="sr-only">choose a price</span>
+                                    <input class="filters-price__input" type="text" name="[feedback]price" tabindex="1">
+                                    <span class="filters-price__dollar">$</span><span class="filters-price__from"></span>
+                                    <span class="filters-price__dollar filters-price__dollar--right">$</span><span class="filters-price__to"></span>
+                                </label>
+                            </form>
+                            <h2 class="filters-box__title title-products">
+                                Brand
+                            </h2>
+                            <form class="filters-brand">
+                                <label class="filters-brand__label">
+                                    <span class="sr-only">RFL brand</span>
+                                    <input class="filters-brand__input" type="checkbox" name="[feedback]rfl" tabindex="1">
+                                    <div class="filters-brand__checkbox" tabindex="0">
+                                        <span>RFL</span>
+                                        <span class="filters-brand__number">(10)</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="filters-brand__label">
+                                    <span class="sr-only">brothers brand</span>
+                                    <input class="filters-brand__input" type="checkbox" name="[feedback]brothers" tabindex="1">
+                                    <div class="filters-brand__checkbox" tabindex="0">
+                                        <span>Brothers</span>
+                                        <span class="filters-brand__number">(21)</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="filters-brand__label">
+                                    <span class="sr-only">regal brand</span>
+                                    <input class="filters-brand__input" type="checkbox" name="[feedback]regal" tabindex="1">
+                                    <div class="filters-brand__checkbox" tabindex="0">
+                                        <span>Regal</span>
+                                        <span class="filters-brand__number">(3)</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="filters-brand__label">
+                                    <span class="sr-only">nadia brand</span>
+                                    <input class="filters-brand__input" type="checkbox" name="[feedback]nadia" tabindex="1">
+                                    <div class="filters-brand__checkbox" tabindex="0">
+                                        <span>Nadia</span>
+                                        <span class="filters-brand__number">(14)</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="filters-brand__label">
+                                    <span class="sr-only">otobi brand</span>
+                                    <input class="filters-brand__input" type="checkbox" name="[feedback]otobi" tabindex="1">
+                                    <div class="filters-brand__checkbox" tabindex="0">
+                                        <span>Otobi</span>
+                                        <span class="filters-brand__number">(6)</span>
+                                    </div>
+                                </label>
+                            </form>
+                        </div>
+                        <h2 class="products-list__title title-products">
+                            Recent Products
+                        </h2>
+                        <ul class="recent">
+                            <li class="recent__item">
+                                <a class="recent__link" href="#">
+                                    <div class="recent__wrapper-img">
+                                        <img src="images/content/recent__img-1.png" alt="Chandelier">
+                                    </div>
+                                    <div class="recent__box">
+                                        <h3 class="recent__title">
+                                            Pendant lamp
+                                        </h3>
+                                        <div class="recent__stars"></div>
+                                        <span class="recent__price">23<span>$</span></span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="recent__item">
+                                <a class="recent__link" href="#">
+                                    <div class="recent__wrapper-img">
+                                        <img src="images/content/recent__img-2.png" alt="Table lamp">
+                                    </div>
+                                    <div class="recent__box">
+                                        <h3 class="recent__title">
+                                            Pendant lamp
+                                        </h3>
+                                        <div class="recent__stars"></div>
+                                        <span class="recent__price">23<span>$</span></span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="recent__item">
+                                <a class="recent__link" href="#">
+                                    <div class="recent__wrapper-img">
+                                        <img src="images/content/recent__img-3.png" alt="Floor lamp">
+                                    </div>
+                                    <div class="recent__box">
+                                        <h3 class="recent__title">
+                                            Pendant lamp
+                                        </h3>
+                                        <div class="recent__stars"></div>
+                                        <span class="recent__price">23<span>$</span></span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="products-list__inner">
+                        <ul class="products-week__list">
+                            <li class="products-week__item mix chair">
+                                <article class="product-card">
+                                    <div class="product-card__img-wrapper">
+                                        <img src="images/content/products-list2-1.png" alt="Wooden radio">
+                                    </div>
+                                    <div class="product-card__content">
+                                        <div class="product-card__box">
+                                            <h3 class="product-card__title">
+                                                Wooden radio
+                                            </h3>
+                                            <div class="product-card__stars"></div>
+                                            <span class="product-card__price">23<span>$</span></span>
+                                            <div class="product-card__text">
+                                                <p>
+                                                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__buttons">
+                                            <ul class="product-card__list">
+                                                <li class="product-card__item">
+                                                    <button class="product-card__btn product-card__btn--add btn" type="button">
+                                                        <span class="sr-only">Add this product</span>
+                                                        <svg width="22" height="20">
+                                                            <use xlink:href="images/sprite.svg#add-product-icon"></use>
+                                                        </svg>
+                                                    </button>
+                                                </li>
+                                                <li class="product-card__item">
+                                                    <button class="product-card__btn btn" type="button">
+                                                        <span class="sr-only">Added to my favorite things</span>
+                                                        <svg width="22" height="18">
+                                                            <use xlink:href="images/sprite.svg#favorit-icon"></use>
+                                                        </svg>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <button class="product-card__add" type="button">
+                                                add to cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="products-week__item mix chair">
+                                <article class="product-card">
+                                    <div class="product-card__img-wrapper">
+                                        <img src="images/content/products-list2-2.png" alt="Wooden radio">
+                                    </div>
+                                    <div class="product-card__content">
+                                        <div class="product-card__box">
+                                            <h3 class="product-card__title">
+                                                Wooden chair
+                                            </h3>
+                                            <div class="product-card__stars"></div>
+                                            <span class="product-card__price">23<span>$</span></span>
+                                            <div class="product-card__text">
+                                                <p>
+                                                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__buttons">
+                                            <ul class="product-card__list">
+                                                <li class="product-card__item">
+                                                    <button class="product-card__btn product-card__btn--add btn" type="button">
+                                                        <span class="sr-only">Add this product</span>
+                                                        <svg width="22" height="20">
+                                                            <use xlink:href="images/sprite.svg#add-product-icon"></use>
+                                                        </svg>
+                                                    </button>
+                                                </li>
+                                                <li class="product-card__item">
+                                                    <button class="product-card__btn btn" type="button">
+                                                        <span class="sr-only">Added to my favorite things</span>
+                                                        <svg width="22" height="18">
+                                                            <use xlink:href="images/sprite.svg#favorit-icon"></use>
+                                                        </svg>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <button class="product-card__add" type="button">
+                                                add to cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="products-week__item mix chair">
+                                <article class="product-card">
+                                    <div class="product-card__img-wrapper">
+                                        <img src="images/content/products-list2-3.png" alt="Wooden radio">
+                                    </div>
+                                    <div class="product-card__content">
+                                        <div class="product-card__box">
+                                            <h3 class="product-card__title">
+                                                Pendant lamp
+                                            </h3>
+                                            <div class="product-card__stars"></div>
+                                            <span class="product-card__price">23<span>$</span></span>
+                                            <div class="product-card__text">
+                                                <p>
+                                                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__buttons">
+                                            <ul class="product-card__list">
+                                                <li class="product-card__item">
+                                                    <button class="product-card__btn product-card__btn--add btn" type="button">
+                                                        <span class="sr-only">Add this product</span>
+                                                        <svg width="22" height="20">
+                                                            <use xlink:href="images/sprite.svg#add-product-icon"></use>
+                                                        </svg>
+                                                    </button>
+                                                </li>
+                                                <li class="product-card__item">
+                                                    <button class="product-card__btn btn" type="button">
+                                                        <span class="sr-only">Added to my favorite things</span>
+                                                        <svg width="22" height="18">
+                                                            <use xlink:href="images/sprite.svg#favorit-icon"></use>
+                                                        </svg>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <button class="product-card__add" type="button">
+                                                add to cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="products-week__item mix chair">
+                                <article class="product-card">
+                                    <div class="product-card__img-wrapper">
+                                        <img src="images/content/products-list2-4.png" alt="Wooden radio">
+                                    </div>
+                                    <div class="product-card__content">
+                                        <div class="product-card__box">
+                                            <h3 class="product-card__title">
+                                                Retro table
+                                            </h3>
+                                            <div class="product-card__stars"></div>
+                                            <span class="product-card__price">23<span>$</span></span>
+                                            <div class="product-card__text">
+                                                <p>
+                                                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__buttons">
+                                            <ul class="product-card__list">
+                                                <li class="product-card__item">
+                                                    <button class="product-card__btn product-card__btn--add btn" type="button">
+                                                        <span class="sr-only">Add this product</span>
+                                                        <svg width="22" height="20">
+                                                            <use xlink:href="images/sprite.svg#add-product-icon"></use>
+                                                        </svg>
+                                                    </button>
+                                                </li>
+                                                <li class="product-card__item">
+                                                    <button class="product-card__btn btn" type="button">
+                                                        <span class="sr-only">Added to my favorite things</span>
+                                                        <svg width="22" height="18">
+                                                            <use xlink:href="images/sprite.svg#favorit-icon"></use>
+                                                        </svg>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <button class="product-card__add" type="button">
+                                                add to cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                            </li>
+                        </ul>
+                        <div class="pagination">
+                            <a class="pagination__prev" href="#">
+                                    Previous
+                            </a>
+                            <ul class="pagination__list">
+                                <li class="pagination__item">
+                                    <a class="pagination__link" href="#">
+                                        1
+                                    </a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a class="pagination__link" href="#">
+                                        2
+                                    </a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a class="pagination__link" href="#">
+                                        3
+                                    </a>
+                                </li>
+                            </ul>
+                            <a class="pagination__next" href="#">
+                                Next
+                            </a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            @@include('./parts/_partners.html')
+        </div>
+
+        
+
+
+    </main>
+
+    @@include('./parts/_footer.html')
+
+    <script src="js/main.min.js"></script>
+</body>
+</html>

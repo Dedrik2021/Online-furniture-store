@@ -1,13 +1,9 @@
 .footer {
-    padding: 85px 0 30px;
+    padding: 70px 0 30px;
     color: $gray-400;
 
     @include r($mobile-sm) {
         padding-bottom: 20px;
-    }
-
-    @include r($mobile) {
-        padding-top: 50px;
     }
 
     &__top {
@@ -15,60 +11,63 @@
         justify-content: space-between;
         margin-bottom: 60px;
 
-        @include r($mobile-md) {
+        @include r($mobile-sm) {
             flex-wrap: wrap;
             justify-content: space-around;
         }
 
-        @include r($mobile) {
+        @include r($mobile-sm) {
             margin-bottom: 40px;
+        }
+
+        @include r($mobile) {
+            margin-bottom: 25px;
         }
     }
 
     &__box {
         max-width: 275px;
-        width: 100%; 
+        width: 100%;
 
         @include r($mobile-md) {
-            max-width: 245px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            &:not(:last-child) {
-                margin-bottom: 40px;
-            }
+            max-width: 190px;
+            width: 100%;
+            text-align: center;
         }
 
         @include r($mobile-sm) {
+            max-width: 250px;
 
             &:not(:last-child) {
                 margin-bottom: 0px;
             }
 
             &:nth-child(1),
-            &:nth-child(2) {
+            &:nth-child(4) {
                 margin-bottom: 30px;
+            }
+
+            &:nth-of-type(4) {
+                order: -4;
+            }
+    
+            &:nth-of-type(1) {
+                order: -4;
             }
         }
 
         @include r($mobile) {
             max-width: 275px;
+            margin-bottom: 10px;
 
-            &:nth-child(1),
-            &:nth-child(2) {
-                margin-bottom: 0px;
-            }
-
-            &:not(:last-child) {
+            &:nth-child(2){
                 margin-bottom: 20px;
             }
         }
-        
     }
 
     &__logo {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         display: inline-block;
         border-bottom: 1px solid transparent;
     }
@@ -83,10 +82,19 @@
         display: flex;
         align-items: flex-end;
         @include line-clamp(1);
+
+        @include r($mobile) {
+            padding-top: 0;
+            margin-bottom: 15px;
+        }
     }
 
     &__contacts {
         max-width: 195px;
+
+        @include r($mobile-sm) {
+            max-width: 275px;
+        }
     }
 
     &__item {
@@ -124,11 +132,12 @@
         border-top: 1px solid $blue-100;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         line-height: 2.3;
 
         @include r($mobile) {
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column-reverse;
+            align-items: center;
         }
 
         .footer__copy {
@@ -139,12 +148,15 @@
             @include r($mobile) {
                 margin-right: 0;
                 max-width: 500px;
-                margin-bottom: 10px;
             }
         }
 
         .menu {
             display: flex;
+
+            @include r($mobile) {
+                margin-bottom: 10px;
+            }
     
             &__item {
                 position: relative;
@@ -165,6 +177,10 @@
                         width: 1px;
                         right: -15px;
                         top: 5px;
+
+                        @include r($mobile-sm) {
+                            top: 0px;
+                        }
                     }
                 }
             }
@@ -190,8 +206,8 @@
 .subscribe-form {
     position: relative;
 
-    @include r($mobile-lg) {
-        display: block;
+    @include r($mobile-sm) {
+        text-align: left;
     }
 
     &__text {
@@ -207,6 +223,15 @@
         height: 40px;
         max-width: 170px;
         padding: 0 15px;
+
+        @include r($mobile-lg) {
+            max-width: 200px;
+            width: 100%;
+        }
+
+        @include r($mobile-sm) {
+            max-width: 170px;
+        }
 
         &:focus {
             outline-color: $yellow-200;
@@ -225,11 +250,14 @@
         right: -1px;
 
         @include r($mobile-lg) {
-            padding: 10px 5px;
+            padding: 11px 5px 12px;
+            top: 80px;
         }
 
         @include r($mobile-sm) {
             right: -2px;
+            padding: 10px 8px;
+            top: 81px;
         }
 
         @include r($mobile) {

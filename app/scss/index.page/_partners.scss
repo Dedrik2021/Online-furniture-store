@@ -3,6 +3,7 @@
     background-color: $yellow-100;
     display: flex;
     justify-content: center;
+    margin-bottom: 15px;
 
     @include r($mobile) {
         padding: 40px 0;
@@ -10,24 +11,20 @@
 
     &__list {
 
-        @include r($mobile-lg) {
-            max-width: 950px;
-            width: 100%;
+        @include r($mobile-xl) {
+            max-width: 940px;
         }
 
         @include r($mobile-md) {
             max-width: 750px;
-            width: 100%;
         }
 
         @include r($mobile-sm) {
-            max-width: 550px;
-            width: 100%;
+            max-width: 480px;
         }
 
         @include r($mobile) {
             max-width: 250px;
-            width: 100%;
         }
     }
 

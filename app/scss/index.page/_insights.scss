@@ -1,10 +1,6 @@
 .insights {
     padding-top: 110px;
 
-    @include r($mobile) {
-        padding-top: 50px;
-    }
-
     &__top {
         display: flex;
         justify-content: space-between;
@@ -59,6 +55,7 @@
         @include r($mobile-lg) {
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-around;
         }
     }
 
@@ -66,16 +63,20 @@
         max-width: 370px;
 
         @include r($mobile-lg) {
-            margin: 0 auto;
-            max-width: 450px;
+            margin: 0 10px;
+            max-width: 460px;
         }
 
         @include r($mobile-md) {
-            max-width: 370px;
+            max-width: 350px;
         }
 
         @include r($mobile-sm) {
             max-width: 500px;
+        }
+
+        @include r($mobile) {
+            max-width: 450px;
         }
 
         &:not(:last-child) {
@@ -216,6 +217,10 @@
         @include r($mobile-lg) {
             background-color: $blue-100;
         }
+
+        @include r($mobile) {
+            padding: 20px 20px 10px;
+        }
     }
 
     &__title {
@@ -241,6 +246,10 @@
         @include r($mobile-lg) {
             justify-content: space-around;
         }
+
+        @include r($mobile) {
+            padding-top: 10px;
+        }
     }
 
     &__link--admin,
@@ -261,7 +270,8 @@
         }
 
         @include r($mobile) {
-            max-width: 120px;
+            max-width: 130px;
+            font-size: 12px;
         }
 
         &::before {

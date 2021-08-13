@@ -5,8 +5,13 @@
         justify-content: space-around;
 
         @include r($mobile-xl) {
+            padding-top: 30px;
             display: flex;
             flex-wrap: wrap;
+        }
+
+        @include r($mobile) {
+            padding-top: 20px;
         }
     }
 
@@ -18,7 +23,8 @@
         background-color: $yellow-100;
 
         @include r($mobile-xl) {
-            max-width: 480px;
+            max-width: 470px;
+            margin: 0 5px;
             padding: 40px 0px 45px 200px;
         }
 
@@ -28,7 +34,7 @@
         }
 
         @include r($mobile) {
-            padding: 40px 20px 45px 100px;
+            padding: 20px 20px 25px 100px;
         }
 
         &:not(:last-child) {
@@ -55,6 +61,7 @@
 
             @include r($mobile) {
                 left: 35px;
+                top: 35px;
             }
         }
 

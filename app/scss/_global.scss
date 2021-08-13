@@ -3,7 +3,7 @@ body {
     height: 100%;
 }
 
-body {
+.lock {
     background-color: $white-100;
     font-family: $dmsans;
     font-weight: 400;
@@ -13,6 +13,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    &._active {
+
+        @include r($mobile-xl) {
+            overflow: hidden;
+        }
+    }
 }
 
 a {
@@ -184,5 +191,29 @@ main {
         &:focus {
             box-shadow: 5px 5px 5px 2px rgba(37, 37, 37, 0.5);
         }
+    }
+}
+
+.title-products {
+    font-weight: 700;
+    font-size: 18px;
+    color: $blue-500;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 40px;
+        background-color: $blue-200;
+        top: 8px;
+        right: -55px;
+    }
+
+    &--price {
+        margin-bottom: 20px;
     }
 }

@@ -1,10 +1,6 @@
 .design {
     padding-top: 95px;
 
-    @include r($mobile) {
-        padding-top: 50px;
-    }
-
     &__title {
         margin-bottom: 25px;
     }
@@ -21,7 +17,7 @@
             margin-bottom: 90px;
         }
 
-        @include r($mobile-sm) {
+        @include r($mobile) {
             display: block;
             margin-bottom: 40px;
         }
@@ -31,10 +27,6 @@
         transition: box-shadow 0.4s;
 
         &:not(:last-child) {
-
-            @include r($mobile-sm) {
-                margin-bottom: 30px;
-            }
 
             @include r($mobile) {
                 margin-bottom: 20px;
@@ -98,8 +90,12 @@
         width: 100%;
         padding: 35px 140px 45px 35px;
 
-        @include r($mobile) {
-            padding: 15px 60px 45px 20px;
+        @include r($mobile-md) {
+            padding: 15px 10px 25px 20px;
+        }
+
+        @include r($mobile-sm) {
+            padding: 15px 10px 25px 20px;
         }
     }
 
