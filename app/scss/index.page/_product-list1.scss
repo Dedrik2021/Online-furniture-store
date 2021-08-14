@@ -59,18 +59,28 @@
 
     &__select {
         border: 2px solid transparent;
-        
-        &.filters-product__option, .dropdown, .opened {
-            background-color: $white-100;
+        border-radius: 5px;
 
-            &:focus {
-                background-color: violet;
-            }
-
-            
+        &:hover {
+            background: $blue-100;
+            border-color: $blue-200;
         }
 
-        
+        &--watch,
+        &--clock,
+        &--lamp,
+        &--chair,
+        &--table {
+
+            &.active {
+                background-color: $blue-100;
+                border-color: $blue-200;
+
+                .jq-selectbox__trigger-arrow {
+                    transform: translate(45deg);
+                }
+            }
+        }
     }
 }
 
@@ -125,7 +135,7 @@
         background: $blue-100;
         box-shadow: none;
         border-top: none;
-        top: 42px;
+        top: 44px;
     }
 
     &__select {
@@ -140,11 +150,6 @@
         box-shadow: none;
         text-shadow: none;
         transition: background-color 0.4s;
-
-        &:hover {
-            background: $blue-100;
-            border-color: $blue-200;
-        }
 
         &:focus {
             outline-color: transparent;

@@ -144,6 +144,38 @@ $(function() {
 
     $('.filters-product__select').styler();
 
+    $('.filters-product__select--chair').on('click', function(e) {
+        e.preventDefault();
+        $('.filters-product__select--chair').toggleClass('active');
+    });
+
+    $('.filters-product__select--table').on('click', function(e) {
+        e.preventDefault();
+        $('.filters-product__select--table').toggleClass('active');
+    });
+
+    $('.filters-product__select--lamp').on('click', function(e) {
+        e.preventDefault();
+        $('.filters-product__select--lamp').toggleClass('active');
+    });
+
+    $('.filters-product__select--watch').on('click', function(e) {
+        e.preventDefault();
+        $('.filters-product__select--watch').toggleClass('active');
+    });
+
+    $('.filters-product__select--clock').on('click', function(e) {
+        e.preventDefault();
+        $('.filters-product__select--clock').toggleClass('active');
+    });
+
+    $(document).mouseup(function (e) {
+        var container = $('.filters-box');
+        if (container.has(e.target).length === 0 && $('.filters-product__select--chair, .filters-product__select--table, .filters-product__select--lamp, .filters-product__select--watch, .filters-product__select--clock').hasClass('active')) {
+            $('.filters-product__select--chair, .filters-product__select--lamp, .filters-product__select--table, .filters-product__select--watch, .filters-product__select--clock').removeClass('active');
+        }
+    });
+
     $(".recent__stars").rateYo({
         rating: 3.6,
         starWidth: '12px',
