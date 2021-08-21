@@ -5,7 +5,7 @@
 @import './index.page/insights';
 @import './index.page/partners';
 
-@import './index.page/product-list1';
+@import './index.page/products-list';
 @import './index.page/product-list2';
 
 .footer,
@@ -94,8 +94,8 @@
     padding: 25px 0 30px;
     text-align: center;
     background-color: $blue-100;
-    margin: 150px 0 120px;
-
+    margin: 155px 0 115px;
+    
     &__title {
         font-family: $rubik;
         font-weight: 300;
@@ -103,6 +103,19 @@
         font-size: 36px;
         color: $blue-600;
     }
+
+    &.active {
+        display: none;
+    }
+
+    &__list {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+    
 }
 
 .breadcrumbs {
@@ -168,7 +181,7 @@
     &__link {
         background-color: transparent;
         border: 1px solid $blue-200;
-        padding: 15px 20px;
+        padding: 15px 20px 15px 20px;
         font-family: $rubik;
         font-weight: 400;
         color: $blue-500;

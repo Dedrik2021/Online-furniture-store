@@ -12,15 +12,6 @@
     &__list {
         background-color: $yellow-500;
         position: relative;
-        padding: 215px 0 275px;
-
-        @include r($mobile-sm) {
-            padding: 100px 0 130px;
-        }
-        
-        @include r($mobile) {
-            padding: 100px 0 100px;
-        }
 
         &::after {
             position: absolute;
@@ -46,12 +37,11 @@
             @include r($mobile-sm) {
                 width: 500px;
                 height: 500px;
-                top: 30px;
             }
 
             @include r($mobile) {
-                width: 300px;
-                height: 300px;
+                width: 270px;
+                height: 270px;
             }
         }
     }
@@ -59,10 +49,20 @@
     &__inner {
         display: flex;
         justify-content: space-between;
+        padding: 215px 0 275px;
 
         @include r($mobile-md) {
             justify-content: center;
             text-align: center;
+            padding: 190px 0 0px;
+        }
+
+        @include r($mobile-sm) {
+            padding: 110px 0 50px;
+        }
+
+        @include r($mobile) {
+            padding: 100px 0 0px;
         }
     }
 
@@ -72,6 +72,15 @@
         @include r($mobile-md) {
             position: relative;
             z-index: 5;
+            top: -160px;
+        }
+
+        @include r($mobile-sm) {
+            top: -90px;
+        }
+
+        @include r($mobile-sm) {
+            top: -80px;
         }
     }
 
@@ -88,10 +97,15 @@
 
         @include r($mobile-xl) {
             font-size: 65px;
-        } 
+        }
+        
+        @include r($mobile-sm) {
+            margin-bottom: 20px;
+        }
 
         @include r($mobile) {
             font-size: 45px;
+            margin-bottom: 10px;
         }
     }
 
@@ -104,14 +118,18 @@
         @include line-clamp(5);
 
         @include r($mobile-md) {
-            margin: 0 auto 50px;
-            background-color: $white-100;
+            margin: 0 auto 325px;
             border-radius: 10px;
+        }
+
+        @include r($mobile-sm) {
+            line-height: 1.4;
+            margin-bottom: 230px;
         }
 
         @include r($mobile) {
             font-size: 16px;
-            margin-bottom: 25px;
+            margin-bottom: 140px;
         }
     }
 
@@ -140,7 +158,16 @@
         @include r($mobile-md) {
             position: absolute;
             z-index: 0;
-            padding: 0;
+        }
+
+        @include r($mobile-sm) {
+            max-width: 450px;
+            padding-top: 125px;
+        }
+
+        @include r($mobile) {
+            max-width: 250px;
+            padding-top: 90px;
         }
     }
 
@@ -152,9 +179,10 @@
         bottom: 45px;
         z-index: 1;
 
-        @include r($mobile) {
+        @include r($mobile-sm) {
             bottom: 35px;
         }
+
 
         li:not(:last-child) {
             margin-right: 10px;

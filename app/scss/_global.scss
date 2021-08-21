@@ -39,7 +39,7 @@ a {
         &:focus {
             border-bottom: none;
         }
-    
+
         &:active:focus {
             border-bottom-color: transparent;
             color: transparent;
@@ -202,18 +202,59 @@ main {
     text-transform: uppercase;
     display: inline-block;
     position: relative;
+    @include line-clamp(1);
 
-    &::after {
-        position: absolute;
-        content: "";
-        height: 2px;
-        width: 40px;
-        background-color: $blue-200;
-        top: 8px;
-        right: -55px;
+    span {
+        position: relative;
+        padding-left: 15px;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 40px;
+            height: 2px;
+            background-color: $blue-200;
+            top: 10px;
+        }
     }
+
+    
 
     &--price {
         margin-bottom: 20px;
+    }
+}
+
+.blackout {
+    position: fixed;
+    width: 100%;
+    height: calc(100vh - 80px);
+    top: 90px; 
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 10;
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0.4s;
+
+    @include r($mobile-xl) {
+        display: block;
+    }
+
+    @include r($mobile-sm) {
+        display: none;
+    }
+
+    &._active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &.sticky {
+        z-index: 10;
+        top: 80px;
     }
 }

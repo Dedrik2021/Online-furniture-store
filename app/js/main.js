@@ -1,9 +1,17 @@
 $(function() {
     $(window).scroll(function() {
         if ($(this).scrollTop() > 1){
-        $('.header, .menu__list').addClass('sticky');
+        $('.header, .menu__list, .blackout').addClass('sticky');
         } else {
-            $('.header, .menu__list').removeClass('sticky');
+            $('.header, .menu__list, .blackout').removeClass('sticky');
+        }
+    });
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1){
+        $('.menu__list, .user-nav').addClass('sticky');
+        } else {
+            $('.menu__list, .user-nav').removeClass('sticky');
         }
     });
 
@@ -13,6 +21,14 @@ $(function() {
         $('.user-nav__btn').toggleClass('active');
         $('.user-nav__search').toggleClass('active'); 
     })
+
+    $(document).mouseup(function (e) {
+        var container = $('.user-nav__search');
+        if (container.has(e.target).length === 0 && $('.user-nav__input, .user-nav__btn, .user-nav__search').hasClass('active')) {
+            $('.user-nav__search, .user-nav__btn, .user-nav__input').removeClass('active');
+        }
+    });
+
 
     $('.menu__link--page').on('click', function(e) {
         e.preventDefault();
@@ -37,12 +53,13 @@ $(function() {
         $('.user-nav__search').toggleClass('_active');
         $('.user-nav').toggleClass('_active');
         $('.lock').toggleClass('_active');
+        $('.blackout').toggleClass('_active');
     })
     
     $(document).mouseup(function (e) {
         var container = $('.menu');
-        if (container.has(e.target).length === 0 && $('.menu__list, .menu__burger').hasClass('_active')) {
-            $('.menu__list, .menu__burger').removeClass('_active');
+        if (container.has(e.target).length === 0 && $('.menu__list, .menu__burger, .blackout, .lock').hasClass('_active')) {
+            $('.menu__list, .menu__burger, .blackout, .lock').removeClass('_active');
         }
     });
 
@@ -88,6 +105,12 @@ $(function() {
             {
                 breakpoint: 576,
                 settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
                     slidesToShow: 1,
                 }
             }
@@ -131,50 +154,66 @@ $(function() {
         to: 500.01,
         step: 0.01,
 
-        onStart: function (data) {
-            $('.filters-price__from').text(data.from);
-            $('.filters-price__to').text(data.to);
-        },
+        // onStart: function (data) {
+        //     $('.filters-price__from').text(data.from);
+        //     $('.filters-price__to').text(data.to);
+        // },
 
-        onChange: function (data) {
-            $('.filters-price__from').text(data.from);
-            $('.filters-price__to').text(data.to);
-        }
+        // onChange: function (data) {
+        //     $('.filters-price__from').text(data.from);
+        //     $('.filters-price__to').text(data.to);
+        // }
     });
 
-    $('.filters-product__select').styler();
-
-    $('.filters-product__select--chair').on('click', function(e) {
-        e.preventDefault();
-        $('.filters-product__select--chair').toggleClass('active');
+    $(".filters-price__input").on("change", function() {
+        var $this = $(this),
+        value = $this.prop("value").split(";");
+        $(".filters-price__value1").val(value[0]);
+        $(".filters-price__value2").val(value[1]);
     });
 
-    $('.filters-product__select--table').on('click', function(e) {
-        e.preventDefault();
-        $('.filters-product__select--table').toggleClass('active');
+    var rSlider = $(".filters-price__input").data("ionRangeSlider");
+    $('.filters-price__value1, .filters-price__value2').on('change', function() {
+        rSlider.update({
+            from: +$(".filters-price__value1").val(),
+            to: +$(".filters-price__value2").val()
+        });
     });
 
-    $('.filters-product__select--lamp').on('click', function(e) {
-        e.preventDefault();
-        $('.filters-product__select--lamp').toggleClass('active');
+    $('.products-list__filter-btn').on('click', function() {
+        $('.products-list__filter-btn').removeClass('active');
+        $(this).addClass('active')
     });
 
-    $('.filters-product__select--watch').on('click', function(e) {
-        e.preventDefault();
-        $('.filters-product__select--watch').toggleClass('active');
+    $('.btn-list').on('click', function() {
+        $('.page-nomination, .page-nomination__list, .products-week__list, .products-week__list-list, .pagination__items, .pagination').addClass('active');
     });
 
-    $('.filters-product__select--clock').on('click', function(e) {
-        e.preventDefault();
-        $('.filters-product__select--clock').toggleClass('active');
+    $('.btn-grid').on('click', function() {
+        $('.page-nomination__list, .page-nomination, .products-week__list, .products-week__list-list, .pagination, .pagination__items').removeClass('active');
     });
 
-    $(document).mouseup(function (e) {
-        var container = $('.filters-box');
-        if (container.has(e.target).length === 0 && $('.filters-product__select--chair, .filters-product__select--table, .filters-product__select--lamp, .filters-product__select--watch, .filters-product__select--clock').hasClass('active')) {
-            $('.filters-product__select--chair, .filters-product__select--lamp, .filters-product__select--table, .filters-product__select--watch, .filters-product__select--clock').removeClass('active');
-        }
-    });
+    // $('.filters-product__select--lamp').on('click', function(e) {
+    //     e.preventDefault();
+    //     $('.filters-product__select--lamp').toggleClass('active');
+    // });
+
+    // $('.filters-product__select--watch').on('click', function(e) {
+    //     e.preventDefault();
+    //     $('.filters-product__select--watch').toggleClass('active');
+    // });
+
+    // $('.filters-product__select--clock').on('click', function(e) {
+    //     e.preventDefault();
+    //     $('.filters-product__select--clock').toggleClass('active');
+    // });
+
+    // $(document).mouseup(function (e) {
+    //     var container = $('.filters-box');
+    //     if (container.has(e.target).length === 0 && $('.filters-product__select--chair, .filters-product__select--table, .filters-product__select--lamp, .filters-product__select--watch, .filters-product__select--clock').hasClass('active')) {
+    //         $('.filters-product__select--chair, .filters-product__select--lamp, .filters-product__select--table, .filters-product__select--watch, .filters-product__select--clock').removeClass('active');
+    //     }
+    // });
 
     $(".recent__stars").rateYo({
         rating: 3.6,
@@ -194,52 +233,36 @@ $(function() {
         rating: "80%",
     });
 
-    // $('.product-card__btn--add').on('click', function() {
-    //     $('.product-card__add, .product-card__list').toggleClass('active');
-        
-    // })
+    $(document).mouseup(function (e) {
+        var container = $('.product-card__buttons');
+        if (container.has(e.target).length === 0 && $('.product-card__add, .product-card__btn--add').hasClass('active')) {
+            $('.product-card__add, .product-card__btn--add').removeClass('active');
+        }
+    });
 
-    // $(document).mouseup(function (e) {
-    //     var container = $('.product-card__buttons');
-    //     if (container.has(e.target).length === 0 && $('.product-card__add, .product-card__list').hasClass('active')) {
-    //         $('.product-card__add, .product-card__list').removeClass('active');
-    //     }
-    // });
+    var containerEl1 = document.querySelector('.products-week__content');
+    var containerEl2 = document.querySelector('.design__content');
+    
+    var config = {
+        controls: {
+            scope: 'local'
+        }
+    };
+    
+    var mixer1 = mixitup(containerEl1, config);
+    var mixer2 = mixitup(containerEl2, config);
+
 });
 
-var containerEl1 = document.querySelector('.products-week__content');
-var containerEl2 = document.querySelector('.design__content');
+const cards = document.querySelectorAll('.products-list, .product-card');
 
-var config = {
-    controls: {
-        scope: 'local'
-    }
-};
+cards.forEach((card)=>{
+    card.querySelector('.product-card__btn--add').addEventListener('click', () => {
+        card.querySelector('.product-card__add').classList.toggle('active');
+    });
+})
 
-var mixer1 = mixitup(containerEl1, config);
-var mixer2 = mixitup(containerEl2, config);
-var mixer3 = mixitup(containerEl3, config);
-
-const el = document.querySelector('button.user-nav__btn');
-console.log('before -> ', el);
-el.setAttribute('type', 'reset');
-console.log('after -> ', el);
-
-
-// const cards = document.querySelectorAll('.filters-product');
-
-// cards.forEach((card)=>{
-//     card.querySelector('select').addEventListener('click', () => {
-//         card.querySelector('.jq-selectbox__trigger-arrow').classList.toggle('active');
-//     });
-// })
-
-
-// const cards = document.querySelectorAll('.product-card__btn');
-
-// cards.forEach((card)=>{
-//     card.querySelector('select').addEventListener('click', () => {
-//         card.querySelector('.product-card__add, .product-card__list').classList.toggle('active');
-//     });
-// })
-
+// const el = document.querySelector('button, .user-nav__btn');
+// console.log('before -> ', el);
+// el.setAttribute('type', 'reset');
+// console.log('after -> ', el);
