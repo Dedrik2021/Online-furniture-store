@@ -1,0 +1,47 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+
+    &.list {
+        justify-content: flex-start;
+    }
+
+    &__prev {
+        margin-right: 15px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__prev,
+    &__next,
+    &__link {
+        background-color: transparent;
+        border: 1px solid $blue-200;
+        padding: 15px 20px 15px 20px;
+        font-family: $rubik;
+        font-weight: 400;
+        color: $blue-500;
+        font-size: 16px;
+        transition: background-color 0.4s, color 0.4s;
+
+        &:hover {
+            background-color: $blue-200;
+            color: $white-100;
+        }
+
+        &:focus {
+            border-bottom-color: transparent;
+            box-shadow: 4px 4px 5px 2px rgba(37, 37, 37, 0.5);
+        }
+    }
+    
+}

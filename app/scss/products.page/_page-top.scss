@@ -1,0 +1,69 @@
+.page-top {
+    padding: 25px 0 30px;
+    text-align: center;
+    background-color: $blue-100;
+    margin: 155px 0 115px;
+    
+    &__title {
+        font-family: $rubik;
+        font-weight: 300;
+        margin-bottom: 10px;
+        font-size: 36px;
+        color: $blue-600;
+
+        @include r($mobile) {
+            font-size: 33px;
+            margin-bottom: 5px;
+        }
+    } 
+
+    @include r($mobile-xl) {
+        margin: 90px 0 70px;
+        padding: 15px 0 20px;
+    }
+
+    @include r($mobile-sm) {
+        margin: 70px 0 30px;
+    }
+
+    @include r($mobile) {
+        padding: 10px 0 15px;
+    }
+}
+
+.breadcrumbs {
+    display: flex;
+    justify-content: center;
+
+    &__item {
+
+        &:not(:last-child) {
+            padding-right: 20px;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "/";
+                right: 7px;
+                top: 0;
+            }
+        }
+
+        &:last-child {
+            pointer-events: none;
+        }
+    }
+
+    &__link {
+        font-family: $rubik;
+        font-weight: 400;
+        color: $blue-600;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom-color 0.4s, color 0.4s;
+
+        &:hover {
+            border-bottom-color: $blue-200;
+            color: $blue-200;
+        }
+    }
+}

@@ -30,6 +30,7 @@
     "@fancyapps/fancybox": "^3.5.7",
     "@tailwindcss/line-clamp": "^0.2.1",
     "gulp-svg-sprite": "^1.5.0",
+    "mustard-ui": "^1.0.4",
     "save-dev": "0.0.1-security"
   }
 }

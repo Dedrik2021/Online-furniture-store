@@ -1,0 +1,88 @@
+.filters-price {
+    border: 3px solid transparent;
+    position: relative;
+
+    &:focus {
+        outline-color: transparent;
+        border-color: $blue-200;
+        border-radius: 5px;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__value1,
+    &__value2 {
+        border: none;
+        max-width: 50px;
+        padding: 0;
+        font-family: $rubik;
+        font-size: 14px;
+        font-weight: 400;
+        border-bottom: 1px solid transparent;
+
+        &:focus {
+            outline: transparent;
+            border-bottom-color: $blue-200;
+        }
+    }
+
+    &__dollar {
+        font-size: 14px;
+        font-family: $rubik;
+        font-weight: 400;
+        line-height: 1.2;
+        color: $blue-500;
+
+        &--right {
+            position: absolute;
+            right: 50px;
+            top: 0px;
+        }
+    }
+}
+
+.irs--flat {
+
+    .irs-line {
+        top: 9px;
+        height: 2px;
+        background-color: $blue;
+        border-radius: none;
+    }
+
+    .irs-bar {
+        top: 8px;
+        height: 3px;
+        background-color: $blue-200;
+    }
+
+    .irs-handle {
+        top: 2px;
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+        background-color: $blue-200;
+
+        &>i:first-child {
+            display: none;
+        }
+    }
+
+    .irs-max,
+    .irs-min,
+    .irs-from,
+    .irs-to,
+    .irs-single {
+        display: none;
+    }
+}

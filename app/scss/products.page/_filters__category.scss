@@ -1,0 +1,72 @@
+.filters-items {
+
+    &__label {
+        cursor: pointer;
+        position: relative;
+    }
+
+    &__input {
+        position: absolute;
+        top: 15px;
+        left: 100px;
+
+        &:checked+.filters-items__checkbox {
+            background-color: $blue-100;
+
+            &>.filters-items__number {
+                color: $blue-500;
+            }
+        }
+    }
+
+    &__checkbox {
+        position: relative;
+        display: flex;
+        background-color: $white-100;
+        justify-content: space-between;
+        padding: 9px 25px 10px 10px;
+        border-radius: 5px;
+        font-family: $rubik;
+        font-weight: 400;
+        color: $blue-500;
+        border: 3px solid transparent;
+        font-size: 16px;
+        transition: background-color 0.4s;
+
+
+        &:hover {
+            background-color: $blue-100;
+
+            &>.filters-items__number {
+                color: $blue-500;
+            }
+        }
+
+        &:focus {
+            outline-color: transparent;
+            border-color: $blue-200;
+            border-radius: 5px;
+        }
+    }
+
+    &__category,
+    &__brand {
+        max-width: 155px;
+        @include line-clamp(1);
+    }
+
+    &__angle-right {
+        content: "";
+        width: 5px;
+        height: 10px;
+        position: absolute;
+        background-image: url(../images/content/angle-right.svg);
+        right: 20px;
+        top: 13px;
+    }
+
+    &__number {
+        color: $gray;
+        transition: color 0.4s;
+    }
+}

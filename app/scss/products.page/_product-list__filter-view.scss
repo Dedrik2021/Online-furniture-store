@@ -1,0 +1,39 @@
+.product-list {
+
+    &__filter-view {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -35px;
+        margin-bottom: 20px;
+    
+        span {
+            font-family: "Rubik", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: #243f4d;
+            margin-right: 5px;
+        }
+    
+        .btn-grid {
+            margin-right: 10px;
+        }
+    }
+    
+    &__filter-btn {
+        background-color: transparent;
+        padding: 0;
+    
+        &.active {
+    
+            svg {
+                fill: $yellow-900;
+    
+            }
+        }
+    
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+

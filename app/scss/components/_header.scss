@@ -134,7 +134,7 @@
             height: calc(100vh - 73px);
             text-align: center;
             background-color: $white-100;
-            padding: 120px 0 25px;
+            padding: 35px 0 25px;
             border: 2px solid $yellow-500;
             border-top: none;
             transition: right 0.4s, background-color 0.4s, padding-top 0.7s, border-color 0.4s, top 0.2s;
@@ -157,7 +157,7 @@
         }
 
         @include r($mobile) {
-            padding: 160px 15px 25px;
+            padding: 140px 15px 25px;
         }
 
         &._active {
@@ -187,7 +187,7 @@
             }
 
             @include r($mobile) {
-                padding-top: 160px;
+                padding-top: 140px;
                 top: 65px;
             }
         }
@@ -307,10 +307,6 @@
                     top: 30px;
                 }
             }
-
-            // @include r($mobile-xl) {
-            //     pointer-events: none;
-            // }
         }
     }
 
@@ -565,53 +561,6 @@
 
             &:focus {
                 border-bottom: none;
-
-                // @include r($mobile-xl) {
-                //     color: $blue-200;
-                // }
-
-                // & + .menu-dropdown {
-                //     visibility: visible;
-                //     opacity: 1;
-                //     top: 20px;
-                // }
-
-                // span {
-                //     height: 1px;
-                //     transform: rotate(90deg);
-                //     background-color: $blue-300;
-                //     width: 13px;
-
-                //     @include r($mobile-xl) {
-                //         width: 20px;
-                //         height: 2px;
-                //         background-color: $blue-200;
-                //     }
-
-                //     &::before {
-                //         transform: rotate(-35deg);
-                //         transform-origin: right bottom;
-                //         width: 6px;
-                //         background-color: $blue-300;
-
-                //         @include r($mobile-xl) {
-                //             width: 9px;
-                //             background-color: $blue-200;
-                //         }
-                //     }
-
-                //     &::after {
-                //         transform: rotate(35deg);
-                //         transform-origin: right top;
-                //         width: 6px;
-                //         background-color: $blue-300;
-
-                //         @include r($mobile-xl) {
-                //             width: 9px;
-                //             background-color: $blue-200;
-                //         }
-                //     }
-                // }
             }
 
             &:active:focus {
@@ -640,7 +589,7 @@
         position: absolute;
         left: 35%;
         transform: translateX(150%);
-        top: 75px;
+        top: 74px;
         width: 100%;
         z-index: 10;
         transition: transform 0.4s;
@@ -649,8 +598,58 @@
     &._active {
 
         @include r($mobile) {
+            top: 74px;
             z-index: 10;
             transform: translateX(-50%);
+        }
+    }
+
+    &__box {
+
+        @include r($mobile-xl) {
+            max-width: 910px;
+            width: 100%;
+            margin-right: 20px;
+        }
+
+        @include r($mobile-md) {
+            margin-right: 10px;
+        }
+
+        @include r($mobile-sm) {
+            margin-right: 0;
+            padding: 40px;
+            background-color: $yellow-500;
+            position: absolute;
+            top: 59px;
+            margin-right: 0;
+            width: 425px;
+            left: 38%;
+            transform: translateX(150%);
+            transition: transform 0.4s;
+        }
+
+        @include r($mobile) {
+            max-width: 530px;
+            width: 100%;
+            padding: 110px 70px 30px;
+            top: -15px;
+            left: 65%;
+        }
+
+        &._active {
+
+            @include r($mobile-sm) {
+                transform: translateX(-50%);
+            }
+        }
+
+        &.sticky {
+
+            @include r($mobile) {
+                top: -21px;
+            }
+            
         }
     }
 
@@ -679,20 +678,21 @@
 
         @include r($mobile-sm) {
             position: absolute;
-            z-index: 0;
-            top: 100px;
+            z-index: 1000;
+            top: 20px;
             margin-right: 0;
-            width: 140%;
-            left: 37%;
+            width: 130%;
+            left: 48%;
             transform: translateX(150%);
             transition: transform 0.4s;
         }
 
         @include r($mobile) {
             position: absolute;
-            top: 70px;
-            width: 95%;
-            left: 65%;
+            top: 80px;
+            max-width: 550px;
+            width: 100%;
+            left: 50%;
         }
 
         &.active {
@@ -1023,6 +1023,10 @@
         max-width: 180px;
     }
 
+    @include r($mobile) {
+        box-shadow: none;
+    }
+
     &__item {
         text-align: center;
         border-radius: 20px;
@@ -1081,7 +1085,7 @@
 
     &--page,
     &--home {
-        transition: opacity 0.4s, top 0.4s;
+        transition: opacity 0.4s ease-in, top 0.4s ease-out;
 
         @include r($mobile-xl) {
             top: 0px;

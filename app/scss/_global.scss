@@ -3,7 +3,7 @@ body {
     height: 100%;
 }
 
-.lock {
+body {
     background-color: $white-100;
     font-family: $dmsans;
     font-weight: 400;
@@ -14,7 +14,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
 
-    &._active {
+    &.lock {
 
         @include r($mobile-xl) {
             overflow: hidden;
@@ -203,6 +203,11 @@ main {
     display: inline-block;
     position: relative;
     @include line-clamp(1);
+
+    @include r($mobile-md) {
+        display: flex;
+        justify-content: center;
+    }
 
     span {
         position: relative;
