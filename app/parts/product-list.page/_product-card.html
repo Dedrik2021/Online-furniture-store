@@ -1,0 +1,69 @@
+<article class="product-card">
+    <div class="product-card__img-wrapper">
+        <img src="@@image-url" alt="Wooden radio">
+    </div>
+    <h3 class="product-card__title">
+        @@title
+    </h3>
+    <span class="product-card__price"><span>$</span>29.00</span>
+    <ul class="product-card__list" tabindex="0">
+        <li class="product-card__item">
+            <a class="product-card__btn" href="/product-detalis.html">
+                <span class="sr-only">View this product</span>
+                <svg width="20" height="20">
+                    <use xlink:href="images/sprite.svg#view-icon"></use>
+                </svg>
+            </a>          
+        </li>
+        <li class="product-card__item">
+            <button class="product-card__btn" type="button">
+                <span class="sr-only">Add this product</span>
+                <svg width="22" height="20">
+                    <use xlink:href="images/sprite.svg#add-product-icon"></use>
+                </svg>
+            </button>
+        </li>
+        <li class="product-card__item">
+            <button class="product-card__btn" type="button">
+                <span class="sr-only">Added to my favorite things</span>
+                <svg width="22" height="18">
+                    <use xlink:href="images/sprite.svg#favorit-icon"></use>
+                </svg>
+            </button>
+        </li>
+    </ul>
+    <div class="product-card__box">
+        <h3 class="product-card__title product-card__title--box">
+            <a class="product-card__link" href="/product-detalis.html">
+                <span>
+                    @@name
+                </span>
+            </a>
+        </h3>
+        <div class="product-card__stars"></div>
+        <span class="product-card__price product-card__price--box">23<span>$</span></span>
+        <div class="product-card__text">
+            <p>
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            </p>
+        </div>
+        <ul class="product-card__list product-card__list--box">
+            <li class="product-card__item">
+                <button class="product-card__btn" type="button">
+                    <span class="sr-only">Add this product</span>
+                    <svg width="22" height="20">
+                        <use xlink:href="images/sprite.svg#add-product-icon"></use>
+                    </svg>
+                </button>
+            </li>
+            <li class="product-card__item">
+                <button class="product-card__btn" type="button">
+                    <span class="sr-only">Added to my favorite things</span>
+                    <svg width="22" height="18">
+                        <use xlink:href="images/sprite.svg#favorit-icon"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
+</article>

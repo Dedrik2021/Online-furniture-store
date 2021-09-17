@@ -198,6 +198,7 @@ main {
     font-weight: 700;
     font-size: 18px;
     color: $blue-500;
+    max-width: 300px;
     margin-bottom: 25px;
     text-transform: uppercase;
     display: inline-block;
@@ -207,6 +208,10 @@ main {
     @include r($mobile-md) {
         display: flex;
         justify-content: center;
+    }
+
+    @include r($mobile) {
+        margin: 0 auto;
     }
 
     span {
@@ -223,14 +228,12 @@ main {
         }
     }
 
-    
-
     &--price {
         margin-bottom: 20px;
     }
 }
 
-.blackout {
+.overlay {
     position: fixed;
     width: 100%;
     height: calc(100vh - 80px);
@@ -238,7 +241,7 @@ main {
     left: 0;
     bottom: 0;
     right: 0;
-    background: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.5);
     z-index: 10;
     opacity: 0;
     display: none;
@@ -250,16 +253,38 @@ main {
     }
 
     @include r($mobile-sm) {
-        display: none;
+        top: 70px;
+        height: calc(100vh - 70px);
     }
 
+    @include r($mobile) {
+        top: 65px;
+        height: calc(100vh - 65px);
+    }
+
+    &.active,
     &._active {
         opacity: 1;
         visibility: visible;
     }
 
+    &._active {
+
+        @include r($mobile-sm) {
+            display: none;
+        }
+    } 
+
     &.sticky {
         z-index: 10;
         top: 80px;
+
+        @include r($mobile-sm) {
+            top: 70px;
+        }
+
+        @include r($mobile) {
+            top: 65px;
+        }
     }
 }

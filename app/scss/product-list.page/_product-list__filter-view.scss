@@ -1,0 +1,93 @@
+.product-list {
+
+    &__filter-view {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -35px;
+        margin-bottom: 20px;
+
+        @include r($mobile-sm) {
+            margin-top: -45px;
+        }
+
+        @include r($mobile-sm) {
+            margin-top: -43px;
+        }
+
+        @include r($mobile) {
+            display: none;
+        }
+    
+        span {
+            font-family: "Rubik", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: #243f4d;
+            margin-right: 10px;
+
+            @include r($mobile-sm) {
+                margin-right: 20px;
+                font-size: 24px;
+            }
+
+            @include r($mobile) {
+                margin-right: 15px;
+                font-size: 20px;
+                display: flex;
+                align-items: flex-end;
+            }
+        }
+    
+        .btn-grid {
+            margin-right: 10px;
+
+            @include r($mobile-sm) {
+                margin-right: 20px;
+            
+                svg {
+                    width: 25px;
+                    height: 23px;
+                }
+            }
+
+            @include r($mobile) {
+                margin-right: 15px;
+            }
+        }
+    }
+    
+    &__filter-btn {
+        background-color: transparent;
+        padding: 0 3px 0 0;
+
+        svg {
+
+            @include r($mobile-sm) {
+                width: 30px;
+                height: 25px;
+            }
+        }
+
+        &:hover {
+
+            svg {
+                fill: $blue-200;
+            }
+        }
+    
+        &.active {
+    
+            svg {
+                fill: $yellow-900;
+            }
+        }
+
+        svg {
+            transition: fill 0.3s;
+        }
+    
+        &:focus {
+            box-shadow: 2px 2px 5px 1px rgba(37, 37, 37, 0.5);
+        }
+    }
+}

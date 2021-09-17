@@ -1,44 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online furniture store</title>
-    <link rel="icon" href="images/content/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.min.css">
-</head>
-
-<body>
+@@include('./parts/components/_top.html', {
+    "title": "Online furniture store",
+}) 
     
-    @@include('./parts/_header.html')
+    @@include('./parts/components/_header.html')
 
     <main class="main">
         <h1 class="sr-only">
             Here you can choose our products
         </h1>
         
-        <div class="blackout"></div>
+        <div class="overlay"></div>
 
-        @@include('./parts/_board.html')
+        @@include('./parts/index.page/_board.html')
 
-        @@include('./parts/_advantages.html')
+        @@include('./parts/index.page/_advantages.html')
 
-        @@include('./parts/_products-week.html')
+        @@include('./parts/index.page/_products-week.html')
 
-        @@include('./parts/_design.html')
+        @@include('./parts/index.page/_design.html')
 
-        @@include('./parts/_insights.html')
+        @@include('./parts/index.page/_insights.html')
 
-        @@include('./parts/_partners.html')
+        @@include('./parts/components/_partners.html')
 
     </main>
     
-    @@include('./parts/_footer.html')
-
-    <script src="js/main.min.js"></script>
-    
-</body>
-
-</html>
+    @@include('./parts/components/_footer.html')

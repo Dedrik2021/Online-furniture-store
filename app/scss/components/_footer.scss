@@ -120,6 +120,14 @@
 
         span {
             text-transform: uppercase;
+
+            @include r($mobile-md) {
+                display: block;
+            }
+
+            @include r($mobile-sm) {
+                display: inline-block;
+            }
         }
 
         &:not(:last-child) {

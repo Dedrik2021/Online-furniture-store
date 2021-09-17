@@ -1,5 +1,5 @@
 .header {
-    padding: 55px 0 35px;
+    padding: 45px 0;
     position: fixed;
     left: 0;
     right: 0;
@@ -1007,6 +1007,7 @@
     color: $white-100;
     position: absolute;
     top: 70px;
+    left: -90px;
     min-width: 230px;
     border: 2px solid $blue-200;
     border-top-color: transparent;
@@ -1124,10 +1125,27 @@
         max-width: 245px;
         width: 100%;
         top: 85px;
-        right: 0;
+        left: 80px;
+
+        @include r($mobile-xxl) {
+            left: 470px;
+        }
 
         @include r($mobile-xl) {
-            right: -45px;
+            left: 78%;
+        }
+
+        @include r($mobile-lg) {
+            left: 72%;
+        }
+
+        @include r($mobile-md) {
+            left: 64%;
+        }
+
+        @include r($mobile-sm) {
+            left: 45%;
+            box-shadow: none;
         }
 
         @include r($mobile) {

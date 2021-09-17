@@ -79,22 +79,6 @@ function browsersync() {
     })
 }
 
-// function images() {
-//     return src('app/images/**/*.*')
-//     .pipe(imagemin([
-//         imagemin.gifsicle({interlaced: true}),
-//         imagemin.mozjpeg({quality: 75, progressive: true}),
-//         imagemin.optipng({optimizationLevel: 5}),
-//         imagemin.svgo({
-//             plugins: [
-//                 {removeViewBox: true},
-//                 {cleanupIDs: false}
-//             ]
-//         })
-//     ]))
-//     .pipe(dest('dist/images'))
-// }
-
 function build() {
     return src([
         'app/**/*.html',
@@ -111,7 +95,7 @@ function cleanDist() {
 function watching() {
     watch(['app/scss/**/*.scss'], styles);
     watch(['app/js/**/*.js', '!app/js/main.min.js'],scripts);
-    watch(['app/*.html'], html);
+    watch(['app/**/*.html'], html);
     watch('app/images/content/*', parallel('images'));
     watch('app/images/sprite/*', parallel('svgSprite'));
     watch('app/fonts/*', parallel('fonts'));
