@@ -719,19 +719,18 @@
 
     &__input {
         visibility: hidden;
-        background-color: transparent;
         border-radius: 20px;
         border: transparent;
         padding: 0;
         width: 0;
         line-height: 20px;
-        transition: width 0.5s, background-color 0.4s;
+        transition: width 0.5s;
 
         @include r($mobile-xxl) {
             visibility: visible;
             width: 410px;
             padding: 10px;
-            background-color: $yellow-100;
+            background-color: $white-100;
             border-radius: 40px;
         }
 
@@ -758,7 +757,7 @@
             visibility: visible;
             width: 325px;
             padding: 10px;
-            background-color: $yellow-100;
+            background-color: $white-100;
             border-radius: 40px;
 
             @include r($mobile-xxl) {
