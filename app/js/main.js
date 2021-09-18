@@ -242,24 +242,27 @@ $(function() {
         vertical: true,
         draggable: false,
         arrows: false,
-    })
-
+    });
+    
     $('.detalis-card__big').slick({
         asNavFor: '.detalis-card__thumb',
         draggable: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         arrows: false,
         fade: true,
         responsive: [
             {
                 breakpoint: 576,
                 settings: {
+                    draggable: true,
                     slidesToShow: 1,
                     autoplay: true,
                     autoplaySpeed: 2000,
                 }
             },
         ]
-    })
+    });
 
     $('.detalis-card__add-num').styler();
 
