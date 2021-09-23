@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="icon" href="images/content/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body> 
+
+    <script src="js/main.min.js"></script>
+</body>
+</html> 
+    
+    <header class="header">
+    <div class="container">
+        <nav class="menu">
+            <a class="menu__logo logo" href="/" >
+                <img class="logo__img" src="images/content/logo.png" width="150" height="40" alt="logo">
+            </a>
+            <button class="menu__burger btn" type="button">
+                <span class="sr-only">open the menu</span>
+                <span></span>
+            </button>
+            <ul class="menu__list">
+                <li class="menu__item menu__item--home">
+                    <a class="menu__link menu__link--home" href="#" >
+                        Home<span></span>
+                    </a>
+                    <ul class="menu-dropdown menu-dropdown--home">
+                        <li class="menu-dropdown__item">
+                            <a class="menu-dropdown__link" href="/product-list.html">
+                                Product-list
+                            </a>
+                        </li>
+                        <li class="menu-dropdown__item">
+                            <a class="menu-dropdown__link" href="#">
+                                Home2
+                            </a>
+                        </li>
+                        <li class="menu-dropdown__item">
+                            <a class="menu-dropdown__link" href="#">
+                                Home3
+                            </a>
+                        </li>
+                        <li class="menu-dropdown__item">
+                            <a class="menu-dropdown__link" href="#">
+                                Home4
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#" >
+                        About
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#" >
+                        Services
+                    </a>
+                </li>
+                <li class="menu__item menu__item--page">
+                    <a class="menu__link menu__link--page" href="#" >
+                        Pages<span></span>
+                    </a>
+                    <ul class="menu-dropdown menu-dropdown--page">
+                        <li class="menu-dropdown__item">
+                            <a class="menu-dropdown__link" href="/blog.html">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="menu-dropdown__item">
+                            <a class="menu-dropdown__link" href="#">
+                                Page2
+                            </a>
+                        </li>
+                        <li class="menu-dropdown__item">
+                            <a class="menu-dropdown__link" href="#">
+                                Page3
+                            </a>
+                        </li>
+                        <li class="menu-dropdown__item">
+                            <a class="menu-dropdown__link" href="#">
+                                Page4
+                            </a>
+                        </li>
+                        <li class="menu-dropdown__item">
+                            <a class="menu-dropdown__link" href="#">
+                                Page5
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="/blog.html" >
+                        News
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="/contact.html" >
+                        Contact
+                    </a>
+                </li>
+            </ul>
+            <div class="user-nav">
+                <div class="user-nav__box">
+                    <form class="user-nav__search">
+                        <label class="sr-only" for="form-search">
+                            Search for your product
+                        </label>
+                        <input class="user-nav__input" type="search" id="form-search" name="[user-nav__search]search"
+                            placeholder="Search for product" required>
+                        <button class="user-nav__btn btn" type="submit">
+                            <span class="sr-only">search</span>
+                            <svg width="15.28" height="15.281">
+                                <use xlink:href="images/sprite.svg#search"></use>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="user-nav__content">
+                    <a class="user-nav__link user-nav__link--heart" href="#" >
+                        <svg width="18" height="17">
+                            <use xlink:href="images/sprite.svg#heart"></use>
+                        </svg>
+                        <span class="user-nav__count">0</span>
+                        <span class="sr-only">My favorite things</span>
+                    </a>
+                    <a class="user-nav__link user-nav__link--basket" href="#" >
+                        <svg width="18.94" height="16.969">
+                            <use xlink:href="images/sprite.svg#basket"></use>
+                        </svg>
+                        <span class="user-nav__count user-nav__count--basket">0</span>
+                        <span class="sr-only">Selected item</span>
+                    </a>
+                </div>
+                <div class="user-nav__inner">
+                    <button class="user-nav__more" type="button" >
+                        <span class="sr-only">open the submenu</span>
+                    </button>
+                    <ul class="menu-dropdown menu-dropdown--wide">
+                        <li class="menu-dropdown__item">
+                            <a class="menu-dropdown__link" target="_blank" href="#">
+                                submenu1
+                            </a>
+                        </li>
+                        <li class="menu-dropdown__item">
+                            <a class="menu-dropdown__link" target="_blank" href="#">
+                                submenu2
+                            </a>
+                        </li>
+                        <li class="menu-dropdown__item">
+                            <a class="menu-dropdown__link" target="_blank" href="#">
+                                submenu3
+                            </a>
+                        </li>
+                        <li class="menu-dropdown__item">
+                            <a class="menu-dropdown__link" target="_blank" href="#">
+                                submenu4
+                            </a>
+                        </li>
+                        <li class="menu-dropdown__item">
+                            <a class="menu-dropdown__link" target="_blank" href="#">
+                                submenu5
+                            </a>
+                        </li>
+                        <li class="menu-dropdown__item">
+                            <a class="menu-dropdown__link" target="_blank" href="#">
+                                submenu6
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+    
+    <main class="main">
+        <div class="overlay"></div>
+
+        <div class="blog">
+
+            <div class="page-top">
+    <div class="container container--sm">
+        <h1 class="page-top__title">
+            Blog
+        </h1>
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="/">
+                    Home
+                </a>
+            </li>
+            <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="@@href1">
+                    Blog
+                </a>
+            </li>
+            <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">
+                    @@page2
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+            <div class="container container--sm">
+                <div class="blog__content">
+                    <div class="blog__inner">
+                        <button class="blog__sidebar-btn btn" type="button">
+                            <svg width="25" height="25">
+                                <use xlink:href="images/sprite.svg#filter-solid"></use>
+                            </svg>
+                            <span>Filter</span>
+                        </button>
+                        <div class="blog__box">
+                            <ul class="blog__list">
+                                <li class="blog__item">
+    
+                                    <article class="post-card">
+    <a class="post-card__link" href="/blog__details.html">
+        <div class="post-card__img-wrapper">
+            <img class="post-card__img" src="images/content/post-card-1.jpg" alt="bedroom">
+        </div>
+    </a>
+    <div class="post-card__box">
+        <a class="post-card__link post-card__link--category" href="#" >
+            <time class="post-card__date" datetime="2020-01-28">
+                28 january, 2020
+            </time>
+            <span class="post-card__link post-card__link--admin">By admin</span>  
+        </a>
+        <a class="post-card__link post-card__link--wrapper" href="/blog__details.html">
+            <h2 class="post-card__title">
+                Fonsectetur adipisicing  eiusmod
+            </h2>
+            <div class="post-card__text">
+                <p>
+                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+                </p>
+            </div>
+        </a>
+        <div class="post-card__wrapper">
+            <a class="post-card__btn btn btn--arrow" href="/blog__details.html">
+                View More
+            </a>
+        </div>
+        
+    </div>
+</article>
+    
+                                </li>
+                                <li class="blog__item">
+    
+                                    <article class="post-card">
+    <a class="post-card__link" href="/blog__details.html">
+        <div class="post-card__img-wrapper">
+            <img class="post-card__img" src="images/content/post-card-2.jpg" alt="bedroom">
+        </div>
+    </a>
+    <div class="post-card__box">
+        <a class="post-card__link post-card__link--category" href="#" >
+            <time class="post-card__date" datetime="2020-01-28">
+                28 january, 2020
+            </time>
+            <span class="post-card__link post-card__link--admin">By admin</span>  
+        </a>
+        <a class="post-card__link post-card__link--wrapper" href="/blog__details.html">
+            <h2 class="post-card__title">
+                Fonsectetur adipisicing elit,
+            </h2>
+            <div class="post-card__text">
+                <p>
+                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+                </p>
+            </div>
+        </a>
+        <div class="post-card__wrapper">
+            <a class="post-card__btn btn btn--arrow" href="/blog__details.html">
+                View More
+            </a>
+        </div>
+        
+    </div>
+</article>
+    
+                                </li>
+                                <li class="blog__item">
+    
+                                    <article class="post-card">
+    <a class="post-card__link" href="/blog__details.html">
+        <div class="post-card__img-wrapper">
+            <img class="post-card__img" src="images/content/post-card-6.jpg" alt="bedroom">
+        </div>
+    </a>
+    <div class="post-card__box">
+        <a class="post-card__link post-card__link--category" href="#" >
+            <time class="post-card__date" datetime="2020-01-28">
+                28 january, 2020
+            </time>
+            <span class="post-card__link post-card__link--admin">By admin</span>  
+        </a>
+        <a class="post-card__link post-card__link--wrapper" href="/blog__details.html">
+            <h2 class="post-card__title">
+                Fsectetur adipisicing tempor incididunt
+            </h2>
+            <div class="post-card__text">
+                <p>
+                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+                </p>
+            </div>
+        </a>
+        <div class="post-card__wrapper">
+            <a class="post-card__btn btn btn--arrow" href="/blog__details.html">
+                View More
+            </a>
+        </div>
+        
+    </div>
+</article>
+    
+                                </li>
+                                <li class="blog__item">
+    
+                                    <article class="post-card">
+    <a class="post-card__link" href="/blog__details.html">
+        <div class="post-card__img-wrapper">
+            <img class="post-card__img" src="images/content/post-card-7.jpg" alt="bedroom">
+        </div>
+    </a>
+    <div class="post-card__box">
+        <a class="post-card__link post-card__link--category" href="#" >
+            <time class="post-card__date" datetime="2020-01-28">
+                28 january, 2020
+            </time>
+            <span class="post-card__link post-card__link--admin">By admin</span>  
+        </a>
+        <a class="post-card__link post-card__link--wrapper" href="/blog__details.html">
+            <h2 class="post-card__title">
+                Vonsectetur adipisicing elit
+            </h2>
+            <div class="post-card__text">
+                <p>
+                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+                </p>
+            </div>
+        </a>
+        <div class="post-card__wrapper">
+            <a class="post-card__btn btn btn--arrow" href="/blog__details.html">
+                View More
+            </a>
+        </div>
+        
+    </div>
+</article>
+    
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="blog__sidebar">
+                            <button class="blog__sidebar-close btn--close">
+                                <span class="sr-only">close filters</span>
+                                <span></span>
+                            </button>
+                            <div class="blog__filters">
+    
+                                <form class="filters-form__search">
+    <label for="filters-search"><span class="sr-only">search</span></label>
+    <input class="filters-form__input" type="search" id="filters-search" name="[feedback]filters-search">
+    <button class="filters-form__btn btn" type="submit">
+        <svg width="17" height="17">
+            <use xlink:href="images/sprite.svg#magnifier"></use>
+        </svg>
+    </button>
+</form>
+<div class="filters__category">
+    <h2 class="filters__title title-products">
+        Category<span></span>
+    </h2>
+    <div class="filters-items">
+        <label class="filters-items__label">
+            <span class="sr-only">Chair</span>
+            <input class="filters-items__input" type="checkbox" name="chair" data-filter=".category-chair">
+            <span class="filters-items__checkbox">
+                <span class="filters-items__category">Chair</span>
+                <span class="filters-items__angle-right"></span>
+            </span>
+        </label>
+        
+        <label class="filters-items__label">
+            <span class="sr-only">Table</span>
+            <input class="filters-items__input" type="checkbox" name="table">
+            <span class="filters-items__checkbox">
+                <span class="filters-items__category">Table</span>
+                <span class="filters-items__angle-right"></span>
+            </span>
+        </label>
+        
+        <label class="filters-items__label">
+            <span class="sr-only">Lamp</span>
+            <input class="filters-items__input" type="checkbox" name="lamp">
+            <span class="filters-items__checkbox">
+                <span class="filters-items__category">Lamp</span>
+                <span class="filters-items__angle-right"></span>
+            </span>
+        </label>
+        
+        <label class="filters-items__label">
+            <span class="sr-only">Watch</span>
+            <input class="filters-items__input" type="checkbox" name="watch">
+            <span class="filters-items__checkbox">
+                <span class="filters-items__category">Watch</span>
+                <span class="filters-items__angle-right"></span>
+            </span>
+        </label>
+        
+        <label class="filters-items__label">
+            <span class="sr-only">Clock</span>
+            <input class="filters-items__input" type="checkbox" name="clock">
+            <span class="filters-items__checkbox">
+                <span class="filters-items__category">Clock</span>
+                <span class="filters-items__angle-right"></span>
+            </span>
+        </label>
+    </div>
+</div>
+    
+                            </div>                      
+                            <div class="blog__recent">
+                                <h2 class="blog__recent-title title-products">
+                                    Recent Posts<span></span>
+                                </h2>
+                                <ul class="recent">
+                                    <li class="recent__item">
+    
+                                        <a class="recent__link" href="/blog__details.html">
+    <div class="recent__wrapper-img">
+        <img src="images/content/post-card-8.jpg" alt="Chandelier">
+    </div>
+    <div class="recent__box">
+        <h3 class="recent__title">
+            Corem ipsum dolor tetur adipisicing elit
+        </h3>
+        <div class="recent__box-date">
+            <svg width="10" height="11">
+                <use xlink:href="images/sprite.svg#post-date"></use>
+            </svg>
+            <time class="recent__date" datetime="2020-01-28">
+                28 january, 2020
+            </time>
+        </div>   
+    </div>
+</a>
+    
+                                    </li>
+                                    <li class="recent__item">
+    
+                                        <a class="recent__link" href="/blog__details.html">
+    <div class="recent__wrapper-img">
+        <img src="images/content/post-card-9.jpg" alt="Chandelier">
+    </div>
+    <div class="recent__box">
+        <h3 class="recent__title">
+            Fdipisicing elit, sed do eiusmod tempor
+        </h3>
+        <div class="recent__box-date">
+            <svg width="10" height="11">
+                <use xlink:href="images/sprite.svg#post-date"></use>
+            </svg>
+            <time class="recent__date" datetime="2020-01-28">
+                28 january, 2020
+            </time>
+        </div>   
+    </div>
+</a>
+                                        
+                                    </li>
+                                    <li class="recent__item">
+    
+                                        <a class="recent__link" href="/blog__details.html">
+    <div class="recent__wrapper-img">
+        <img src="images/content/post-card-10.jpg" alt="Chandelier">
+    </div>
+    <div class="recent__box">
+        <h3 class="recent__title">
+            Eonsectetur adipisicing elit, sed do eiusmod 
+        </h3>
+        <div class="recent__box-date">
+            <svg width="10" height="11">
+                <use xlink:href="images/sprite.svg#post-date"></use>
+            </svg>
+            <time class="recent__date" datetime="2020-01-28">
+                28 january, 2020
+            </time>
+        </div>   
+    </div>
+</a>
+                                        
+                                    </li>
+                                    <li class="recent__item">
+    
+                                        <a class="recent__link" href="/blog__details.html">
+    <div class="recent__wrapper-img">
+        <img src="images/content/post-card-2.jpg" alt="Chandelier">
+    </div>
+    <div class="recent__box">
+        <h3 class="recent__title">
+            gnim ad minim veniam, quis nostrud 
+        </h3>
+        <div class="recent__box-date">
+            <svg width="10" height="11">
+                <use xlink:href="images/sprite.svg#post-date"></use>
+            </svg>
+            <time class="recent__date" datetime="2020-01-28">
+                28 january, 2020
+            </time>
+        </div>   
+    </div>
+</a>
+            
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pagination">
+    <a class="pagination__nav pagination__nav--prev pagination--style" href="#">
+            Previous
+    </a>
+    <ul class="pagination__list">
+        <li class="pagination__item">
+            <span class="pagination__nav pagination__nav--activ">
+                1
+            </span>
+        </li>
+        <li class="pagination__item">
+            <a class="pagination__nav" href="#">
+                2
+            </a>
+        </li>
+        <li class="pagination__item">
+            <a class="pagination__nav" href="#">
+                3
+            </a>
+        </li>
+    </ul>
+    <a class="pagination__nav pagination__nav--next" href="#">
+        Next
+    </a>
+</div>    
+
+                </div>
+            </div>
+
+            <div class="partners">
+    <div class="container container--sm">
+        <ul class="partners__list">
+            <li class="partners__item">
+                <div class="partners__img-wrapper">
+                    <img src="images/content/partners-1.png" alt="peterson & stephanie">
+                </div>
+            </li>
+            <li class="partners__item">
+                <div class="partners__img-wrapper">
+                    <img src="images/content/partners-2.png" alt="kmn consulting">
+                </div>
+            </li>
+            <li class="partners__item">
+                <div class="partners__img-wrapper">
+                    <img src="images/content/partners-3.png" alt="chainforce">
+                </div>                       
+            </li>
+            <li class="partners__item">
+                <div class="partners__img-wrapper">
+                    <img src="images/content/partners-4.png" alt="naxt g3n">
+                </div>                       
+            </li>
+            <li class="partners__item">
+                <div class="partners__img-wrapper">
+                    <img src="images/content/partners-5.png" alt="vintage">
+                </div>                       
+            </li>
+            <li class="partners__item">
+                <div class="partners__img-wrapper">
+                    <img src="images/content/partners-1.png" alt="peterson & stephanie">
+                </div>                      
+            </li>
+            <li class="partners__item">
+                <div class="partners__img-wrapper">
+                    <img src="images/content/partners-2.png" alt="kmn consulting">
+                </div>                      
+            </li>
+            <li class="partners__item">
+                <div class="partners__img-wrapper">
+                    <img src="images/content/partners-3.png" alt="chainforce">
+                </div>                       
+            </li>
+            <li class="partners__item">
+                <div class="partners__img-wrapper">
+                    <img src="images/content/partners-4.png" alt="naxt g3n">
+                </div>                       
+            </li>
+            <li class="partners__item">
+                <div class="partners__img-wrapper">
+                    <img src="images/content/partners-5.png" alt="vintage">
+                </div>                      
+            </li>
+        </ul>
+    </div>
+</div>
+
+        </div>
+    </main>
+    
+    <footer class="footer">
+    <div class="container container--sm">
+        <div class="footer__top">
+            <div class="footer__box">
+                <a class="footer__logo logo" href="#" >
+                    <img class="logo__img" width="150" height="40" src="images/content/logo.png" alt="logo">
+                </a>
+                <address class="footer__contacts">
+                    <a class="footer__link" target="_blank" href="https://goo.gl/maps/AdMkDcJWqRr9rBD38" >
+                        <span>Address:</span> 4772 Wines Lane
+                        Houston, TX 77032
+                    </a>
+                    <a class="footer__link" href="tel:+8323475843" >
+                        <span>Telephone:</span> +832-347-5843
+                    </a>
+                    <a class="footer__link" href="mailto:contact@Glee.com" >
+                        <span>Email:</span> contact@Glee.com
+                    </a>
+                </address>
+            </div>
+            <div class="footer__box">
+                <span class="footer__title">
+                    Services
+                </span>
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a class="footer__link" href="#" >
+                            About us
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#" >
+                            Return Policy
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="/blog.html" >
+                            Our Blog
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="/contact.html" >
+                            Contact Us
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#" >
+                            Terms & Condition
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__box">
+                <span class="footer__title">
+                    Account
+                </span>
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a class="footer__link" target="_blank" href="#" >
+                            Your Account
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" target="_blank" href="#" >
+                            Checkout
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" target="_blank" href="#" >
+                            Login
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" target="_blank" href="#" >
+                            Register
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__box">
+                <span class="footer__title">
+                    Newsletter
+                </span>
+                <form class="subscribe-form">
+                    <div class="subscribe-form__text">
+                        <p>
+                            Subscribe by our newsletter and get update protidin.
+                        </p>
+                    </div>
+                    <label class="sr-only" for="subscribe-email">
+                        enter your email
+                    </label>
+                    <input class="subscribe-form__email" type="email" id="subscribe-email"
+                        placeholder="Email address" name="[subscription]email" required>
+
+                    <button class="subscribe-form__btn btn btn--universal" type="submit" >
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__copy">
+                <p>
+                    ©2020 CopyRight Example. All rights reserved.
+                </p>
+            </div>
+            <nav class="footer__menu">
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a class="menu__link" href="http://localhost:3000/" >
+                            Home
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#" >
+                            About
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/blog.html" >
+                            Blog
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/contact.html" >
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</footer>

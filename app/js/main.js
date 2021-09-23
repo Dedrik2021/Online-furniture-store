@@ -55,7 +55,7 @@ $(function() {
         $('.overlay').toggleClass('_active');
     })
 
-    $('.menu__burger, .product-list__aside-btn').on('click', function(e) {
+    $('.menu__burger, .product-list__aside-btn, .blog__sidebar-btn').on('click', function(e) {
         e.preventDefault();
         $('body').toggleClass('lock');
     })
@@ -68,7 +68,7 @@ $(function() {
     });
 
     $(document).mouseup(function (e) {
-        var container = $('.menu, .product-list');
+        var container = $('.menu, .product-list, .blog');
         if (container.has(e.target).length === 0 && $('body').hasClass('lock')) {
             $('body').removeClass('lock');
         }
@@ -194,16 +194,17 @@ $(function() {
         $('.products-week__item, .products-week__list, .pagination').removeClass('list');
     });
 
-    $(".recent__stars").rateYo({
+    $(".recent__stars, .reviews__stars").rateYo({
         rating: 3.6,
         starWidth: '12px',
         normalFill: '#d6d6d6',
         ratedFill: '#ffcc00',
         spacing   : "6px",
         rating: "80%",
+        readOnly: true,
     });
 
-    $(".product-card__stars").rateYo({
+    $(".product-card__stars, .details-card__stars").rateYo({
         rating: 3.6,
         starWidth: '20px',
         normalFill: '#d6d6d6',
@@ -217,12 +218,12 @@ $(function() {
         $('.product-list__aside, .product-list__aside-btn, .overlay').addClass('active');
     })
 
-    $('.product-list__close-btn').on('click', function(e) {
+    $('.btn--close').on('click', function(e) {
         e.preventDefault();
         $('.product-list__aside, .product-list__aside-btn, .overlay').removeClass('active');
     })
 
-    $('.product-list__close-btn').on('click', function(e) {
+    $('.btn--close').on('click', function(e) {
         e.preventDefault();
         $('body').removeClass('lock');
     })
@@ -234,8 +235,8 @@ $(function() {
         }
     });
 
-    $('.detalis-card__thumb').slick({
-        asNavFor: '.detalis-card__big',
+    $('.details-card__thumb').slick({
+        asNavFor: '.details-card__big',
         focusOnSelect: true,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -244,8 +245,8 @@ $(function() {
         arrows: false,
     });
     
-    $('.detalis-card__big').slick({
-        asNavFor: '.detalis-card__thumb',
+    $('.details-card__big').slick({
+        asNavFor: '.details-card__thumb',
         draggable: false,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -264,24 +265,23 @@ $(function() {
         ]
     });
 
-    $('.detalis-card__add-num').styler();
+    $('.details-card__add-num').styler();
 
-    $('.product-tabs__tab-btn').on('click', function(e) {
+    $('.product-tabs__btn').on('click', function(e) {
         e.preventDefault();
-        $('.product-tabs__tab-btn').removeClass('active');
+        $('.product-tabs__btn').removeClass('active');
         $(this).addClass('active');
 
-        $('.product-tabs__item').removeClass('active');
-        $($(this).attr('href')).addClass('active');
+        // $('.product-tabs__item').removeClass('active');
+        // $($(this).attr('href')).addClass('active');
     })
 
-    $('.products-week__list--slider').slick({
+    $('.product-details__slider').slick({
         prevArrow: '<button type="button" class="slick-btn slick-prev"><img src="images/content/arrow-left.svg" alt="previous"></button>',
         nextArrow: '<button type="button"  class="slick-btn slick-next"><img src="images/content/arrow-right.svg" alt="next"></button>',
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 4000,
         responsive: [
             {
                 breakpoint: 992,
@@ -318,6 +318,23 @@ $(function() {
         ]
     });
 
+    $('.blog__sidebar-btn').on('click', function(e) {
+        e.preventDefault();
+        $('.blog__sidebar, .overlay').addClass('active');
+    })
+
+    $('.btn--close').on('click', function(e) {
+        e.preventDefault();
+        $('.blog__sidebar, .overlay').removeClass('active');
+    })
+
+    $(document).mouseup(function (e) {
+        var container = $('.blog__inner');
+        if (container.has(e.target).length === 0 && $('.blog__sidebar, .overlay').hasClass('active')) {
+            $('.blog__sidebar, .overlay').removeClass('active');
+        }
+    });
+
     var containerEl1 = document.querySelector('.products-week__content');
     var containerEl2 = document.querySelector('.design__content');
     
@@ -331,3 +348,167 @@ $(function() {
     var mixer2 = mixitup(containerEl2, config);
 
 });
+
+function openContent(evt, contentName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("product-tabs__item");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("product-tabs__btn");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(contentName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen").click();
+
+let map;
+
+function initMap() {
+    
+    map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: 29.783350368422294, lng: -95.27397108740126 },
+        zoom: 9,
+        styles: [
+            {
+                "featureType": "all",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "hue": "#ff4400"
+                    },
+                    {
+                        "saturation": -68
+                    },
+                    {
+                        "lightness": -4
+                    },
+                    {
+                        "gamma": 0.72
+                    }
+                ]
+            },
+            {
+                "featureType": "landscape.man_made",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "hue": "#0077ff"
+                    },
+                    {
+                        "gamma": 3.1
+                    }
+                ]
+            },
+            {
+                "featureType": "poi.park",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "hue": "#44ff00"
+                    },
+                    {
+                        "saturation": -23
+                    }
+                ]
+            },
+            {
+                "featureType": "transit",
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                    {
+                        "saturation": -64
+                    },
+                    {
+                        "hue": "#ff9100"
+                    },
+                    {
+                        "lightness": 16
+                    },
+                    {
+                        "gamma": 0.47
+                    },
+                    {
+                        "weight": 2.7
+                    }
+                ]
+            },
+            {
+                "featureType": "transit.line",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "lightness": -48
+                    },
+                    {
+                        "hue": "#ff5e00"
+                    },
+                    {
+                        "gamma": 1.2
+                    },
+                    {
+                        "saturation": -23
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "hue": "#00ccff"
+                    },
+                    {
+                        "gamma": 0.44
+                    },
+                    {
+                        "saturation": -33
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "hue": "#007fff"
+                    },
+                    {
+                        "gamma": 0.77
+                    },
+                    {
+                        "saturation": 65
+                    },
+                    {
+                        "lightness": 99
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                    {
+                        "gamma": 0.11
+                    },
+                    {
+                        "weight": 5.6
+                    },
+                    {
+                        "saturation": 99
+                    },
+                    {
+                        "hue": "#0091ff"
+                    },
+                    {
+                        "lightness": -86
+                    }
+                ]
+            }
+        ]
+    });
+} 
+

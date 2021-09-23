@@ -1,0 +1,14 @@
+.product-tabs {
+
+    &__descr-text {
+        font-family: $rubik;
+        font-size: 16px;
+        line-height: 2;
+        color: $blue-500;
+        margin-bottom: 110px;
+
+        @include r($mobile-lg) {
+            margin-bottom: 55px;
+        }
+    }
+}

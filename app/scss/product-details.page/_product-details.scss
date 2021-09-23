@@ -1,0 +1,134 @@
+.product-details {
+
+    .page-top {
+        margin-bottom: 120px;
+
+        @include r($mobile-xl) {
+            margin: 90px 0 70px;
+        }
+
+        @include r($mobile-sm) {
+            margin: 70px 0 30px;
+        }
+
+        @include r($mobile) {
+            margin: 65px 0 30px;
+        }
+    }
+
+    .breadcrumbs {
+
+        &__item {
+
+            &:nth-child(2) {
+                pointer-events: none;
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__inner {
+        margin-bottom: 100px;
+
+        @include r($mobile-xl) {
+            margin-bottom: 90px;
+        }
+
+        @include r($mobile-sm) {
+            margin-bottom: 70px;
+        }
+
+        @include r($mobile) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__slider {
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+
+        .slick-btn {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            right: 0;
+            box-shadow: none;
+            border: 2px solid $blue-100;
+            background-color: transparent;
+            border-radius: 5px;
+            top: -115px;
+            transition: border-color 0.4s;
+
+            @include r($mobile-lg) {
+                top: -95px;
+            }
+
+            @include r($mobile) {
+                display: none;
+            }
+
+            &:hover {
+                border-color: $blue-200;
+            }
+
+            &:focus {
+                box-shadow: 5px 5px 5px 1px rgba(37, 37, 37, 0.5);
+            }
+        }
+
+        .slick-prev {
+            right: 70px;
+        }
+    }
+
+    &__item {
+        margin: 0 10px;
+        border-radius: 10px;
+        padding: 25px 10px 40px;
+        max-width: 270px;
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+
+        @include r($mobile-lg) {
+            max-width: 450px;
+            width: 100%;
+        }
+
+        @include r($mobile-md) {
+            margin: 0 auto;
+            padding: 25px 10px 35px;
+        }
+
+        &:hover .product-card__list {
+            opacity: 1;
+            top: 50%;
+
+            @include r($mobile-md) {
+                top: 35px;
+            }
+        }
+    }
+
+    &__title {
+        text-align: left;
+        margin-bottom: 70px;
+        max-width: 90%;
+        @include line-clamp(2);
+
+        @include r($mobile-lg) {
+            margin-bottom: 45px;
+        }
+
+        @include r($mobile) {
+            text-align: center;
+            max-width: 100%;
+        }
+    }
+
+    .partners {
+        margin-bottom: 5px;
+    }
+}

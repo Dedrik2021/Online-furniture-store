@@ -146,6 +146,11 @@
             &:hover {
                 background-color: $blue-300;
             }
+
+            &:active:focus {
+                border-radius: 40px;
+                color: $white-100;
+            }
         }
 
         &--admin {

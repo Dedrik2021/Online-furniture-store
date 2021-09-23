@@ -50,8 +50,16 @@
             }
         }
 
+        &:nth-child(2) {
+
+            &::after {
+                display: none;
+            }
+        }
+
         &:last-child {
             pointer-events: none;
+            display: none;
         }
     }
 

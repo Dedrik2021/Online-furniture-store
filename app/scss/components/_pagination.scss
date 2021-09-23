@@ -6,10 +6,6 @@
         justify-content: flex-start;
     }
 
-    &__prev {
-        margin-right: 15px;
-    }
-
     &__list {
         display: flex;
         justify-content: center;
@@ -21,7 +17,7 @@
         align-items: center;
     }
 
-    &--style {
+    &__nav {
         background-color: transparent;
         border: 1px solid $blue-200;
         padding: 15px 20px 15px 20px;
@@ -45,6 +41,14 @@
             color: $white-100;
             background-color: $blue-500;
         }
+
+        &--prev {
+            margin-right: 15px;
+        }
+
+        &--activ {
+            color: $white-100;
+            background-color: $blue-200;
+        }
     }
-    
 }

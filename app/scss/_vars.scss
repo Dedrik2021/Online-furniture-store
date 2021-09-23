@@ -2,6 +2,10 @@ $white-100: #fff;
 $white-200: #f2f2f2;
 $white-300: #fefefe;
 $white-400: #e6e6e6;
+$white-500: #a1a1a1;
+$white-600: #e0e0e0;
+$white-700: #fbfbfb;
+$white-800: #fafafa;
 
 $gray: #b3b3b3;
 $gray-100: #e8e4df;
@@ -10,13 +14,19 @@ $gray-300: #8b8b8b;
 $gray-400: #7b7b7b;
 $gray-500: #585858;
 $gray-600: #414141;
+$gray-700: #9a9a9a;
 $gray-800: #333333;
+$gray-900: #ebebeb;
+$gray-1000: #999;
 
 $black-100: #191919;
 $black-200: #1a1a1a;
 $black-300: #262626;
+$black-400: #222222;
 
 $violet-100: #d6d6d6; 
+$violet-200: #565872; 
+$violet-300: #77788d; 
 
 $blue: #c2d2db;
 $blue-100: #edf1f4;
@@ -26,6 +36,8 @@ $blue-400: #234969;
 $blue-500: #243f4d;
 $blue-600: #222933;
 $blue-700: #1f2044;
+$blue-800: #164a7b;
+$blue-900: #516278;
 
 $yellow-100: #fef7f0;
 $yellow-200: #fde3cc;
@@ -37,6 +49,7 @@ $pink-300: #feefe2;
 
 $dmsans: 'DMSans', sans-serif;
 $rubik: 'Rubik', sans-serif;
+$Nunito: 'Nunito', sans-serif;
 $poppins: 'Poppins', sans-serif;
 
 @function max($numbers...) {

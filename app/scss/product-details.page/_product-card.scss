@@ -1,0 +1,73 @@
+.product-card {
+
+    &__list {
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        transition: opacity 0.5s, top 0.5s;
+        top: 60%;
+        transform: translateY(-50%);
+        display: flex;
+    
+        @include r($mobile-md) {
+            position: relative;
+            opacity: 1;
+            top: 35px;
+        }
+    
+        &:focus {
+            opacity: 1;
+            top: 50%;
+            outline: none;
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px 2px rgba(67, 99, 114, 0.5);
+            background-color: rgba(37, 37, 37, 0.1);
+    
+            @include r($mobile-md) {
+                position: relative;
+                opacity: 1;
+                top: -85px;
+            }
+        }
+    }
+    
+    &__btn {
+        margin: 0 7px;
+        background-color: $white-100;
+        border-radius: 50%;
+        border-bottom: 1px solid transparent;
+        transition: background-color 0.4s;
+        box-shadow: 1px 1px 25px 1px rgba(37, 37, 37, 0.5);
+        height: 46px;
+        width: 46px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        &:hover {
+            background-color: $blue-200;
+    
+            svg {
+                fill: $white-100;
+            }
+        }
+    
+        &:focus {
+            box-shadow: 0px 0px 5px 5px rgba(37, 37, 37, 0.5);
+        }
+    
+        &:active:focus {
+            background-color: $blue-300;
+            border-radius: 50%;
+    
+            svg {
+                fill: $white-100;
+            }
+        }
+    
+        svg {
+            fill: $blue-200;
+            transition: fill 0.4s;
+        }
+    }
+}
