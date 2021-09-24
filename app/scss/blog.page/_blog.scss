@@ -161,6 +161,7 @@
             color: $white-100;
             font-size: 12px;
             font-weight: 400;
+            max-width: 400px;
             text-transform: uppercase;
             @include line-clamp(1);
         }

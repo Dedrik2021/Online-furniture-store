@@ -28,7 +28,8 @@
         }
 
         @include r($mobile) {
-            display: block;
+            flex-direction: column-reverse;
+            align-items: center;
             max-width: 500px;
             margin: 0 auto 30px;
         }
@@ -42,7 +43,6 @@
     &__thumb {
         max-width: 140px;
         width: 100%;
-        // height: 530px;
         margin-right: 25px;
 
         @include r($mobile-lg) {
@@ -60,7 +60,8 @@
         }
 
         @include r($mobile) {
-            display: none;
+            margin-right: 0;
+            max-width: 100%;
         }
 
         .slick-list {
@@ -75,22 +76,18 @@
         border: 2px solid $white-200;
 
         @include r($mobile-md) {
-            width: 250px;
+            max-width: 250px;
         }
 
         @include r($mobile-sm) {
-            width: 385px;
+            max-width: 385px;
         }
 
         @include r($mobile) {
-            max-width: 500px;
-            margin: 0 auto;
+            max-width: 100%;
+            margin: 0 auto 20px;
+            height: 400px;
         }
-
-        // .slick-slide,
-        // .slick-track {
-        //     height: 530px;
-        // }
 
         .slick-slide {
             display: flex;
@@ -113,10 +110,6 @@
 
         @include r($mobile-md) {
             height: 100%;
-        }
-
-        @include r($mobile) {
-            // height: 580px;
         }
     }
 
@@ -251,7 +244,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-
         }
     }
 
@@ -293,7 +285,6 @@
 
         input {
             text-align: center;
-
         }
     }
 
@@ -342,6 +333,10 @@
         cursor: pointer;
         border: 2px solid $white-200;
 
+        @include r($mobile) {
+            height: 140px;
+        }
+
         img {
             height: 100%;
             width: 100%;
@@ -350,7 +345,6 @@
     }
 
     &__big {
-        // height: 100%;
         padding: 60px 0;
         width: 100%;
 
@@ -364,10 +358,6 @@
             padding: 60px 0;
         }
 
-        // @include r($mobile) {
-        //     max-width: 100%;
-        // }
-
         img {
             height: 405px;
             max-width: 235px;
@@ -379,6 +369,10 @@
 
             @include r($mobile-sm) {
                 height: 405px;
+            }
+
+            @include r($mobile) {
+                height: 290px;
             }
         }
     }

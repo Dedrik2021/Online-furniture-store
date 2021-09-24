@@ -34,6 +34,7 @@
         }
     
         .post-card {
+            pointer-events: none;
             margin-bottom: 60px;
 
             @include r($mobile) {
@@ -46,10 +47,6 @@
                 @include r($mobile-lg) {
                     background-color: $white-100;
                 }
-            }
-    
-            &__link {
-                pointer-events: none;
             }
     
             &__title {
@@ -66,6 +63,7 @@
                 &--top {
     
                     p {
+                        @include line-clamp(1000);
     
                         &:nth-child(1) {
                             font-weight: 500;
@@ -77,6 +75,7 @@
                 &--bottom {
                     padding: 0 0 0 5px;
                     margin-bottom: 0;
+                    @include line-clamp(10000);
 
                     @include r($mobile-sm) {
                         padding: 0;
@@ -128,17 +127,30 @@
                 border-top: 0;
                 padding: 0;
                 margin-bottom: 35px;
+                display: inline;
 
                 @include r($mobile-sm) {
                     display: block;
                     margin-bottom: 35px;
                 }
             }
+
+            &__wrapper {
+                margin-bottom: 35px;
+
+                @include r($mobile-md) {
+                    padding: 0;
+                }
+            }
     
-            &__wrapper-img {
-                height: 70vh;
+            &__img-bottom {
+                max-width: 320px;
+                width: 100%;
                 max-height: 210px;
+                height: 70vh;
+                float: left;
                 margin-right: 30px;
+                object-fit: cover;
                 background-color: $blue-100;
 
                 @include r($mobile-md) {
@@ -146,27 +158,9 @@
                 }
 
                 @include r($mobile-sm) {
-                    margin-right: 0;
-                    margin-bottom: 35px;
-                }
-    
-                img {
-                    max-width: 320px;
-                    height: 100%;
-                    object-fit: cover;
-
-                    @include r($mobile-sm) {
-                        max-width: 100%;
-                        width: 100%;
-                    }
-                }
-            }
-    
-            &__wrapper {
-                padding: 20px 0 0;
-
-                @include r($mobile-md) {
-                    padding: 0;
+                    float: none;
+                    max-width: 750px;
+                    margin: 0 0 10px;
                 }
             }
     
@@ -177,6 +171,15 @@
                 text-transform: none;
                 line-height: 1.6;
                 margin-bottom: 15px;
+                @include line-clamp(2);
+
+                &--top {
+                    padding-top: 20px;
+
+                    @include r($mobile-lg) {
+                        padding-top: 0;
+                    }
+                }
             }
         }
     
@@ -215,6 +218,7 @@
         letter-spacing: 0.04rem;
         display: block;
         margin-bottom: 55px;
+        @include line-clamp(2);
 
         @include r($mobile-sm) {
             text-align: center;
@@ -257,7 +261,12 @@
         &__link {
             letter-spacing: 0.03rem;
             margin-bottom: 5px;
+            max-width: 400px;
 
+            span {
+                @include line-clamp(2);
+            }
+            
             &::after {
                 display: none;
             }
@@ -285,6 +294,7 @@
             padding-left: 5px;
             margin-bottom: 20px;
             line-height: 1.9;
+            @include line-clamp(100000);
 
             @include r($mobile-xxl) {
                 padding-left: 0;
