@@ -1,0 +1,156 @@
+.reviews-form {
+    max-width: 100%;
+    width: 100%;
+
+    &__top {
+        display: flex;
+        margin-bottom: 20px;
+
+        @include r($mobile) {
+            display: block;
+        }
+    }
+
+    &__box {
+        position: relative;
+        max-width: 400px;
+        width: 100%;
+
+        @include r($mobile-md) {
+            max-width: 100%;
+        }
+
+        &--name {
+            margin-right: 30px;
+
+            @include r($mobile-lg) {
+                margin-right: 15px;
+            }
+
+            @include r($mobile) {
+                margin: 0 0 20px;
+            }
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        max-width: 830px;
+        height: 120px;
+        margin-bottom: 40px;
+    }
+
+
+    &__label {
+        position: absolute;
+        margin: 0;
+        width: 18px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        right: 20px;
+
+        @include r($mobile-lg) {
+            right: 15px;
+        }
+
+        @include r($mobile) {
+            right: 10px;
+        }
+
+        &--name,
+        &--email {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        &--name {
+            background-image: url(../images/content/user-form.svg);
+        }
+
+        &--email {
+            background-image: url(../images/content/envelope-form.svg);
+        }
+
+        &--text {
+            background-image: url(../images/content/comment-form.svg);
+            top: 15px;
+
+            @include r($mobile-lg) {
+                top: 10px;
+            }
+        }
+    }
+
+    &__id {
+        max-width: 100%;
+        width: 100%;
+        padding: 17px 40px 17px 20px;
+
+        @include r($mobile-lg) {
+            padding: 18px 35px 18px 10px;
+        }
+
+        @include r($mobile) {
+            max-width: 100%;
+            padding: 18px 30px 18px 10px;
+        }
+        
+        &:not(:last-child) {
+
+            @include r($mobile) {
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    &__id,
+    &__text {
+        border: none;
+        background-color: $white-800;
+
+        &::placeholder {
+            text-transform: none;
+            font-family: $rubik;
+            font-size: 16px;
+            color: $violet-300;
+        }
+
+        &:focus {
+            outline: transparent;
+            box-shadow: 5px 5px 5px 1px rgba(37, 37, 37, 0.5);
+        }
+    }
+    
+    &__text {
+        margin-bottom: 0;
+        max-width: 100%;
+        width: 100%;
+        resize: none;
+        overflow: auto;
+        height: 100%;
+        padding: 15px 40px 20px 20px;
+
+        @include r($mobile-lg) {
+            padding: 10px 35px 10px 10px;
+        }
+
+        @include r($mobile-md) {
+            padding: 10px 30px 10px 10px;
+        }
+    }
+
+    &__btn {
+        padding: 13px 35px 15px;
+        text-transform: uppercase;
+        font-family: $poppins;
+        font-size: 15px;
+        max-width: 250px;
+        letter-spacing: 0.03rem;
+        @include line-clamp(1);
+
+        &:focus {
+            box-shadow: 5px 5px 5px 1px rgba(37, 37, 37, 0.5);
+        }
+    }
+}

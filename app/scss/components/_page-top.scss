@@ -50,16 +50,15 @@
             }
         }
 
-        &:nth-child(2) {
-
-            &::after {
-                display: none;
-            }
-        }
-
         &:last-child {
             pointer-events: none;
-            display: none;
+
+            .breadcrumbs__link {
+
+                &:focus {
+                    visibility: hidden;
+                }
+            }
         }
     }
 
@@ -74,5 +73,12 @@
             border-bottom-color: $blue-200;
             color: $blue-200;
         }
+
+        // &:not(:last-child) {
+
+        //     &:focus {
+        //         border-bottom-color: $blue-500;
+        //     }
+        // }
     }
 }

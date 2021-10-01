@@ -1,0 +1,23 @@
+.login {
+
+    .page-top {
+        margin-bottom: 105px;
+
+        @include r($mobile-xl) {
+            margin: 90px 0 70px;
+        }
+
+        @include r($mobile-sm) {
+            margin: 70px 0 30px;
+        }
+
+        @include r($mobile) {
+            margin: 65px 0 30px;
+        }
+    }
+
+    .partners {
+        margin-bottom: 0;
+    }
+}
+

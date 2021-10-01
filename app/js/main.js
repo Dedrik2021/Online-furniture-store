@@ -55,8 +55,7 @@ $(function() {
         $('.overlay').toggleClass('_active');
     })
 
-    $('.menu__burger, .product-list__aside-btn, .blog__sidebar-btn').on('click', function(e) {
-        e.preventDefault();
+    $('.menu__burger, .product-list__aside-btn, .blog__sidebar-btn').on('click', function() {
         $('body').toggleClass('lock');
     })
     
@@ -68,7 +67,7 @@ $(function() {
     });
 
     $(document).mouseup(function (e) {
-        var container = $('.menu, .product-list');
+        var container = $('.menu, .product-list, .blog, .blog-details');
         if (container.has(e.target).length === 0 && $('body').hasClass('lock')) {
             $('body').removeClass('lock');
         }
@@ -214,7 +213,6 @@ $(function() {
     });
 
     $('.product-list__aside-btn, .blog__sidebar-btn').on('click', function() {
-        
         $('.product-list__aside, .product-list__aside-btn, .blog__sidebar, .overlay').toggleClass('active');
     })
 
@@ -229,7 +227,7 @@ $(function() {
     })
 
     $(document).mouseup(function (e) {
-        var container = $('.product-list__content, .blog__content');
+        var container = $('.product-list__content, .blog, .blog-details__inner');
         if (container.has(e.target).length === 0 && $('.product-list__aside, .blog__sidebar, .product-list__aside-btn, .overlay').hasClass('active')) {
             $('.product-list__aside, .product-list__aside-btn, .blog__sidebar, .overlay').removeClass('active');
         }
@@ -245,7 +243,7 @@ $(function() {
         arrows: false,
         responsive: [
             {
-                breakpoint: 576,
+                breakpoint: 577,
                 settings: {
                     vertical: false,
                 }
@@ -262,7 +260,7 @@ $(function() {
         fade: true,
         responsive: [
             {
-                breakpoint: 576,
+                breakpoint: 577,
                 settings: {
                     draggable: true,
                     slidesToShow: 1,
@@ -322,6 +320,14 @@ $(function() {
             },
         ]
     });
+
+    $('.login__checkbox, .login__checkbox--costom').on('click', function() {
+        $('.login__checkbox--costom').toggleClass('active');
+    })
+
+    $('.login__checkbox--costom').on('click', function() {
+        $('.login__checkbox--costom').toggleClass('active');
+    })
 
     var containerEl1 = document.querySelector('.products-week__content');
     var containerEl2 = document.querySelector('.design__content');
@@ -499,4 +505,3 @@ function initMap() {
         ]
     });
 } 
-

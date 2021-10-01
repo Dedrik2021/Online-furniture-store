@@ -1,0 +1,67 @@
+.filters-form {
+
+    &__search {
+        width: 100%;
+        position: relative;
+        display: flex;
+        margin-bottom: 55px;
+
+        @include r($mobile-md) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__input {
+        max-width: 222px;
+        width: 100%;
+        padding: 12px 10px;
+        border: 2px solid $blue-100;
+        border-right-color: transparent;
+        position: absolute;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+
+        @include r($mobile) {
+            max-width: 475px;
+            border-right-color: $blue-100;
+            position: relative;
+        }
+
+
+        &:focus {
+            outline: transparent;
+            border: 2px solid $blue-200;
+            box-shadow: -1px 5px 5px 0px rgba(37, 37, 37, 0.5);
+        }
+    }
+
+    &__btn {
+        max-width: 48px;
+        width: 100%;
+        padding: 13px 0 14px;
+        margin-left: auto;
+        display: flex;
+        justify-content: center;
+        background-color: $blue-100;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        transition: background-color 0.4s;
+
+        &:hover {
+            background-color: $blue-200;
+
+            svg {
+                fill: $white-100;
+            }
+        }
+
+        svg {
+            fill: $blue-800;
+            transition: fill 0.4s;
+        }
+
+        &:focus {
+            box-shadow: 3px 3px 5px 1px rgba(37, 37, 37, 0.5);
+        }
+    }
+}

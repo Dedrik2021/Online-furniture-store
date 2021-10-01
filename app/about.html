@@ -1,0 +1,187 @@
+@@include('./parts/components/_top.html', {
+    "title": "About Us",
+}) 
+    
+    @@include('./parts/components/_header.html')
+    
+    <main class="main">
+        <div class="overlay"></div>
+        <div class="about">
+
+            @@include('./parts/components/_page-top.html', {
+                "title": "About Us",
+                "arr": [{title: 'About Us'}]
+            })
+
+            <div class="container container--sm">
+                <div class="about__inner">
+                    <div class="about__img"></div>
+                    <div class="about__box">
+                        <div class="about__wrapper">
+                            <span class="about__years">12</span>
+                            <ul class="about__list">
+                                <li class="about__list-item">
+                                    Years
+                                </li>
+                                <li class="about__list-item">
+                                    Experience
+                                </li>
+                                <li class="about__list-item">
+                                    Working
+                                </li>
+                            </ul>
+                        </div>
+                        <h2 class="about__title title">
+                            Mission of our creative house
+                        </h2>
+                        <div class="about__text text">
+                            <p>
+                                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                            </p>
+                        </div>
+                        <ul class="about__block">
+                            <li class="about__item">
+                                <div class="about__advantages about__advantages--notebook">
+                                    520<span>+</span>
+                                </div>
+                                <span class="about__result">Projects</span>
+                            </li>
+                            <li class="about__item">
+                                <div class="about__advantages about__advantages--shout">
+                                    <span>$</span>4<span>M</span>
+                                </div>
+                                <span class="about__result">Revenue</span>
+                            </li>
+                            <li class="about__item">
+                                <div class="about__advantages about__advantages--medal">
+                                    250 
+                                </div>
+                                <span class="about__result">Awards</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="about__awards">
+                <div class="container container--sm">
+
+                    @@include('./parts/about/_about-awards.html')
+
+                </div>
+            </div>
+            <div class="container container--sm">
+                <div class="about__team">
+                    <div class="about__team-descr">
+                        <h2 class="about__team-title title">
+                            Our Team
+                        </h2>
+                        <div class="about__team-text text">
+                            <p>
+                                Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor inciLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                            </p>
+                        </div>
+                        <a class="about__team-btn btn btn--universal btn--arrow" href="#">
+                            Join With Us
+                        </a>
+                    </div>
+                    <ul class="team">
+                        <li class="team__item">
+                            <div class="team__img-wrapper">
+                                <img src="images/content/about-2.jpg" alt="Eliza Elliot">
+                            </div>
+                            <div class="team__box">
+                                <div class="team__about">
+                                    <a class="team__link" href="#">
+                                        <span class="team__name">
+                                            Eliza Elliot
+                                        </span>
+                                    </a>
+                                    <span class="team__prof">
+                                        Commodo tempor 
+                                    </span>
+                                </div>
+
+                                @@include('./parts/components/_share.html', {
+                                    "about": true,
+                                })     
+
+                            </div>
+                        </li>
+                        <li class="team__item">
+                            <div class="team__img-wrapper">
+                                <img src="images/content/about-3.jpg" alt="Roscoe A.">
+                            </div>
+                            <div class="team__box">
+                                <div class="team__about">
+                                    <a class="team__link" href="#">
+                                        <span class="team__name">
+                                            Roscoe A.
+                                        </span>
+                                    </a>
+                                    <span class="team__prof">
+                                        Commodo tempor 
+                                    </span>
+                                </div>
+
+                                @@include('./parts/components/_share.html', {
+                                    "about": true,
+                                })     
+
+                            </div>
+                        </li>
+                        <li class="team__item">
+                            <div class="team__img-wrapper">
+                                <img src="images/content/about-5.jpg" alt="Ruby M.">
+                            </div>
+                            <div class="team__box">
+                                <div class="team__about">
+                                    <a class="team__link" href="#">
+                                        <span class="team__name">
+                                            Ruby M.
+                                        </span>
+                                    </a>
+                                    <span class="team__prof">
+                                        Commodo tempor 
+                                    </span>
+                                </div>
+
+                                @@include('./parts/components/_share.html', {
+                                    "about": true,
+                                })     
+
+                            </div>
+                        </li>
+                        <li class="team__item">
+                            <div class="team__img-wrapper">
+                                <img src="images/content/about-4.jpg" alt="Marie F. Bloss">
+                            </div>
+                            <div class="team__box">
+                                <div class="team__about">
+                                    <a class="team__link" href="#">
+                                        <span class="team__name">
+                                            Marie F. Bloss
+                                        </span>
+                                    </a>
+                                    <span class="team__prof">
+                                        Commodo tempor 
+                                    </span>
+                                </div>
+
+                                @@include('./parts/components/_share.html', {
+                                    "about": true,
+                                })     
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            @@include('./parts/index/_insights.html')
+
+            @@include('./parts/components/_partners.html')
+
+        </div>
+    </main>
+    
+    @@include('./parts/components/_footer.html')

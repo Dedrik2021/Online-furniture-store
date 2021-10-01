@@ -11,59 +11,108 @@
 
         @@include('./parts/components/_page-top.html', {
             "title": "Product Details",
-            "page1": "Product Details",
+            "arr": [{title: 'Product Details'}]
         })
-
+        
         <div class="container container--sm">
 
             <div class="product-details__inner">
+                <article class="details-card">
 
-                @@include('./parts/product-details.page/_details__card.html')
-                
+                    @@include('./parts/product-details/_details-card-slider.html')
+
+                    <div class="details-card__box">
+                        <h3 class="details-card__title">
+                            Pendant lamp
+                        </h3>
+                        <div class="details-card__stars"></div>
+                        <span class="details-card__price">23<span>$</span></span>
+                        <div class="details-card__text">
+                            <p>
+                                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquiex ea commodo
+                            </p>
+                        </div>
+                        <div class="details-card__add">
+                            <label for="add-input">
+                                <span class="sr-only">quantity of goods</span>
+                            </label>
+                            <input class="details-card__add-num" type="number" value="1" id="add-input" min="1" name="quantity">
+                            <button class="details-card__add-btn btn btn--universal" type="button">
+                                Add to cart
+                            </button>
+                        </div>
+                        <div class="details-card__info">
+                            <div class="details-card__info-item">
+                                <span>SKU:</span>014
+                            </div>
+                            <div class="details-card__info-item">
+                                <span>Category:</span>Lights
+                            </div>
+                            <div class="details-card__info-item">
+                                <span>Tag:</span>
+
+                                @@include('./parts/components/_tags.html', {
+                                    "arr": ['Decorative'],
+                                })
+
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
             <div class="product-tabs">
 
-                @@include('./parts/product-details.page/_product-tabs__top.html')
+                @@include('./parts/product-details/_product-tabs-top.html')
 
                 <ul class="product-tabs__bottom">
                     <li class="product-tabs__item active" id="description">
                         <div class="product-tabs__descr">
 
-                            @@include('./parts/product-details.page/_product-tabs__descr.html')
+                            @@include('./parts/product-details/_product-tabs-descr.html')
 
                         </div>
 
                     </li>
                     <li class="product-tabs__item" id="Additional-info">
 
-                        @@include('./parts/product-details.page/_information.html')
+                        @@include('./parts/product-details/_information.html')
 
                     </li>
                     <li class="product-tabs__item" id="reviews-cont">
 
                         <ul class="reviews">
-                            <li class="reviews__item">
-                    
-                                @@include('./parts/product-details.page/_comment.html', {
-                                    "image-url": "images/content/avatar-1.jpg",
-                                    "name": "Delores G. Roberts",
-                                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse orci sem, ultrices  "
-                                })
-                                
-                            </li>
-                            <li class="reviews__item">
-                                
-                                @@include('./parts/product-details.page/_comment.html', {
-                                    "image-url": "images/content/avatar-2.jpg",
-                                    "name": "Shannon S. Williams",
-                                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra"
-                                })
+                            @@include('./parts/product-details/_comment.html', {
+                                "image-url": "images/content/avatar-1.jpg",
+                                "alt": "Delores G. Roberts",
+                                "date": "2 days ago",
+                                "name": "Delores G. Roberts",
+                                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse orci sem, ultrices  ",
+                                "reviews": true,
+                            })
 
-                            </li>
+                            @@include('./parts/product-details/_comment.html', {
+                                "image-url": "images/content/avatar-2.jpg",
+                                "alt": "Shannon S. Williams",
+                                "date": "2 days ago",
+                                "name": "Shannon S. Williams",
+                                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra",
+                                "reviews": true,
+                            })
                         </ul>
 
-                        @@include('./parts/product-details.page/_reviews-form.html')
+                        <div class="reviews__inner">
+                            <h2 class="reviews__title">
+                                Add your review
+                            </h2>
+                            @@include('./parts/product-details/_comment-form.html')
 
+                            @@include('./parts/components/_blog-form.html', {
+                                "btn": "Send Message",
+                                "text": "Comment",
+                            })
+
+                        </div>
+                        
                     </li>
                 </ul>
             </div>
@@ -74,7 +123,7 @@
                 <ul class="product-details__slider">
                     <li class="product-details__item">
                         
-                        @@include('./parts/product-details.page/_product-tabs__card.html', {
+                        @@include('./parts/product-details/_product-tabs-card.html', {
                             "title": "Wooden radio",
                             "image-url": "images/content/products-week1.jpg",
                         })
@@ -82,7 +131,7 @@
                     </li>
                     <li class="product-details__item">
     
-                        @@include('./parts/product-details.page/_product-tabs__card.html', {
+                        @@include('./parts/product-details/_product-tabs-card.html', {
                             "title": "Wooden chair",
                             "image-url": "images/content/products-week2.jpg",
                         })
@@ -90,7 +139,7 @@
                     </li>
                     <li class="product-details__item">
     
-                        @@include('./parts/product-details.page/_product-tabs__card.html', {
+                        @@include('./parts/product-details/_product-tabs-card.html', {
                             "title": "white chair",
                             "image-url": "images/content/products-week3.jpg",
                         })
@@ -98,7 +147,7 @@
                     </li>
                     <li class="product-details__item">
     
-                        @@include('./parts/product-details.page/_product-tabs__card.html', {
+                        @@include('./parts/product-details/_product-tabs-card.html', {
                             "title": "Retro table",
                             "image-url": "images/content/products-week4.jpg",
                         })
@@ -106,7 +155,7 @@
                     </li>
                     <li class="product-details__item">
     
-                        @@include('./parts/product-details.page/_product-tabs__card.html', {
+                        @@include('./parts/product-details/_product-tabs-card.html', {
                             "title": "Wooden radio",
                             "image-url": "images/content/products-week5.jpg",
                         })
@@ -114,7 +163,7 @@
                     </li>
                     <li class="product-details__item">
                         
-                        @@include('./parts/product-details.page/_product-tabs__card.html', {
+                        @@include('./parts/product-details/_product-tabs-card.html', {
                             "title": "Wooden chair",
                             "image-url": "images/content/products-week6.jpg",
                         })
@@ -122,7 +171,7 @@
                     </li>
                     <li class="product-details__item">
                         
-                        @@include('./parts/product-details.page/_product-tabs__card.html', {
+                        @@include('./parts/product-details/_product-tabs-card.html', {
                             "title": "White chair",
                             "image-url": "images/content/products-week7.jpg",
                         })
@@ -130,7 +179,7 @@
                     </li>
                     <li class="product-details__item">
                         
-                        @@include('./parts/product-details.page/_product-tabs__card.html', {
+                        @@include('./parts/product-details/_product-tabs-card.html', {
                             "title": "Retro table",
                             "image-url": "images/content/products-week8.jpg",
                         })
@@ -139,7 +188,7 @@
                 </ul>
             </div>
         </div>
-        @@include('./parts/index.page/_insights.html')
+        @@include('./parts/index/_insights.html')
 
         @@include('./parts/components/_partners.html')
     </div>

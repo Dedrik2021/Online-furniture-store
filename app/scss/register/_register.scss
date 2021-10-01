@@ -1,0 +1,59 @@
+.register {
+
+    .page-top {
+        margin-bottom: 105px;
+
+        @include r($mobile-xl) {
+            margin: 90px 0 70px;
+        }
+
+        @include r($mobile-sm) {
+            margin: 70px 0 30px;
+        }
+
+        @include r($mobile) {
+            margin: 65px 0 30px;
+        }
+    }
+
+    .partners {
+        margin-bottom: 0;
+    }
+
+    .login {
+
+        &__input {
+
+            &--password {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__registred {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        &__text {
+            font-family: $rubik;
+            color: $blue-300;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            @include line-clamp(5);
+        }
+
+        &__required {
+
+            &--checkbox {
+                margin-bottom: 20px;
+                line-height: 1.2;
+                max-width: 100%;
+                @include line-clamp(2);
+            }
+        }
+
+        &__checkbox--costom {
+            top: -2px;
+        }
+    }
+}

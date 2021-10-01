@@ -1,3 +1,4 @@
+$white: #fcfcfc;
 $white-100: #fff;
 $white-200: #f2f2f2;
 $white-300: #fefefe;
@@ -51,6 +52,7 @@ $dmsans: 'DMSans', sans-serif;
 $rubik: 'Rubik', sans-serif;
 $Nunito: 'Nunito', sans-serif;
 $poppins: 'Poppins', sans-serif;
+$myriad: 'Myriad', sans-serif;
 
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});

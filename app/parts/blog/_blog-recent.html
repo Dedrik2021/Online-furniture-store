@@ -1,0 +1,29 @@
+<article>
+    <a class="recent__link" href="/blog-details.html">
+        <div class="recent__wrapper-img">
+            <img src="@@image-url" alt="Chandelier">
+        </div>
+        <div class="recent__box">
+            <h3 class="recent__title">
+                @@title
+            </h3>
+
+            @@if (blog === true) {
+                <div class="recent__box-date">
+                    <svg width="10" height="11">
+                        <use xlink:href="images/sprite.svg#post-date"></use>
+                    </svg>
+                    <time class="recent__date" datetime="2020-01-28">
+                        28 january, 2020
+                    </time>
+                </div> 
+            }
+
+            @@if (blog === false) {
+                <div class="recent__stars"></div>
+                <span class="recent__price">23<span>$</span></span>
+            }
+
+        </div>
+    </a>
+</article>

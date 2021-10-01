@@ -1,0 +1,117 @@
+.about-awards {
+    display: flex;
+    padding: 0 25px;
+
+    @include r($mobile-lg) {
+        justify-content: center;
+    }
+
+    @include r($mobile-md) {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    @include r($mobile) {
+        display: block;
+    }
+
+    &__item {
+        position: relative;
+        text-align: center;
+        font-weight: 700;
+        font-size: 36px;
+        color: $blue-500;
+        padding-top: 80px;
+        max-width: 260px;
+        padding: 80px 35px 0 25px;
+        @include line-clamp(2);
+
+        @include r($mobile-lg) {
+            padding: 80px 20px 0;
+        }
+
+        @include r($mobile-md) {
+            padding: 70px 60px 0;
+        }
+
+        @include r($mobile-sm) {
+            padding: 70px 30px 0;
+        }
+
+        @include r($mobile) {
+            font-size: 24px;
+            padding: 70px 0px 0;
+        }
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            
+            @include r($mobile-md) {
+                margin-bottom: 40px;
+            }
+
+            @include r($mobile) {
+                margin-bottom: 0;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 70px;
+
+            @include r($mobile-lg) {
+                margin-right: 20px;
+            }
+
+            @include r($mobile-md) {
+                margin-right: 0;
+            }
+
+            @include r($mobile) {
+                margin-bottom: 30px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid $blue-500;
+            }
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 80px;
+            height: 65px;
+            background-repeat: no-repeat;
+            top: 0;
+            background-position: center;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &--pc::before {
+            background-image: url(../images/content/pc-icon.svg);
+        }
+
+        &--car::before {
+            background-image: url(../images/content/car-icon.svg);
+        }
+
+        &--time::before {
+            background-image: url(../images/content/time-icon.svg);
+        }
+
+        &--reward::before {
+            background-image: url(../images/content/reward-icon.svg);
+        }
+    }
+
+    &__success {
+        display: block;
+        font-size: 18px;
+        padding-top: 10px;
+        @include line-clamp(3);
+
+
+        @include r($mobile) {
+            font-size: 16px;
+            padding-top: 5px;
+        }
+    }
+}

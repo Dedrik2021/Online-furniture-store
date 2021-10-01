@@ -1,0 +1,256 @@
+@@include('./parts/components/_top.html', {
+    "title": "Blog Information",
+}) 
+    
+    @@include('./parts/components/_header.html')
+    
+    <main class="main">
+        <div class="overlay"></div>
+        <div class="blog-details">
+
+            @@include('./parts/components/_page-top.html', {
+                "title": "Blog Details",
+                arr: [{title: 'Blog', path: 'blog'}, {title: 'Blog Details'}],
+            })
+
+            <div class="container container--sm">
+                <div class="blog-details__inner">
+                    <button class="blog__sidebar-btn btn" type="button">
+                        <svg width="25" height="25">
+                            <use xlink:href="images/sprite.svg#filter-solid"></use>
+                        </svg>
+                        <span>Filter</span>
+                    </button>
+                    <div class="blog-details__box">
+                        <section>
+                            <article class="post-card">
+                                <div>
+                                    <img src="images/content/post-card-4.jpg" alt="bedroom">
+                                </div>
+                                <div class="post-card__box">
+                                    <div class="post-card__category">
+                                        <time datetime="2020-01-28">
+                                            28 january, 2020
+                                        </time>
+                                        <a class="post-card__link" href="#">
+                                            <span class="post-card__moder">By admin</span>  
+                                        </a>
+                                    </div>
+                                    <h2>
+                                        Fonsectetur adipisicing eiusmod
+                                    </h2>
+                                    <div class="post-card__text post-card__text--top text">
+                                        <p>
+                                            Sdipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                        </p>
+                                        <p>
+                                            consectetur adipisicing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudexercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudexercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velitesse cillum dolore eu fugiat nulla pariatur.
+                                        </p>
+                                    </div>
+                                    <blockquote>
+                                        <div>
+                                            <p>
+                                                Sdipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                            </p>
+                                        </div>
+                                        <cite>
+                                            Wiusmod tempor
+                                        </cite>
+                                    </blockquote>
+                                    <div class="post-card__wrapper">
+                                        <p>
+                                            <img src="images/content/post-card-7.jpg" alt="hall">
+                                            <span>
+                                                Riusmod tempor incididunt
+                                            </span>
+                                            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        </p>
+                                    </div>
+                                    <h3>
+                                        Kajtsal jervcm eoaspckred
+                                    </h3>
+                                    <div class="post-card__text text">
+                                        <p>
+                                            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+                        <div class="blog-details__wrapper">
+                            <div class="blog-user">
+                                <div class="blog-user__box">
+                                    <img class="blog-user__img" src="images/content/user-1.jpg" alt="Mark N. Hernandez">
+                                    <div class="blog-user__id">
+                                        <a class="blog-user__link" href="#">Mark N. Hernandez</a>
+                                        <span class="blog-user__prof">Designer</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog-details__wrapper-box">
+                                <div class="blog-details__tags">
+                                    <span class="blog-details__tags-span">Tags:</span>
+                                    
+                                    @@include('./parts/components/_tags.html', {
+                                        "arr": ['All,', 'Trending'],
+                                    })
+    
+
+                                </div>
+                                <div class="blog-details__share">
+                                    <span class="blog-details__share-span">Share:</span>
+                                    
+                                    @@include('./parts/components/_share.html', {
+                                        "about": false,
+                                    })
+
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="blog-details__reviews">
+                            <span class="blog-details__reviews-title">
+                                <span>3</span>Comments
+                            </span>
+                            <ul class="reviews">
+                                <li class="reviews__item">
+                                    <img  class="reviews__img" src="images/content/avatar-1.jpg" alt="avatar, Delores G. Roberts">
+                                    <div class="reviews__content">
+                                        <div class="reviews__box">
+                                            <div class="reviews__top">
+                                                <a class="reviews__link" href="#">
+                                                    <span class="reviews__name">
+                                                        Delores G. Roberts
+                                                    </span>
+                                                </a>
+                                                <time class="reviews__date" datetime="2020-10-11t08:18:11+02:00">
+                                                    Add 11 Oct 2020
+                                                </time>
+                                            </div>
+                                            <div class="reviews__text">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse orci sem, ultrices 
+                                                </p>
+                                            </div>
+                                            <button class="reviews__reply" type="button">
+                                                Reply
+                                                <svg width="15" height="13">
+                                                    <use xlink:href="images/sprite.svg#arrow-icon"></use>
+                                                </svg>
+                                                
+                                            </button>
+                                        </div>
+                                        <div class="reviews__box reviews__box--bottom">
+                                            <img  class="reviews__img" src="images/content/avatar-2.jpg" alt="avatar, Shannon S. Williams">
+                                            <div class="reviews__content">
+                                                <div class="reviews__top">
+                                                    <a class="reviews__link" href="#">
+                                                        <span class="reviews__name">
+                                                            Shannon S. Williams
+                                                        </span>
+                                                    </a>
+                                                    <time class="reviews__date" datetime="2020-10-11t08:18:11+02:00">
+                                                        Add 11 Oct 2020
+                                                    </time>
+                                                </div>
+                                                <div class="reviews__text">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra
+                                                    </p>
+                                                </div>
+                                                <button class="reviews__reply" type="button">
+                                                    Reply
+                                                    <svg width="15" height="13">
+                                                        <use xlink:href="images/sprite.svg#arrow-icon"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>                                   
+                                </li>
+
+                                @@include('./parts/product-details/_comment.html', {
+                                    "image-url": "images/content/avatar-3.jpg",
+                                    "alt": "Nicholas R. Coley",
+                                    "name": "Nicholas R. Coley",
+                                    "date": "Add 11 Oct 2020",
+                                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse orci sem, ",
+                                    "reviews": false,
+                                })
+
+                            </ul>
+                        </div>
+                        <div class="blog-details__form">
+                            <span class="blog-details__form-title">
+                                Leave A Comment
+                            </span>
+
+                            @@include('./parts/components/_blog-form.html', {
+                                "btn": "Post Comment",
+                                "text": "Comment"
+                            })
+                            
+                        </div>
+                    </div>
+                    <div class="blog__sidebar">
+                        <button class="blog__sidebar-close btn--close">
+                            <span class="sr-only">close filters</span>
+                            <span></span>
+                        </button>
+                        <div class="blog__filters">
+
+                            @@include('./parts/components/_blog-filters.html')
+
+                        </div>                      
+                        <div class="blog__recent">
+                            <h2 class="blog__recent-title title-products">
+                                Recent Posts<span></span>
+                            </h2>
+                            <ul class="recent">
+                                <li class="recent__item">
+
+                                    @@include('./parts/blog/_blog-recent.html', {
+                                        "image-url": "images/content/post-card-8.jpg",
+                                        "title": "Corem ipsum dolor tetur adipisicing elit",
+                                        "blog": true,
+                                    })
+
+                                </li>
+                                <li class="recent__item">
+
+                                    @@include('./parts/blog/_blog-recent.html', {
+                                        "image-url": "images/content/post-card-9.jpg",
+                                        "title": "Fdipisicing elit, sed do eiusmod tempor",
+                                        "blog": true,
+                                    })
+                                    
+                                </li>
+                                <li class="recent__item">
+
+                                    @@include('./parts/blog/_blog-recent.html', {
+                                        "image-url": "images/content/post-card-10.jpg",
+                                        "title": "Eonsectetur adipisicing elit, sed do eiusmod ",
+                                        "blog": true,
+                                    })
+                                    
+                                </li>
+                                <li class="recent__item">
+
+                                    @@include('./parts/blog/_blog-recent.html', {
+                                        "image-url": "images/content/post-card-2.jpg",
+                                        "title": "gnim ad minim veniam, quis nostrud ",
+                                        "blog": true,
+                                    })
+        
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @@include('./parts/components/_partners.html')
+
+        </div>
+    </main>
+    
+    @@include('./parts/components/_footer.html')

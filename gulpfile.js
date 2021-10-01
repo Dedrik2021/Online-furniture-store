@@ -54,7 +54,10 @@ function html() {
     return src(['app/*html', '!app/parts/**/*/.html'])
         .pipe(fileinclude({
             prefix: '@@',
-            basepath: '@file'
+            basepath: '@file',
+            context: {
+                arr: []
+            }
         }))
         .pipe(dest('./build'))
         .pipe(browserSync.stream())

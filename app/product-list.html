@@ -1,5 +1,5 @@
 @@include('./parts/components/_top.html', {
-    "title": "products of online furniture store",
+    "title": "Our Products",
 }) 
     
     @@include('./parts/components/_header.html')
@@ -10,7 +10,7 @@
 
             @@include('./parts/components/_page-top.html', {
                 "title": "Product-list",
-                "page1": "Product-list",
+                "arr": [{title: 'Product List'}]
             })
 
             <div class="container container--sm">
@@ -29,25 +29,25 @@
                         <div class="filters-inner">
                             
 
-                            @@include('./parts/product-list.page/_filters__category.html')
+                            @@include('./parts/product-list/_filters-category.html')
 
-                            @@include('./parts/product-list.page/_filters__price.html')
+                            @@include('./parts/product-list/_filters-price.html')
 
-                            @@include('./parts/product-list.page/_filters__brand.html')
+                            @@include('./parts/product-list/_filters-brand.html')
                             
                         </div>
 
-                        @@include('./parts/product-list.page/_recent-products.html')
+                        @@include('./parts/product-list/_recent-products.html')
 
                     </div>
                     <div class="product-list__inner">
 
-                        @@include('./parts/product-list.page/_product-list__filter-view.html')
+                        @@include('./parts/product-list/_product-list-filter-view.html')
 
                         <ul class="products-week__list">
                             <li class="products-week__item mix category-chair">
 
-                                @@include('./parts/product-list.page/_product-card.html', {
+                                @@include('./parts/product-list/_product-card.html', {
                                     "title": "Wooden radio",
                                     "image-url": "images/content/products-week1.jpg",
                                     "name": "Wooden radio",
@@ -56,7 +56,7 @@
                             </li>
                             <li class="products-week__item mix chair">
 
-                                @@include('./parts/product-list.page/_product-card.html', {
+                                @@include('./parts/product-list/_product-card.html', {
                                     "title": "white chair",
                                     "image-url": "images/content/products-week2.jpg",
                                     "name": "Wooden chair",
@@ -65,7 +65,7 @@
                             </li>
                             <li class="products-week__item mix lighting decor">
 
-                                @@include('./parts/product-list.page/_product-card.html', {
+                                @@include('./parts/product-list/_product-card.html', {
                                     "title": "Retro table",
                                     "image-url": "images/content/products-week3.jpg",
                                     "name": "Pendant lamp",
@@ -74,7 +74,7 @@
                             </li>
                             <li class="products-week__item mix category-decor category-furniture">
 
-                                @@include('./parts/product-list.page/_product-card.html', {
+                                @@include('./parts/product-list/_product-card.html', {
                                     "title": "Wooden chair",
                                     "image-url": "images/content/products-week4.jpg",
                                     "name": "Retro table",
@@ -83,7 +83,7 @@
                             </li>
                             <li class="products-week__item products-week__item--list mix category-chair category-furniture">
 
-                                @@include('./parts/product-list.page/_product-card.html', {
+                                @@include('./parts/product-list/_product-card.html', {
                                     "title": "White chair",
                                     "image-url": "images/content/products-week5.jpg",
                                 })
@@ -91,7 +91,7 @@
                             </li>
                             <li class="products-week__item products-week__item--list mix category-chair category-furniture">
 
-                                @@include('./parts/product-list.page/_product-card.html', {
+                                @@include('./parts/product-list/_product-card.html', {
                                     "title": "Retro table",
                                     "image-url": "images/content/products-week4.jpg",
                                 })
@@ -99,7 +99,7 @@
                             </li>
                             <li class="products-week__item products-week__item--list mix category-furniture category-decor">
 
-                                @@include('./parts/product-list.page/_product-card.html', {
+                                @@include('./parts/product-list/_product-card.html', {
                                     "title": "Wooden chair",
                                     "image-url": "images/content/products-week9.jpg",
                                 })
@@ -107,7 +107,7 @@
                             </li>
                             <li class="products-week__item products-week__item--list mix category-decor">
 
-                                @@include('./parts/product-list.page/_product-card.html', {
+                                @@include('./parts/product-list/_product-card.html', {
                                     "title": "white chair",
                                     "image-url": "images/content/products-week7.jpg",
                                 })
@@ -115,7 +115,7 @@
                             </li>
                             <li class="products-week__item products-week__item--list mix category-lighting">
 
-                                @@include('./parts/product-list.page/_product-card.html', {
+                                @@include('./parts/product-list/_product-card.html', {
                                     "title": "Retro table",
                                     "image-url": "images/content/products-week8.jpg",
                                 })
@@ -123,7 +123,7 @@
                             </li>
                             <li class="products-week__item products-week__item--list mix category-lighting">
 
-                                @@include('./parts/product-list.page/_product-card.html', {
+                                @@include('./parts/product-list/_product-card.html', {
                                     "title": "Wooden chair",
                                     "image-url": "images/content/products-week10.jpg",
                                 })
@@ -131,7 +131,7 @@
                             </li>
                             <li class="products-week__item products-week__item--list mix category-lighting">
 
-                                @@include('./parts/product-list.page/_product-card.html', {
+                                @@include('./parts/product-list/_product-card.html', {
                                     "title": "White chair",
                                     "image-url": "images/content/products-week11.jpg",
                                 })
@@ -139,7 +139,7 @@
                             </li>
                             <li class="products-week__item products-week__item--list mix category-lighting">
 
-                                @@include('./parts/product-list.page/_product-card.html', {
+                                @@include('./parts/product-list/_product-card.html', {
                                     "title": "Retro table",
                                     "image-url": "images/content/products-week12.jpg",
                                 })
@@ -153,7 +153,7 @@
                 </div>
             </div>
 
-            @@include('./parts//components/_partners.html')
+            @@include('./parts/components/_partners.html')
 
         </div>
     </main>

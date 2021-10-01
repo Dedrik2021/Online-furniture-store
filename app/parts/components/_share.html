@@ -1,0 +1,39 @@
+<ul class="blog-share">
+
+    @@if (about === false) {
+        <li class="blog-share__item">
+            <a class="blog-share__link" href="https://www.facebook.com/" style="background-image: url(../images/content/facebook-icon.svg);" target="_blank">
+                <span class="sr-only">facebook</span>
+            </a>
+        </li>
+        <li class="blog-share__item">
+            <a class="blog-share__link" href="https://twitter.com/?lang=de" style="background-image: url(../images/content/twitter-icon.svg);" target="_blank">
+                <span class="sr-only">twitter</span>
+            </a>
+        </li>
+        <li class="blog-share__item">
+            <a class="blog-share__link" href="https://www.instagram.com/?hl=de" style="background-image: url(../images/content/insta-icon.svg);" target="_blank">
+                <span class="sr-only">instagram</span>
+            </a>
+        </li>
+        <li class="blog-share__item">
+            <a class="blog-share__link" href="https://www.google.com/" style="background-image: url(../images/content/google__plus-icon.svg);" target="_blank">
+                <span class="sr-only">google plus</span>
+            </a>
+        </li>
+    }
+    
+    @@if (about === true) {
+        <li class="blog-share__item">
+            <a class="blog-share__link" href="https://www.instagram.com/?hl=de" style="background-image: url(../images/content/insta-icon.svg);" target="_blank">
+                <span class="sr-only">instagram</span>
+            </a>
+        </li>
+        <li class="blog-share__item">
+            <a class="blog-share__link" href="https://www.google.com/" style="background-image: url(../images/content/google__plus-icon.svg);" target="_blank">
+                <span class="sr-only">google plus</span>
+            </a>
+        </li>
+    }
+    
+</ul>

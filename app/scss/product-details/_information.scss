@@ -1,0 +1,42 @@
+.information {
+    margin-bottom: 110px;
+
+    @include r($mobile-lg) {
+        margin-bottom: 55px;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        font-family: "Rubik",sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        color: $blue-500;
+        @include line-clamp(2);
+
+        @include r($mobile-md) {
+            margin-bottom: 15px;
+        }
+
+        @include r($mobile-sm) {
+            text-align: center;
+        }
+    }
+
+    &__text {
+        font-family: $rubik;
+        font-size: 16px;
+        line-height: 1.8;
+        color: $blue-500;
+
+        p {
+
+            &:not(:last-child) {
+                margin-bottom: 25px;
+
+                @include r($mobile-sm) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

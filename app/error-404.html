@@ -1,0 +1,39 @@
+@@include('./parts/components/_top.html', {
+    "title": "Error 404",
+}) 
+    
+    @@include('./parts/components/_header.html')
+    
+    <main class="main">
+        <h1 class="sr-only">
+            error 404
+        </h1>
+        <div class="overlay"></div>
+        <div class="error-404">
+            <div class="container container--sm">
+                <div class="error-404__inner">
+                    <div class="error-404__box">
+                        <h2 class="error-404__title title">
+                            OPPS! Page Not Found!!
+                        </h2>
+                        <div class="error-404__text text">
+                            <p>
+                                We,re sorry but we can’t seem to find the pages you request. This might be because you have typed the web address not find incorrectly.
+                            </p>
+                        </div>
+                        <a class="error-404__btn btn btn--universal" href="/">
+                            Back To Home
+                        </a>
+                    </div>
+                    <div class="error-404__img-wrapper">
+                        <img src="images/content/error-404.jpg" alt="error 404">
+                    </div>
+                </div>
+            </div>
+
+            @@include('./parts/components/_partners.html')
+
+        </div>
+    </main>
+    
+    @@include('./parts/components/_footer.html')

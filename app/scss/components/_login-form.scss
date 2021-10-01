@@ -1,0 +1,170 @@
+.login {
+
+    &__form {
+        max-width: 470px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto 115px;
+    
+        @include r($mobile-xl) {
+            margin-bottom: 90px;
+        }
+    
+        @include r($mobile-sm) {
+            margin-bottom: 70px;
+        }
+    
+        @include r($mobile) {
+            margin-bottom: 65px;
+        }
+    }
+    
+    &__required {
+        line-height: 3;
+        @include line-clamp(1);
+
+        @include r($mobile) {
+            line-height: 2;
+        }
+    
+        &--checkbox {
+            position: relative;
+            cursor: pointer;
+            line-height: 1.2;
+            display: flex;
+            align-items: center;
+            max-width: 50%;
+            @include line-clamp(1);
+        }
+    }
+    
+    &__input {
+        padding: 20px;
+        border: 2px solid $blue-100;
+        margin-bottom: 35px;
+    
+        @include r($mobile) {
+            padding: 15px 10px;
+        }
+    
+        &:focus {
+            outline: transparent;
+            box-shadow: 3px 3px 5px 1px rgba(37, 37, 37, 0.5);
+        }                               
+    
+        &--user {
+            margin-bottom: 10px;
+        }
+    }
+    
+    &__btn {
+        font-family: $rubik;
+        font-weight: 500;
+        padding: 18px 0;
+        font-size: 18px;
+    }
+    
+    &__box {
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        width: 100%;
+        padding: 35px 0 30px;
+        border-bottom: 2px solid $blue-100;
+        margin-bottom: 30px;
+    }
+    
+    &__checkbox {
+        width: 13px;
+        height: 13px;
+        position: absolute;
+        left: -3px;
+        top: -3px;
+    }
+    
+    &__checkbox--costom {
+        height: 15px;
+        width: 15px;
+        display: inline-block;
+        background-color: $blue-100;
+        position: relative;
+        left: 0;
+        top: -1px;
+        margin-right: 10px;
+    
+        &::before {
+            content: "";
+            z-index: 10;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            background-image: url(../images/content/check-icon.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+    
+        &.active::before {
+            opacity: 1;
+        }
+    }
+    
+    &__link {
+        margin-left: auto;
+        border-bottom: 1px solid transparent;
+        transition: color 0.4s, border-bottom-color 0.4s;
+        @include line-clamp(1);
+    
+        &:hover {
+            color: $blue-200;
+            border-bottom-color: $blue-200;
+        }
+    }
+    
+    &__registred,
+    &__link,
+    &__required {
+        font-family: $rubik;
+        color: $blue-300;
+    }
+    
+    &__registred {
+        text-align: center;
+        margin-bottom: 25px;
+        @include line-clamp(2);
+    }
+    
+    &__btn-regist {
+        text-align: center;
+        border: 2px solid $blue-200;
+        padding: 18px 0;
+        color: $blue-500;
+        font-family: $rubik;
+        font-weight: 500;
+        font-size: 18px;
+        transition: color 0.4s, background-color 0.4s;
+        @include line-clamp(1);
+    
+        &:hover {
+            color: $white-100;
+            background-color: $blue-200;
+        }
+        
+        &:focus {
+            border-bottom: 2px solid $blue-200;
+            box-shadow: 3px 3px 5px 1px rgba(37, 37, 37, 0.5);
+        }
+    
+        &:active:focus {
+            border-color: $blue-200;  
+            color: $white-100;
+            background-color: $blue-500;
+        }
+    }
+}
+

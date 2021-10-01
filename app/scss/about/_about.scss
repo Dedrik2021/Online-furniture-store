@@ -1,0 +1,486 @@
+.about {
+
+    .page-top {
+        margin-bottom: 120px;
+
+        @include r($mobile-xl) {
+            margin: 90px 0 70px;
+        }
+
+        @include r($mobile-sm) {
+            margin: 70px 0 30px;
+        }
+
+        @include r($mobile) {
+            margin: 65px 0 30px;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        margin-bottom: 120px;
+
+        @include r($mobile-xl) {
+            margin-bottom: 90px;
+        }
+
+        @include r($mobile-md) {
+            justify-content: center;
+        }
+
+        @include r($mobile-sm) {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__img {
+        height: 675px;
+        max-width: 570px;
+        width: 100%;
+        margin-right: 50px;
+        background-image: url(../images/content/about-1.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include r($mobile-lg) {
+            margin-right: 25px;
+        }
+
+        @include r($mobile-md) {
+            display: none;
+        }
+    }
+
+    &__box {
+        max-width: 550px;
+        width: 100%;
+        padding-top: 50px;
+
+        @include r($mobile-md) {
+            padding-top: 0;
+            max-width: 600px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        margin-bottom: 10px;
+
+        @include r($mobile-md) {
+            justify-content: center;
+        }
+
+        @include r($mobile-md) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__years {
+        font-family: $rubik;
+        font-weight: 700;
+        font-size: 140px;
+        color: $blue-200;
+        margin-right: 20px;
+        word-wrap: break-word;
+        letter-spacing: 0.4rem;
+        @include line-clamp(1);
+    }
+
+    &__list {
+        padding-top: 50px;
+    }
+
+    &__list-item {
+        font-family: $rubik;
+        font-size: 16px;
+        line-height: 1.6;
+        @include line-clamp(1);
+
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__title {
+        text-align: left;
+        margin-bottom: 35px;
+        @include line-clamp(2);
+
+        @include r($mobile) {
+            text-align: center;
+        }
+    }
+
+    &__text {
+        line-height: 1.9;
+        margin-bottom: 60px;
+        @include line-clamp(10);
+
+        @include r($mobile) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__block {
+        display: flex;
+        border-top: 2px solid $blue-100;
+        padding-top: 30px;
+
+        @include r($mobile) {
+            max-width: 100%;
+            justify-content: center;
+            padding-top: 15px;
+        }
+    }
+
+    &__item {
+        padding-left: 55px;
+        position: relative;
+        padding-bottom: 20px;
+
+        @include r($mobile-md) {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        @include r($mobile) {
+            padding: 50px 15px 0;
+            text-align: center;
+        }
+
+        &:not(:first-child) {
+            border-left: 1px solid $blue-100;
+            padding-left: 90px;
+
+            @include r($mobile) {
+                padding: 50px 10px 0 25px;
+            }
+
+            &::before {
+                left: 30px;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 25px;
+
+            @include r($mobile) {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__advantages {
+        font-weight: 700;
+        font-size: 36px;
+        color: $blue-500;
+        @include line-clamp(1);
+
+        @include r($mobile) {
+            font-size: 22px;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 45px;
+            height: 40px;
+            left: 0px;
+            top: 15px;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            @include r($mobile) {
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        &--notebook::before {
+            background-image: url(../images/content/notebook-icon.svg);
+        }
+
+        &--shout::before {
+            background-image: url(../images/content/shout-icon.svg);
+        }
+
+        &--medal::before {
+            background-image: url(../images/content/medal-icon.svg);
+        }
+
+        &--shout::before,
+        &--medal::before {
+            left: 30px;
+
+            @include r($mobile) {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    &__result {
+        font-weight: 700;
+        font-size: 16px;
+        color: $gray-600;
+        max-width: 100px;
+        word-wrap: break-word;
+        @include line-clamp(2);
+    }
+
+    &__awards {
+        background-color: $yellow-500;
+        padding: 85px 0 80px;
+        margin-bottom: 120px;
+
+        @include r($mobile-lg) {
+            padding: 70px 0;
+            margin-bottom: 90px;
+        }
+
+        @include r($mobile-md) {
+            padding: 50px 0;
+        }
+
+        @include r($mobile-sm) {
+            margin-bottom: 60px;
+        }
+
+        @include r($mobile) {
+            padding: 40px 0;
+        }
+    }
+
+    &__team {
+        display: flex;
+
+        @include r($mobile-md) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__team-descr {
+        max-width: 305px;
+        margin-right: 95px;
+
+        @include r($mobile-lg) {
+            margin-right: 30px;
+        }
+
+        @include r($mobile-md) {
+            margin: 0 0 50px;
+            max-width: 600px;
+        }
+    }
+
+    &__team-title {
+        text-align: left;
+        margin-bottom: 20px;
+        @include line-clamp(2);
+
+        @include r($mobile) {
+            text-align: center;
+        }
+    }
+
+    &__team-text {
+        line-height: 1.9;
+        margin-bottom: 55px;
+        @include line-clamp(20);
+
+        @include r($mobile-md) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__team-btn {
+        border-radius: 5px;
+        padding: 17px 60px 15px 15px;
+        font-family: $poppins;
+        font-weight: 600;
+
+        @include r($mobile) {
+            display: inline-block;
+        }
+
+        &:focus {
+            border-bottom: 0;
+        }
+
+        &:active:focus {
+            border-radius: 5px;
+            color: $white-100;
+        }
+    }
+
+    .blog-share {
+        display: flex;
+    
+        @include r($mobile-sm) {
+            display: block;
+        }
+    
+        @include r($mobile) {
+            display: flex;
+        }
+    
+        &__item {
+            
+            &:not(:last-child) {
+                margin-right: 5px;
+    
+                @include r($mobile-sm) {
+                    margin: 0 0 5px;
+                }
+    
+                @include r($mobile) {
+                    margin: 0 5px;
+                }
+            }
+        }
+    
+        &__link {
+            background-color: $gray-100;
+            display: block;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 40px;
+            height: 40px;
+            background-size: 20px;
+            border-radius: 50%;
+            border-bottom: 0;
+            transition: background-color 0.4s;
+    
+            &:hover {
+                background-color: $yellow-500;
+            }
+    
+            &:focus {
+                border-bottom: 0;
+                box-shadow: 0px 0px 5px 2px rgba(37, 37, 37, 0.5);
+            }
+        }
+    }
+    
+    .team {
+        max-width: 770px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+        row-gap: 40px;
+    
+        @include r($mobile) {
+            display: block;
+        }
+    
+        &__item {
+            background-color:  $white;
+            position: relative;
+            max-width: 370px;
+            height: 380px;
+            box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+    
+            @include r($mobile) {
+                max-width: 100%;
+                width: 100%;
+            }
+    
+            &:not(:last-child) {
+    
+                @include r($mobile) {
+                    margin-bottom: 30px;
+                }
+                
+            }
+        }
+    
+        &__img-wrapper {
+            max-width: 370px;
+            width: 100%;
+            height: 320px;
+            background-color: $blue-100;
+    
+            @include r($mobile) {
+                max-width: 100%;
+                max-height: 100%;
+            }
+    
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    
+        &__box {
+            max-width: 325px;
+            width: 100%;
+            background-color: $white-100;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 25px 25px;
+            bottom: 0;
+    
+            @include r($mobile-sm) {
+                padding: 15px;
+            }
+    
+            @include r($mobile) {
+                padding: 10px;
+            }
+        }
+    
+        &__link {
+            font-weight: 700;
+            font-size: 22px;
+            color: $blue-300;
+            border-bottom: 1px solid transparent;
+            display: inline-block;
+            margin-bottom: 10px;
+            transition: color 0.4s, border-bottom-color 0.4s;
+    
+            &:hover {
+                border-bottom-color: $yellow-500;
+                color: $blue-200;
+            }
+    
+            &:focus {
+                border-bottom-color: $blue-500;
+            }
+        }
+    
+        &__name {
+            @include line-clamp(1);
+        }
+    
+        &__prof {
+            display: block;
+            font-family: $rubik;
+            font-size: 16px;
+            color: $violet-200;
+            @include line-clamp(1);
+        }
+    }
+    
+    .insights {
+        padding-top: 115px;
+
+        @include r($mobile-xl) {
+            padding-top: 90px;
+        }
+
+        @include r($mobile-sm) {
+            padding-top: 60px;
+        }
+    }
+
+    .partners {
+        margin-bottom: 5px;
+    }
+}
+

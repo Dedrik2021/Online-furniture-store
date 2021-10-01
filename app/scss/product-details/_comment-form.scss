@@ -1,0 +1,88 @@
+.comment-form {
+
+    &__wrapper {
+        margin-bottom: 30px;
+        display: flex;
+
+        @include r($mobile-sm) {
+            justify-content: center;
+        }
+
+        @include r($mobile) {
+            display: block;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        font-family: $rubik;
+        font-size: 18px;
+        color: $blue-500;
+        margin-right: 60px;
+        max-width: 650px;
+        @include line-clamp(1);
+
+        @include r($mobile-sm) {
+            margin-right: 30px;
+        }
+
+        @include r($mobile) {
+            margin: 0 0 20px;
+        }
+    }
+
+    &__label {
+        position: relative;
+
+        @include r($mobile) {
+            display: block;
+        }
+
+        &:not(:last-child) {
+            margin-right: 25px;
+
+            @include r($mobile) {
+                margin: 0 0 10px;
+            }
+        }
+    }
+
+    &__input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        left: 5px;
+        top: 5px;
+
+        @include r($mobile) {
+            left: 50%;
+        }
+
+        &:checked+.comment-form__radio {
+
+            svg {
+                fill: $yellow-900;
+            }
+        }
+    }
+
+    &__radio {
+        position: relative;
+        z-index: 10;
+        cursor: pointer;
+
+        &:hover {
+            
+            svg {
+                fill: $yellow-900;
+                opacity: 0.5;
+            }
+        }
+
+        svg {
+            fill: $gray;
+            transition: fill 0.4s, opacity 0.4s;
+        }
+    }
+}

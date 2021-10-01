@@ -11,7 +11,8 @@
 
             @@include('./parts/components/_page-top.html', {
                 "title": "Blog",
-                "page1": "Blog",
+                "arr": ['About Us'],
+                "arr": [{title: 'Blog'}],
             })
 
             <div class="container container--sm">
@@ -23,46 +24,60 @@
                             </svg>
                             <span>Filter</span>
                         </button>
-                        <div class="blog__box">
-                            <ul class="blog__list">
-                                <li class="blog__item">
-    
-                                    @@include('./parts/blog.page/_blog__card.html', {
-                                        "image-url": "images/content/post-card-1.jpg",
-                                        "title": "Fonsectetur adipisicing  eiusmod",
-                                        "text": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ",
-                                    })
-    
-                                </li>
-                                <li class="blog__item">
-    
-                                    @@include('./parts/blog.page/_blog__card.html', {
-                                        "image-url": "images/content/post-card-2.jpg",
-                                        "title": "Fonsectetur adipisicing elit,",
-                                        "text": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ",
-                                    })
-    
-                                </li>
-                                <li class="blog__item">
-    
-                                    @@include('./parts/blog.page/_blog__card.html', {
-                                        "image-url": "images/content/post-card-6.jpg",
-                                        "title": "Fsectetur adipisicing tempor incididunt",
-                                        "text": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ",
-                                    })
-    
-                                </li>
-                                <li class="blog__item">
-    
-                                    @@include('./parts/blog.page/_blog__card.html', {
-                                        "image-url": "images/content/post-card-7.jpg",
-                                        "title": "Vonsectetur adipisicing elit",
-                                        "text": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ",
-                                    })
-    
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="blog__list">
+                            <li class="blog__item">
+
+                                @@include('./parts/blog/_blog-card.html', {
+                                    "image-url": "images/content/post-card-1.jpg",
+
+                                    "title": "Fonsectetur adipisicing  eiusmod",
+
+                                    "text": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ",
+
+                                    "alt": "Badroom"
+                                })
+
+                            </li>
+                            <li class="blog__item">
+
+                                @@include('./parts/blog/_blog-card.html', {
+                                    "image-url": "images/content/post-card-2.jpg",
+
+                                    "title": "Fonsectetur adipisicing elit,",
+
+                                    "text": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ",
+
+                                    "alt": "Hall"
+                                })
+
+                            </li>
+                            <li class="blog__item">
+
+                                @@include('./parts/blog/_blog-card.html', {
+                                    "image-url": "images/content/post-card-6.jpg",
+
+                                    "title": "Fsectetur adipisicing tempor incididunt",
+
+                                    "text": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ",
+
+                                    "alt": "Reading room"
+                                })
+                                
+                            </li>
+                            <li class="blog__item">
+
+                                @@include('./parts/blog/_blog-card.html', {
+                                    "image-url": "images/content/post-card-7.jpg",
+
+                                    "title": "Vonsectetur adipisicing elit",
+
+                                    "text": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ",
+
+                                    "alt": "Cabinet"
+                                })
+
+                            </li>
+                        </ul>
                         <div class="blog__sidebar">
                             <button class="blog__sidebar-close btn--close">
                                 <span class="sr-only">close filters</span>
@@ -70,7 +85,7 @@
                             </button>
                             <div class="blog__filters">
     
-                                @@include('./parts/blog.page/_blog__filters.html')
+                                @@include('./parts/components/_blog-filters.html')
     
                             </div>                      
                             <div class="blog__recent">
@@ -80,33 +95,37 @@
                                 <ul class="recent">
                                     <li class="recent__item">
     
-                                        @@include('./parts/blog.page/_blog__recent.html', {
+                                        @@include('./parts/blog/_blog-recent.html', {
                                             "image-url": "images/content/post-card-8.jpg",
                                             "title": "Corem ipsum dolor tetur adipisicing elit",
+                                            "blog": true,
                                         })
     
                                     </li>
                                     <li class="recent__item">
     
-                                        @@include('./parts/blog.page/_blog__recent.html', {
+                                        @@include('./parts/blog/_blog-recent.html', {
                                             "image-url": "images/content/post-card-9.jpg",
                                             "title": "Fdipisicing elit, sed do eiusmod tempor",
+                                            "blog": true,
                                         })
                                         
                                     </li>
                                     <li class="recent__item">
     
-                                        @@include('./parts/blog.page/_blog__recent.html', {
+                                        @@include('./parts/blog/_blog-recent.html', {
                                             "image-url": "images/content/post-card-10.jpg",
                                             "title": "Eonsectetur adipisicing elit, sed do eiusmod ",
+                                            "blog": true,
                                         })
                                         
                                     </li>
                                     <li class="recent__item">
     
-                                        @@include('./parts/blog.page/_blog__recent.html', {
+                                        @@include('./parts/blog/_blog-recent.html', {
                                             "image-url": "images/content/post-card-2.jpg",
                                             "title": "gnim ad minim veniam, quis nostrud ",
+                                            "blog": true,
                                         })
             
                                     </li>

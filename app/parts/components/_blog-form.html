@@ -1,0 +1,24 @@
+<form class="reviews-form">
+    <div class="reviews-form__top">
+        <div class="reviews-form__box reviews-form__box--name">
+            <label class="reviews-form__label reviews-form__label--name" for="form-name">
+                <span class="sr-only">your name</span>
+            </label>
+            <input class="reviews-form__id reviews-form__id--name" id="form-name" type="text" name="[reviews]name" placeholder="Name" required>
+        </div>
+        
+        <div class="reviews-form__box">
+            <label class="reviews-form__label reviews-form__label--email" for="form-email">
+                <span class="sr-only">your email address</span>
+            </label>
+            <input class="reviews-form__id reviews-form__id--email" id="form-email" type="email" name="[reviews]email" placeholder="Email" required>
+        </div>
+    </div>
+    <div class="reviews-form__wrapper">
+        <label class="reviews-form__label reviews-form__label--text" for="form-text">
+            <span class="sr-only">your text</span>
+        </label>
+        <textarea class="reviews-form__text" name="[reviews]text" id="form-text" placeholder="@@text" required></textarea>
+    </div>
+    <button class="reviews-form__btn btn btn--universal" type="submit">@@btn</button>
+</form>

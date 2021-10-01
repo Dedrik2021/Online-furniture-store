@@ -1,0 +1,30 @@
+@@include('./parts/components/_top.html', {
+    "title": "Login",
+}) 
+    
+    @@include('./parts/components/_header.html')
+    
+    <main class="main">
+        <div class="overlay"></div>
+
+        <div class="login">
+
+            @@include('./parts/components/_page-top.html', {
+                "title": "Login",
+                "arr": [{title: 'Login'}]
+            })
+
+            <div class="container container--sm">
+                
+                @@include('./parts/components/_login-form.html', {
+                    "register": false,
+                })
+
+            </div>
+
+            @@include('./parts/components/_partners.html')
+
+        </div>
+    </main>
+    
+    @@include('./parts/components/_footer.html')

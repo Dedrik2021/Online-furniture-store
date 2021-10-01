@@ -11,18 +11,22 @@
 
             @@include('./parts/components/_page-top.html', {
                 "title": "Contact",
-                "page1": "Contact",
+                "arr": [{title: 'Contact'}]
             })
 
             <div class="container container--sm">
                 <div class="contact__box">
 
-                    @@include('./parts/contact.page/_contact-list.html')
+                    @@include('./parts/contact/_contact-list.html')
 
                 </div>
                 <div class="contact__wrapper">
                     
-                    @@include('./parts/contact.page/_contact-form.html')
+                    @@include('./parts/components/_blog-form.html', {
+                        "btn": "Send Message",
+                        "email": "Email",
+                        "text": "Message"
+                    })
 
                     <div id="map">
                         <i class="map__marker">
@@ -34,7 +38,7 @@
                 </div>
             </div>
 
-            @@include('./parts/index.page/_insights.html')
+            @@include('./parts/index/_insights.html')
 
             @@include('./parts/components/_partners.html')
             
