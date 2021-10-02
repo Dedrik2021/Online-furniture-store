@@ -5,19 +5,7 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        margin: 0 auto 115px;
-    
-        @include r($mobile-xl) {
-            margin-bottom: 90px;
-        }
-    
-        @include r($mobile-sm) {
-            margin-bottom: 70px;
-        }
-    
-        @include r($mobile) {
-            margin-bottom: 65px;
-        }
+        margin: 0 auto 35px;
     }
     
     &__required {
@@ -70,9 +58,8 @@
         align-items: center;
         max-width: 100%;
         width: 100%;
-        padding: 35px 0 30px;
+        padding: 30px 0;
         border-bottom: 2px solid $blue-100;
-        margin-bottom: 30px;
     }
     
     &__checkbox {
@@ -133,38 +120,5 @@
         color: $blue-300;
     }
     
-    &__registred {
-        text-align: center;
-        margin-bottom: 25px;
-        @include line-clamp(2);
-    }
-    
-    &__btn-regist {
-        text-align: center;
-        border: 2px solid $blue-200;
-        padding: 18px 0;
-        color: $blue-500;
-        font-family: $rubik;
-        font-weight: 500;
-        font-size: 18px;
-        transition: color 0.4s, background-color 0.4s;
-        @include line-clamp(1);
-    
-        &:hover {
-            color: $white-100;
-            background-color: $blue-200;
-        }
-        
-        &:focus {
-            border-bottom: 2px solid $blue-200;
-            box-shadow: 3px 3px 5px 1px rgba(37, 37, 37, 0.5);
-        }
-    
-        &:active:focus {
-            border-color: $blue-200;  
-            color: $white-100;
-            background-color: $blue-500;
-        }
-    }
 }
 

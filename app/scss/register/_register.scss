@@ -22,6 +22,22 @@
 
     .login {
 
+        &__form {
+            margin-bottom: 120px;
+
+            @include r($mobile-xl) {
+                margin-bottom: 90px;
+            }
+    
+            @include r($mobile-sm) {
+                margin-bottom: 70px;
+            }
+    
+            @include r($mobile) {
+                margin-bottom: 65px;
+            }
+        }
+
         &__input {
 
             &--password {

@@ -15,11 +15,14 @@
             })
 
             <div class="container container--sm">
-                
-                @@include('./parts/components/_login-form.html', {
-                    "register": false,
-                })
-
+                <div class="login__content">
+                    @@include('./parts/components/_login-form.html', {
+                        "register": false,
+                    })
+    
+                    <span class="login__registred">Not registered? No problem</span>
+                    <a class="login__btn-regist" href="/register.html">Create an account</a>
+                </div>
             </div>
 
             @@include('./parts/components/_partners.html')
