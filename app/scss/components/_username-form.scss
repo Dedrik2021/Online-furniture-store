@@ -1,4 +1,4 @@
-.login {
+.username {
 
     &__form {
         max-width: 470px;
@@ -44,13 +44,6 @@
         &--user {
             margin-bottom: 10px;
         }
-    }
-    
-    &__btn {
-        font-family: $rubik;
-        font-weight: 500;
-        padding: 18px 0;
-        font-size: 18px;
     }
     
     &__box {

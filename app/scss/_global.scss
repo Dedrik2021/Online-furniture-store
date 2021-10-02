@@ -248,6 +248,15 @@ main {
         }
         
     }
+
+    &--username {
+        text-align: center;
+        border: 2px solid $blue-200;
+        font-family: $rubik;
+        font-weight: 500;
+        font-size: 18px;
+        padding: 18px 0;
+    }
 }
 
 .title-products {

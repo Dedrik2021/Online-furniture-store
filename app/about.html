@@ -14,22 +14,22 @@
             })
 
             <div class="container container--sm">
-                <div class="about__inner">
-                    <div class="about__img"></div>
-                    <div class="about__box">
+                <div class="about__content">
+                    <div class="about__img" style="background-image: url(images/content/about-1.jpg);"></div>
+                    <div class="about__inner">
                         <div class="about__wrapper">
                             <span class="about__years">12</span>
-                            <ul class="about__list">
-                                <li class="about__list-item">
+                            <div class="about__box">
+                                <span class="about__advantages">
                                     Years
-                                </li>
-                                <li class="about__list-item">
+                                </span>
+                                <span class="about__advantages">
                                     Experience
-                                </li>
-                                <li class="about__list-item">
+                                </span>
+                                <span class="about__advantages">
                                     Working
-                                </li>
-                            </ul>
+                                </span>
+                            </div>
                         </div>
                         <h2 class="about__title title">
                             Mission of our creative house
@@ -41,19 +41,19 @@
                         </div>
                         <ul class="about__block">
                             <li class="about__item">
-                                <div class="about__advantages about__advantages--notebook">
+                                <div class="about__progress about__progress--notebook">
                                     520<span>+</span>
                                 </div>
                                 <span class="about__result">Projects</span>
                             </li>
                             <li class="about__item">
-                                <div class="about__advantages about__advantages--shout">
+                                <div class="about__progress about__progress--shout">
                                     <span>$</span>4<span>M</span>
                                 </div>
                                 <span class="about__result">Revenue</span>
                             </li>
                             <li class="about__item">
-                                <div class="about__advantages about__advantages--medal">
+                                <div class="about__progress about__progress--medal">
                                     250 
                                 </div>
                                 <span class="about__result">Awards</span>
@@ -86,92 +86,100 @@
                     </div>
                     <ul class="team">
                         <li class="team__item">
-                            <div class="team__img-wrapper">
-                                <img src="images/content/about-2.jpg" alt="Eliza Elliot">
-                            </div>
-                            <div class="team__box">
-                                <div class="team__about">
-                                    <a class="team__link" href="#">
-                                        <span class="team__name">
-                                            Eliza Elliot
-                                        </span>
-                                    </a>
-                                    <span class="team__prof">
-                                        Commodo tempor 
-                                    </span>
+                            <article class="team-cart">
+                                <div class="team-cart__img-wrapper">
+                                    <img src="images/content/about-2.jpg" alt="Eliza Elliot" height="320">
                                 </div>
-
-                                @@include('./parts/components/_share.html', {
-                                    "about": true,
-                                })     
-
-                            </div>
+                                <div class="team-cart__box">
+                                    <div class="team-cart__about">
+                                        <a class="team-cart__link" href="#">
+                                            <h3 class="team-cart__name">
+                                                Eliza Elliot
+                                            </h3>
+                                        </a>
+                                        <span class="team-cart__prof">
+                                            Commodo tempor 
+                                        </span>
+                                    </div>
+    
+                                    @@include('./parts/components/_share.html', {
+                                        "about": true,
+                                    })     
+    
+                                </div>
+                            </article>
                         </li>
                         <li class="team__item">
-                            <div class="team__img-wrapper">
-                                <img src="images/content/about-3.jpg" alt="Roscoe A.">
-                            </div>
-                            <div class="team__box">
-                                <div class="team__about">
-                                    <a class="team__link" href="#">
-                                        <span class="team__name">
-                                            Roscoe A.
-                                        </span>
-                                    </a>
-                                    <span class="team__prof">
-                                        Commodo tempor 
-                                    </span>
+                            <article class="team-cart">
+                                <div class="team-cart__img-wrapper">
+                                    <img src="images/content/about-3.jpg" alt="Roscoe A." height="320">
                                 </div>
-
-                                @@include('./parts/components/_share.html', {
-                                    "about": true,
-                                })     
-
-                            </div>
+                                <div class="team-cart__box">
+                                    <div class="team-cart__about">
+                                        <a class="team-cart__link" href="#">
+                                            <h3 class="team-cart__name">
+                                                Roscoe A.
+                                            </h3>
+                                        </a>
+                                        <span class="team-cart__prof">
+                                            Commodo tempor 
+                                        </span>
+                                    </div>
+    
+                                    @@include('./parts/components/_share.html', {
+                                        "about": true,
+                                    })     
+    
+                                </div>
+                            </article>
                         </li>
                         <li class="team__item">
-                            <div class="team__img-wrapper">
-                                <img src="images/content/about-5.jpg" alt="Ruby M.">
-                            </div>
-                            <div class="team__box">
-                                <div class="team__about">
-                                    <a class="team__link" href="#">
-                                        <span class="team__name">
-                                            Ruby M.
-                                        </span>
-                                    </a>
-                                    <span class="team__prof">
-                                        Commodo tempor 
-                                    </span>
+                            <article class="team-cart">
+                                <div class="team-cart__img-wrapper">
+                                    <img src="images/content/about-5.jpg" alt="Ruby M." height="320">
                                 </div>
-
-                                @@include('./parts/components/_share.html', {
-                                    "about": true,
-                                })     
-
-                            </div>
+                                <div class="team-cart__box">
+                                    <div class="team-cart__about">
+                                        <a class="team-cart__link" href="#">
+                                            <h3 class="team-cart__name">
+                                                Ruby M.
+                                            </h3>
+                                        </a>
+                                        <span class="team-cart__prof">
+                                            Commodo tempor 
+                                        </span>
+                                    </div>
+    
+                                    @@include('./parts/components/_share.html', {
+                                        "about": true,
+                                    })     
+    
+                                </div>
+                            </article>
                         </li>
                         <li class="team__item">
-                            <div class="team__img-wrapper">
-                                <img src="images/content/about-4.jpg" alt="Marie F. Bloss">
-                            </div>
-                            <div class="team__box">
-                                <div class="team__about">
-                                    <a class="team__link" href="#">
-                                        <span class="team__name">
-                                            Marie F. Bloss
-                                        </span>
-                                    </a>
-                                    <span class="team__prof">
-                                        Commodo tempor 
-                                    </span>
+                            <article class="team-cart">
+                                <div class="team-cart__img-wrapper">
+                                    <img src="images/content/about-4.jpg" alt="Marie F. Bloss" height="320">
                                 </div>
-
-                                @@include('./parts/components/_share.html', {
-                                    "about": true,
-                                })     
-
-                            </div>
+                                <div class="team-cart__box">
+                                    <div class="team-cart__about">
+                                        <a class="team-cart__link" href="#">
+                                            <h3 class="team-cart__name">
+                                                Marie F. Bloss
+                                            </h3>
+                                        </a>
+                                        <span class="team-cart__prof">
+                                            Commodo tempor 
+                                        </span>
+                                    </div>
+    
+                                    @@include('./parts/components/_share.html', {
+                                        "about": true,
+                                    })     
+    
+                                </div>
+                            </article>
                         </li>
                     </ul>
                 </div>

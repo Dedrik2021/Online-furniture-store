@@ -321,12 +321,12 @@ $(function() {
         ]
     });
 
-    $('.login__checkbox, .login__checkbox--costom').on('click', function() {
-        $('.login__checkbox--costom').toggleClass('active');
+    $('.username__checkbox, .username__checkbox--costom').on('click', function() {
+        $('.username__checkbox--costom').toggleClass('active');
     })
 
-    $('.login__checkbox--costom').on('click', function() {
-        $('.login__checkbox--costom').toggleClass('active');
+    $('.username__checkbox--costom').on('click', function() {
+        $('.username__checkbox--costom').toggleClass('active');
     })
 
     var containerEl1 = document.querySelector('.products-week__content');

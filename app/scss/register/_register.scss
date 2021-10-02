@@ -20,7 +20,7 @@
         margin-bottom: 0;
     }
 
-    .login {
+    .username {
 
         &__form {
             margin-bottom: 120px;
@@ -45,7 +45,7 @@
             }
         }
 
-        &__registred {
+        &__register {
             text-align: left;
             margin-bottom: 25px;
         }
@@ -63,7 +63,6 @@
             &--checkbox {
                 margin-bottom: 20px;
                 line-height: 1.2;
-                max-width: 100%;
                 @include line-clamp(2);
             }
         }
