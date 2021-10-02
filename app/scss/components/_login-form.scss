@@ -80,7 +80,7 @@
         height: 13px;
         position: absolute;
         left: -3px;
-        top: -3px;
+        top: -1px;
     }
     
     &__checkbox--costom {
@@ -90,7 +90,7 @@
         background-color: $blue-100;
         position: relative;
         left: 0;
-        top: -1px;
+        top: 1px;
         margin-right: 10px;
     
         &::before {
@@ -115,7 +115,7 @@
     }
     
     &__link {
-        margin-left: auto;
+        margin: auto 0 0 auto;
         border-bottom: 1px solid transparent;
         transition: color 0.4s, border-bottom-color 0.4s;
         @include line-clamp(1);

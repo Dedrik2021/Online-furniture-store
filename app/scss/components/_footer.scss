@@ -171,7 +171,7 @@
                 position: relative;
     
                 &:not(:last-child) {          
-                    margin-right: 25px;
+                    margin-right: 28px;
 
                     @include r($mobile-xl) {
                         margin-right: 25px;
@@ -197,6 +197,7 @@
             &__link {
                 font-family: $rubik;
                 color: $gray-400;
+                font-weight: 400;
                 transition: border-bottom-color 0.4s, color 0.4s;
 
                 @include r($mobile-xl) {
