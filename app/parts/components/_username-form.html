@@ -23,15 +23,13 @@
             <span class="username__checkbox username__checkbox--costom"></span>
             Agree with Terms & Conditions
         </label>
-        <button class="username__btn btn btn--universal btn--username" type="submit">
-            Register
-        </button>
     }
 
-    @@if (register === false) {
-        <button class="username__btn btn btn--universal btn--username" type="submit">                                       
-            Login
-        </button>
+    <button class="username__btn btn btn--universal btn--username" type="submit">                                       
+        @@btn
+    </button>
+
+    @@if (login === true) {
         <div class="username__box">
             
             <label class="username__required username__required--checkbox" for="checkbox-username">

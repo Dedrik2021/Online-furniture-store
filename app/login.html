@@ -16,8 +16,11 @@
 
             <div class="container container--sm">
                 <div class="login__content">
+                    
                     @@include('./parts/components/_username-form.html', {
                         "register": false,
+                        "login": true,
+                        "btn": "Login",
                     })
     
                     <span class="login__registred">Not registered? No problem</span>
