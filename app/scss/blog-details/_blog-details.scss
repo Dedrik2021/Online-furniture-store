@@ -254,7 +254,6 @@
                 font-size: 16px;
                 line-height: 1.9;
                 color: $blue-500;
-                @include line-clamp(1000);
 
                 &:not(:last-child) {
                     margin-bottom: 15px;
@@ -269,13 +268,7 @@
 
                 p {
                     padding: 0 0 0 5px;
-                    margin-bottom: 0;
-                    font-family: $rubik;
-                    font-size: 16px;
-                    line-height: 1.9;
-                    color: $blue-500;
-                    @include line-clamp(10000);
-
+                
                     @include r($mobile-sm) {
                         padding: 0;
                     }
@@ -338,10 +331,6 @@
 
                 @include r($mobile) {
                     padding: 15px 20px;
-                }
-
-                p {
-                    display: block;
                 }
 
                 cite {

@@ -1,34 +1,30 @@
 <ul class="share">
 
-    @@if (about === false) {
+    @@if (facebook === true) {
         <li class="share__item">
             <a class="share__link" href="https://www.facebook.com/" style="background-image: url(images/content/facebook-icon.svg);" target="_blank">
                 <span class="sr-only">facebook</span>
             </a>
         </li>
+    }
+
+    @@if (twitter === true) {
         <li class="share__item">
             <a class="share__link" href="https://twitter.com/?lang=de" style="background-image: url(images/content/twitter-icon.svg);" target="_blank">
                 <span class="sr-only">twitter</span>
             </a>
         </li>
+    }
+    
+    @@if (instagram === true) {
         <li class="share__item">
             <a class="share__link" href="https://www.instagram.com/?hl=de" style="background-image: url(images/content/insta-icon.svg);" target="_blank">
                 <span class="sr-only">instagram</span>
-            </a>
-        </li>
-        <li class="share__item">
-            <a class="share__link" href="https://www.google.com/" style="background-image: url(images/content/google__plus-icon.svg);" target="_blank">
-                <span class="sr-only">google plus</span>
             </a>
         </li>
     }
-    
-    @@if (about === true) {
-        <li class="share__item">
-            <a class="share__link" href="https://www.instagram.com/?hl=de" style="background-image: url(images/content/insta-icon.svg);" target="_blank">
-                <span class="sr-only">instagram</span>
-            </a>
-        </li>
+
+    @@if (google === true) {
         <li class="share__item">
             <a class="share__link" href="https://www.google.com/" style="background-image: url(images/content/google__plus-icon.svg);" target="_blank">
                 <span class="sr-only">google plus</span>
